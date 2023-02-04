@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>7 Cristina Correa Segade Ejercicio10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+              table{
+                  width: 700px;
+                  height: 500px;
+                  border: 1em black;
+              }
+              .cabecera {
+                  font-size: x-large;
+                  padding: 5px 100px 5px 100px;
+                  background-image: url("./img/cabecera.png");
+              }
+              .cabecera th , .pie th{
+                  border: 10px double black;
+              }
+              .pie {
+                  font-size: x-large;
+                  padding: 1px 100px 1px 100px;
+                  background-image: url("./img/pie.png");
+              }
+              .menu1{
+                  width: 100px;
+                  height: 200px;
+                  background-color: #ffcce8;
+                  text-align: left;
+              }
+              ul, li{
+                  list-style:none;
+                  padding: 0%;
+              }
+              .menu2{
+                  height: 200px;
+                  background-color: #ffff33;
+                  text-align: left;
+              }
+              .menu2 td{
+                border: 3px solid black;
+              }
+              .contenido{
+                  background-color: #d4f7f7;
+                  padding: 2em 10em 2em 10em;
+              }
+              .menulateral{
+                  width: 100px;
+                  border: 3px dashed black;
+                  background-color: #cccc00;
+              }
+    </style>
+  </head>
+  <body>
+    <main>
+      <table>
+        <tr class="cabecera">
+          <th colspan="3">Soy Cristina Correa. Cabecera</th>
+        </tr>
+        <tr>
+          <td class="menu1">
+            <ul>
+              <li><strong>Menú 1:</strong></li>
+              <li><a href="#">Enlace 1</a></li>
+              <li><a href="#">Enlace 2</a></li>
+              <li><a href="#">Enlace 3</a></li>
+            </ul>
+          </td>
+          <td rowspan="2" class="contenido">Contenido</td>
+          <td rowspan="2" class="menulateral">Menú lateral</td>
+        </tr>
+        <tr class="menu2">
+          <td>
+            <form>
+              <label for="usua">Usuario</label>
+              <input type="text" id="usua" name="usuario" />
+              <label for="contra">Contraseña</label>
+              <input type="password" id="contra" name="contraseña" />
+            </form>
+          </td>
+        </tr>
+        <tr class="pie">
+          <th colspan="3">Soy Cristina Correa. Pie</th>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

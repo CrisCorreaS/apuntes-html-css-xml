@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="utf-8"?><!-- Cerrar el "?" -->
+<programas>
+    <en2008-2013> Programas con data &gt; 2008 e &lt; 2013 <!-- No puede haber una etiqueta de <> enel contenido -->
+        <programa1 nome="Notepad++"><!-- Cerrar etiquetas -->
+            <licenza>GPL</licenza><!-- Faltan etiquetas -->
+            <licenza>LGPL</licenza><!-- Faltan etiquetas -->
+        </programa1>
+        <programa2 nome="XML Copy Editor"><!-- Cerrar etiquetas -->
+            <licenza>GPL</licenza><!-- Faltan etiquetas -->
+            <sistema_operativo>Windows</sistema_operativo><!-- Faltan etiquetas -->
+            <sistema_operativo>Linux</sistema_operativo><!-- Faltan etiquetas -->
+        </programa2>
+    </en2008-2013>
+</programas><!--Quitar una etiqueta de cierre de del elemento raíz -->

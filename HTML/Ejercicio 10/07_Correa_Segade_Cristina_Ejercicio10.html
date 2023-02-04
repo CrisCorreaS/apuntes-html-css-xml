@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07 Cristina Correa Formulario Ejercicio 10</title>
+</head>
+<body>
+    <form method="GET">
+        <fieldset style="background-color: #FFE4C4">
+            <legend>Datos Personales</legend>
+            <ul>
+                <!-- Se puede poner así: <li>Edad: <input type="text"/></li> pero vemos cómo hacerlo con label -->
+                <li>
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" maxlength="5" placeholder="introduzca la edad"
+                    required/>
+                </li>
+                <li>
+                    Sexo:
+                    <input type="radio" name="sexo" value="hombre" checked/>Hombre
+                    <input type="radio" name="sexo" value="mujer" checked/>Mujer
+                </li>
+                <li>
+                    ¿Estás estudiando?
+                    <select name="estudiando">
+                        <option value="si" selected>Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset style="background-color: #FFE4C4">
+            <legend>Preguntas Generales</legend>
+            <ul>
+                <li>
+                    ¿Tienes ordenador en tu casa?
+                    <input type="radio" name="encasa" value="si" checked="checked"/>Sí
+                    <input type="radio" name="encasa" value="no"/>No 
+                </li>
+                <li>
+                    ¿Lo utilizas sólo tú o lo compartes con otras personas?
+                    <input type="radio" name="propio" value="si" checked>Sí
+                    <input type="radio" name="propio" value="no">No
+                </li>
+                <li>
+                    En periodos de case: <br/>
+                    <ul type="circle">
+                        <li>
+                            ¿Cuántos días a la semana sueles encender el ordenador?
+                            <select name="dias">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="más de cuatro">Más de cuatro</option>
+                            </select>
+                        </li>
+                        <li>
+                            ¿Cuántas horas diarias sueles gastar en el ordenador (cada día)?
+                            <select name="horas">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="más de cuatro">Más de cuatro</option>
+                            </select>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    En periodos de vacaciones: <br/>
+                    <ul type="circle">
+                        <li>
+                            ¿Cuántos días a la semana sueles encender el ordenador?
+                            <select name="dias">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="más de cuatro">Más de cuatro</option>
+                            </select>
+                        </li>
+                        <li>
+                            ¿Cuántas horas diarias sueles gastar en el ordenador (cada día)?
+                            <select name="horas">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="más de cuatro">Más de cuatro</option>
+                            </select>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    ¿A qué dedicas tu tiempo en el ordenador? <br/>
+                    <table>
+                        <tr align="left">
+                            <td>
+                                <input type="checkbox" name="escribir" value="Escribir" />Escribir
+                            </td>
+                            <td>
+                                <input type="checkbox" name="dibujar" value="Dibujar" />Dibujar
+                            </td>
+                            <td>
+                                <input type="checkbox" name="programar" value="Programar" />Programar
+                            </td>
+                            <td>
+                                <input type="checkbox" name="hacer música" value="Hacer música" />Hacer música
+                            </td>
+                            <td>
+                                <input type="checkbox" name="retoque fotográfico" value="Retoque fotográfico" />Retoque fotográfico
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="jugar" value="Jugar" />Jugar
+                            </td>
+                            <td>
+                                <input type="checkbox" name="ver páginas web" value="Ver páginas web" />Ver páginas web
+                            </td>
+                            <td>
+                                <input type="checkbox" name="chatear" value="Chatear" />Chatear
+                            </td>
+                            <td>
+                                <input type="checkbox" name="intercambiar música" value="Intercambiar música" />Intercambiar música
+                            </td>
+                            <td>
+                                <input type="checkbox" name="intercambiar películas" value="Intercambiar películas" />Intercambiar películas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Otras actividades (especifica):</td>
+                            <td><textarea name="observaciones1"></textarea></td>
+                            <td><textarea name="observaciones2"></textarea></td>
+                            <td><textarea name="observaciones3"></textarea></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </fieldset>
+        <input type="submit" name="enviar" value="Enviar"/>
+        <input type="reset" name="borrar" value="Borrar">
+    </form>
+</body>
+</html>

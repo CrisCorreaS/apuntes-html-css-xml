@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07 Cristina Correa Formulario Ejercicio 9</title>
+</head>
+<body>
+    <form method="GET">
+        Nombre: <br/>
+        <input type="text" name="nombre"/><br/><br/>
+
+        Apellidos: <br/>
+        <input type="text" name="apellidos"/><br/><br/>
+        <label for="contrasinal">Contraseña:</label><br/>
+        <input type="password" id="contrasinal" name="password"/><br/><br/>
+        <label for="contrasinal2">Repita contraseña:</label><br/>
+        <input type="password" id="contrasinal2" name="password" /><br/><br/>
+        
+        Sexo: <br/>
+        <input type="radio" name="sexo" value="hombre" checked="checked"/>Hombre
+        <input type="radio" name="sexo" value="mujer" checked="checked"/>Mujer <br/><br/>
+        
+        Redes sociales usadas habitualmente: <br/>
+        <input type="checkbox" name="facebook" value="Facebook" checked="checked"/>Facebook <br/>
+        <input type="checkbox" name="twitter" value="Twitter" checked="checked"/>Twitter <br/>
+        <input type="checkbox" name="pinterest" value="Pinterest" checked="checked"/>Pinterest <br/>
+        <input type="checkbox" name="instagram" value="Instagram" checked="checked"/>Instagram <br/>
+        <input type="checkbox" name="otras" value="Otras" checked="checked" />Otras <br />
+        <textarea name="observaciones" title="En esta casilla especifique qué otras redes" placeholder="Especifique qué otras redes"></textarea> <br/><br/>
+
+        Provincia <br/>
+        <select name="provincias">
+            <option value="">--seleccione opción--</option>
+            <option value="Corunha">A Coruña</option>
+            <option value="Lugo">Lugo</option>
+            <option value="Ourense">Ourense</option>
+            <option value="Pontevedra">Pontevedra</option>
+        </select> <br/><br/>
+
+        Sube tu foto... <br/>
+        <input type="file" name="adjunto"/> <br/><br/>
+        <input type="reset" name="limpiar" value="Borrar datos del formulario" /><br /><br />
+        <input type="submit" id="submit" name="Crear cuenta"/>
+    </form>
+</body>
+</html>

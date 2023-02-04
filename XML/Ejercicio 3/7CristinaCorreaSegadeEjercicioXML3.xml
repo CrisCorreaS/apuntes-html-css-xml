@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="utf-8"?>
+<libros>
+    <libro isbn="9783140464079" añoPublicacion="1943">
+        <editorial>Anaya</editorial>
+        <titulo>El Principito</titulo>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <descripción xml:lang="es" xml:space="preserve">En este gran clásico de la literatura francesa del pasado siglo,
+            el autor nos demuestra la diferencia entre pretender escribir para niños y escribir a
+            través del niño que fuimos.</descripción>
+    </libro>
+    <libro isbn="97454464079" añoPublicacion="1863">
+        <editorial>Ediciones Catedra</editorial>
+        <titulo>Cantares Gallegos</titulo>
+        <autor>Rosalía de Castro</autor>
+        <descripción xml:lang="gl" xml:space="preserve">En 1863 Rosalía publica "Cantares gallegos", cuyo prólogo
+            contiene un alegato reivindicativo de Galicia y sus gentes</descripción>
+    </libro>
+</libros>

@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="utf-8"?>
+<musica>
+<album nome="Queen">
+    <artista nome="A Night at the Opera">
+        <canción>Bohemian Rhapsody</canción>
+        <canción>'39</canción>
+        </artista>
+    </album>
+<album nome="R.E.M.">
+    <artista nome="Life's Rich Pageant">
+        <canción>
+                Superman</canción>
+        <canción>These days
+            </canción>
+        </artista>
+    </album>
+<album nome="Iggy Pop">
+    <artista nome="Brick by Brick">
+        <canción>Candy</canción>
+        <canción>My Baby Wants
+                to Rock
+                &amp; Roll</canción>
+        </artista>
+    </album>
+</musica>

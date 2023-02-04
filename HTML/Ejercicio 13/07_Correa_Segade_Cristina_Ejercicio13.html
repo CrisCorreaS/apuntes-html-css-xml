@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07 Cristina Correa Formulario Ejercicio 13</title>
+</head>
+<body>
+    <form method="GET">
+        <fieldset>
+            <legend>Laboral</legend>
+            <input type="checkbox" name="ajena" value="Por cuenta ajena" />Por cuenta ajena
+            <input type="checkbox" name="autonomo" value="Autónomo" />Autónomo<br />
+            ¿Alguna vez en el extranjero?
+            <table>
+                <tr align="left">
+                    <td>
+                        <input type="radio" name="viajar" value="si" checked/>Sí
+                    </td>
+                    <td>
+                        <select name="lugar">
+                            <option value="UE">Dentro de la UE</option>
+                            <option value="Asia">en Asia</option>
+                            <option value="Hispanoamerica">en Hispanoamerica</option>
+                            <option value="EEUU">en EEUU</option>
+                        </select> <br>
+                    </td>
+                </tr>
+                <tr align="left">
+                    <td colspan="2">
+                        <input type="radio" name="viajar" value="no"/>No
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Personal</legend>
+            <label for="nombre">Apellidos y nombre:</label>
+            <input type="name" id="nombre" name="name" /><br /><br />
+        
+            Conocimientos sobre: <br/>
+            <select name="conocimiento" id="conocimientos" multiple>
+                <option value="informatica" selected>Informática</option>
+                <option value="conduccion">Conducción</option>
+                <option value="finanzas" selected>Finanzas</option>
+                <option value="leyes">Leyes</option>
+            </select>
+        </fieldset>
+        <input type="submit" name="enviar" value="enviar datos" />
+    </form>
+</body>
+</html>

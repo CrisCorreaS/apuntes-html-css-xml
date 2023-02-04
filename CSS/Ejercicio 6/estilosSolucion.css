@@ -1,0 +1,53 @@
+/* Selector universal */
+/* Sus atributos modifican el tipo de letra */
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*Lo que esté marcado con el identificador main se muestra en color de fondo gris*/
+/* Sus atributos modifican el color de fondo */
+#main {
+  background-color: grey;
+}
+
+/*Los encabezados h1 de la clase especial se muestran en color azul*/
+/* Sus atributos modifican el color de la letra */
+h1.especial {
+  color: blue;
+}
+
+/*A todos los encabezados de tipo h2 y h3 se les pone un borde naranja de 1 pixel y línea continua (solid)*/
+h2,
+h3 {
+  border: 1px solid orange;
+}
+
+/*Los elementos de una lista ordenada o desordenada están en color rojo*/
+li {
+  color: red;
+}
+
+/*Los elementos de una lista que van dentro de otra lista, elementos de una sublista, están en verde*/
+li li {
+  color: green;
+}
+
+/*Selecciona las imágenes que vayan dentro de un párrafo, img es hijo directo de p y le pone borde negro de 5px*/
+p > img {
+  border: 5px solid black;
+}
+
+/*Selecciona las imágenes que tengan el valor "segunda" en el atributo alt y le pone el borde sólido, rojo de 5px*/
+img[alt="segunda"] {
+  border: 5px solid red;
+}
+
+/*Selecciona los encabezados h3 de la clase antes que están antes de un párrafo y los pone en rosa*/
+p ~ h3.antes {
+  background-color: pink;
+}
+
+/*Selecciona los encabezados h3 que están después de un párrafo y los pone en azul*/
+p + h3 {
+  background-color: blue;
+}

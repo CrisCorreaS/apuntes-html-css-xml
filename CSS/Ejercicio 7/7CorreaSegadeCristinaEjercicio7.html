@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>7 Cristina Correa Segade Ejercicio 7CSS</title>
+    <style>
+      .pagination {
+        display: inline-block;
+      }
+      .pagination a {
+        color: orangered;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      .pagination a.active {
+        background-color: navajowhite;
+        color: olive;
+        font-weight: bold;
+      }
+      .pagination a:hover:not(.active) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Componente de paginación con botones activos y hover</h2>
+    <div class="pagination">
+      <a href="#"><<</a>
+      <a href="#">A</a>
+      <a class="active" href="#">B</a>
+      <a href="#">C</a>
+      <a href="#">D</a>
+      <a href="#">E</a>
+      <a href="#">F</a>
+      <a href="#">>></a>
+    </div>
+  </body>
+</html>

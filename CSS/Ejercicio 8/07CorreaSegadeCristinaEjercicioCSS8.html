@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07 Cristina Correa Segade Ejercicio 8</title>
+    <style>
+      p::selection {
+        background: gray;
+        color: white;
+        font-weight: bold;
+      }
+
+      #brand::after {
+        content: "";
+        padding-right: 4px;
+        color: red;
+      }
+
+      p:not(#brand)::first-letter {
+        font: 34px bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod nostrum
+      illo quibusdam impedit perferendis aperiam voluptatem eum sit incidunt hic
+      esse, voluptatibus deleniti sed autem ratione consequuntur, saepe culpa
+      cupiditate?
+    </p>
+    <p id="brand">Lemonade</p>
+  </body>
+</html>

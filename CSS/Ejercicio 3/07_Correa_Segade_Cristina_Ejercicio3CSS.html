@@ -1,0 +1,94 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>Cristina Correa Segade Ejercicio 3 CSS</title>
+      <meta charset="UTF-8" />
+      <style>
+        /* 1) Todos los parrafos de la pagina*/
+        p {
+          color: fuchsia;
+        }
+
+        /* 2) Todos los parrafos de la pagina de la clase "especial"*/
+        p.especial {
+          color: blue;
+        }
+
+        /* 3) Todas las cabeceras de los tres primeros niveles de la pagina*/
+        h1,
+        h2,
+        h3 {
+          color: #ff334f;
+        }
+
+        /* 4) Todos los elementos de la clase destacada*/
+        .destacada {
+          color: rgb(0, 225, 255);
+        }
+
+        /* 5)  Todos los párrafos de la página y los elementos strong de la clase "destacada"*/
+        p,
+        strong.destacada {
+          color: #33ff9c;
+        }
+
+        /* 6) Todos los párrafos de la página y los elementos de la clase "destacada"*/
+        p,
+        .destacada {
+          color: #ffc433;
+        }
+
+        /* 7) Todos los enlaces que tengan el atributo target con el valor _blank*/
+        a[target="_blank"] {
+          color: #ff3374;
+        }
+
+        /* 8) Los enlaces visitados*/
+        a:visited {
+          color: rgb(238, 255, 0);
+        }
+
+        /* 9) El enlace activo*/
+        a:active {
+          color: red;
+        }
+
+        /* 10) Los enlaces no visitados*/
+        a:link {
+          color: brown;
+        }
+
+        /* 11) El enlace sobre el que el usuario coloca el puntero del ratón*/
+        a:hover {
+          color: blue;
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1>nº7 Cristina Correa Segade</h1>
+      <h1 class="destacada">Encabezado nivel 1</h1>
+      <p>Esto es un párrafo</p>
+      <h2>Encabezado nivel 2</h2>
+      <p class="especial">
+        Esto es un <strong class="destacada">párrafo </strong>de la clase
+        especial
+      </p>
+      <h3 class="destacada">Encabezado nivel 3</h3>
+      <p>
+        Esto es otro párrafo
+        <a href="https://htmlcolorcodes.com/es/" target="_blank"
+          >enlace a html colors</a
+        >
+        <a
+          href="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-relativos-y-absolutos "
+          >enlace sin visitar</a
+        >
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML"
+          >enlace sin visitar</a
+        >
+      </p>
+      <h4 class="destacada">Encabezado nivel 4</h4>
+    </body>
+  </html>
+</DOCTYPE>

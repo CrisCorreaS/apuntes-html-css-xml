@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07 Cristina Correa Formulario Ejercicio 12</title>
+</head>
+<body>
+    <form method="GET">
+        <fieldset>
+            <legend>Datos Fiscales</legend>
+                <select name="fiscal" id="fiscales" multiple>
+                    <option value="automocion">Automocion</option>
+                    <option value="metal" selected>Metal</option>
+                    <option value="informatica">Informatica</option>
+                    <option value="finanzas" selected>Finanzas</option>
+                </select> <br/> <br/>
+                <input type="checkbox" id="autonomo" name="autonomo" value="Autonomo"/>
+                <label for="autonomo">Autónomo</label>
+                <input type="checkbox" id="c_ajena" name="c_ajena" value="Cuenta ajena"/>
+                <label for="c_ajena">Cuenta ajena</label>
+                <input type="checkbox" id="no_sabe" name="no_sabe" value="No sabe"/>
+                <label for="no_sabe">No sabe</label> <br/> <br/>
+                
+                <label for="observaciones">Describa su función:</label><br/>
+                <textarea name="observaciones" title="Escriba aqui"
+                    placeholder="Escriba aqui"></textarea> <br/>
+        </fieldset>
+        <input type="submit" name="enviar" value="Enviar" />
+        <input type="reset" name="borrar" value="Borrar">
+    </form>
+</body>
+</html>

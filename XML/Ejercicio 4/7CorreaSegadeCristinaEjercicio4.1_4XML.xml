@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="utf-8"?>
+<!-- centro.xml -->
+<centro xmlns="http://www.iescentro.com/espazos/centro/"
+xmlns:al="http://www.iescentro.com/espazos/alumnos/">
+    
+    <ciclo id="ASIR" grao="CS">
+        <módulo id="MP0370">
+          <nome>Planificación e administración de redes</nome>
+          <horas>213</horas>
+        </módulo>
+        <módulo id="MP0371">
+          <nome>Fundamentos hardware</nome>
+          <horas>107</horas>
+        </módulo>  
+        <al:alumno>
+            <al:nome>Xoan</al:nome>
+            <al:apelidos>Cancedo da Foz</al:apelidos>
+            <al:datanacemento>06/11/1991</al:datanacemento>
+            <al:nota>Xa fixo outro ciclo</al:nota>
+            <al:modulo id="MP0370" nota="" />
+            <al:modulo id="MP0371" nota="8" />
+        </al:alumno>
+        <al:alumno>
+            <al:nome>Maria</al:nome>
+            <al:apelidos>Perez Gomez</al:apelidos>
+            <al:datanacemento>06/12/1993</al:datanacemento>
+            <al:nota>Traballa polas trades</al:nota>
+            <al:modulo id="MP0370" nota="5" />
+            <al:modulo id="MP0371" nota="6" />
+        </al:alumno>
+     </ciclo>     
+</centro>

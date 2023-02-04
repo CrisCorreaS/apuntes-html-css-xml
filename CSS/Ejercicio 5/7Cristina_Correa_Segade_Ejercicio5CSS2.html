@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div > p {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Selector hijo</h2>
+    <div>
+      <p>Párrafo 1 en div.</p>
+      <p>Paragraph 2 en div.</p>
+      <span><p>Párrafo 3 en div.</p></span>
+      <!-- no hijo directo pero si descendiente -->
+      <p>Párrafo 4 en div.</p>
+    </div>
+    <p>Párrafo 5. Not en div.</p>
+    <p>Párrafo 6. Not en div.</p>
+  </body>
+</html>

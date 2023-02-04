@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07 Cristina Correa Formulario Ejercicio 11</title>
+</head>
+<body>
+    <form method="GET">
+        <fieldset>
+            <legend>Datos Fiscales</legend>
+                <input type="radio" id="en paro" name="situacion" value="en paro"/>
+                <label for="enparo">En paro</label><br/>
+                <input type="radio" id="autonomo" name="situacion" value="autónomo"/>
+                <label for="autonomo">Autónomo</label><br />
+                <input type="radio" id="ajena" name="situacion" value="por c. ajena" />
+                <label for="ajena">Por c. ajena</label><br />
+        </fieldset>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="name" id="nombre" name="name" /><br /><br />
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="surname" id="apellidos" name="surname" /><br /><br />
+            <label for="sueldo">Sueldo</label>
+            <select id="sueldo" name="sueldo">
+                <option value="Más de 400">Más de 400</option>
+                <option value="Menos de 400">Menos de 400</option>
+                <option value="Variables">Variables</option>
+            </select> <br /><br />
+
+            <input type="checkbox" name="enfermedad" value="Enfermedad"/>
+            <label for="enfermedad">Con enfermedad profesional</label><br />
+            <input type="checkbox" name="padres" value="Padres"/>
+            <label for="padres">Con padres a cargo</label><br />
+            <input type="checkbox" name="hijos" value="Hijos"/>
+            <label for="hijos">Con hijos a cargo</label><br />
+        </fieldset>
+        <input type="submit" name="enviar" value="Enviar" />
+        <input type="reset" name="borrar" value="Borrar">
+    </form>
+</body>
+</html>

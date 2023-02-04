@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="utf-8"?><!-- Quitar el comentario al principio -->
+<musica>
+<album nome="Queen"><!-- Tiene que ser la etiqueta album -->
+    <artista nome="A Night at the Opera">
+        <canción>Bohemian Rhapsody</canción>
+        <canción>'39</canción><!-- Tendría que ser canción en minúscula para cerrar -->
+        </artista><!-- Tenemos que cerrar esta etiqueta -->
+    </album>
+<album nome="R.E.M."><!-- Tiene que ser la etiqueta album -->
+    <artista nome="Life's Rich Pageant"><!-- Tiene que ser la etiqueta artista -->
+        <canción>
+                Superman</canción><!-- Tendría que ser canción en minúscula para cerrar -->
+        <canción>These days
+            </canción><!-- Tendría que ser canción en minúscula para cerrar -->
+        </artista>
+    </album>
+<album nome="Iggy Pop"><!-- Tiene que ser la etiqueta album -->
+    <artista nome="Brick by Brick"><!-- Tiene que ser la etiqueta artista y cerrar las comillas
+            en
+        el atributo -->
+        <canción>Candy</canción><!-- Tendría que ser canción en minúscula para cerrar -->
+        <canción>My Baby Wants
+                to Rock
+                &amp; Roll</canción><!-- Tendría que ser canción en minúscula para cerrar -->
+        </artista>
+    </album>
+</musica>

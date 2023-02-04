@@ -1,0 +1,20 @@
+
+
+th{
+    font-family: Times New Roman;    /*El texto que emplee en las cabeceras lo pondrá en Times New Roman*/
+    color: blueviolet;             /*El color que emplee en las cabeceras lo pondrá en blueviolet*/
+    border: black solid;           /*Con esta sentencia pongo el borde de estas casillas en negro*/
+   }
+ 
+ a {
+    font-family: Courier;   /*El texto que emplee en los links lo pondrá en Courier*/
+    color:green           /*El color que emplee en los links lo pondrá en verde*/
+   }
+ td{
+    font-family: Arial;       /*El texto que emplee en las columnas lo pondrá en Arial*/
+    color: red;             /*El color que emplee en las columnas lo pondrá en rojo*/
+    border: black solid;    /*Con esta sentencia pongo el borde de estas casillas en negro*/
+   }
+
+
+   
