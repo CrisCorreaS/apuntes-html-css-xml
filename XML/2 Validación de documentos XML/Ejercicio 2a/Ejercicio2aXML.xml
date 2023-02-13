@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Apartado a)
+    <!DOCTYPE ciclos[ 
+    <!ELEMENT ciclo (ciclo)>
+    <!ELEMENT ciclo (#PCDATA)>
+]>
+
+<ciclos>
+    <ciclo>Desenvolvemento de Aplicacións Web</ciclo>
+</ciclos>-->
+
+<!-- Apartado b)
+<!DOCTYPE ciclos[ 
+    <!ELEMENT ciclo (modulo+)>
+    <!ELEMENT ciclo (#PCDATA)>
+]>
+
+<ciclos>
+    <modulo></modulo>
+    <modulo></modulo>
+</ciclos> -->
+
+<!-- Apartado c)
+<!DOCTYPE ciclos[ 
+    <!ELEMENT ciclo (codigo*)>
+    <!ELEMENT ciclo (#PCDATA)>
+]>
+
+<ciclos>
+    <codigo>CSIFC01</codigo>
+    <codigo>CSIFC02</codigo>
+    <codigo>CSIFC03</codigo>
+</ciclos> -->
+
+<!--  Apartado d)
+<!DOCTYPE familias[ 
+    <!ELEMENT familias (familia*)>
+    <!ELEMENT familias (codigo,nome)>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT nome (#PCDATA)>
+]>
+
+<familias>
+    <familia>
+        <codigo>IFC</codigo>
+        <nome>Informática e cominicacións</nome>
+    </familia>
+    <familia>
+        <codigo>IMP</codigo>
+        <nome>Imaxe persoal</nome>
+    </familia>
+</familias>-->
+
+<!--  Apartado e)
+<!DOCTYPE contactos[ 
+    <!ELEMENT contactos (contacto*)>
+    <!ELEMENT contactos (nome, fixo?, mobil+, codigo*)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT fixo (#PCDATA)>
+    <!ELEMENT mobil (#PCDATA)>
+    <!ELEMENT correo (#PCDATA)>
+]>
+
+<contactos>
+    <contacto>
+        <nome>Noa</nome>
+        <fixo>989898989898</fixo>
+        <mobil>685203695</mobil>
+    </contacto>
+    <contacto>
+        <nome>Noa</nome>
+        <fixo>989898989898</fixo>
+        <mobil>644432344</mobil>
+        <correo>noa.vila@traballo.com</correo>
+        <correo>noa@omeucorreo.com</correo>
+    </contacto>
+</contactos>-->
+
+<!-- Apartado f) -->
+<!DOCTYPE famosos[ 
+    <!ELEMENT famosos (contacto*)>
+    <!ELEMENT famoso ((nome | apodo), profesion+, dataNacimiento?)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT apodo (#PCDATA)>
+    <!ELEMENT profesion (#PCDATA)>
+    <!ELEMENT dataNacimiento (#PCDATA)>
+]>
+
+<famosos>
+    <famoso>
+        <nome>Michael Jackson</nome>
+        <profesion>cantante</profesion>
+    </famoso>
+    <famoso>
+        <apodo>La voz</apodo>
+        <profesion>cantante</profesion>
+        <profesion>actor</profesion>
+        <dataNacimiento>12-dec-1915</dataNacimiento>
+    </famoso>
+</famosos>

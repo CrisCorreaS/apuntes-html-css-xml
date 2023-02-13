@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aapartado a) 
+    <DOCTYPE ciclos[ 
+    <!ELEMENT ciclos (ciclo*)>
+    <!ELEMENT ciclos ((medio | superior), familia, codigo, nome)>
+    <!ELEMENT medio EMPTY>
+    <!ELEMENT superior EMPTY>
+    <!ELEMENT familia (#PCDATA)>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT nome (#PCDATA)>
+]>
+
+<ciclos>
+    <ciclo>
+        <superior/>
+        <familia>Informática e comunicacións</familia>
+        <codigo>CSIF03</codigo>
+        <nome>Desenvolvemento de aplicacións web</nome>
+    </ciclo>
+    <ciclo>
+        <medio/>
+        <familia>Madeira, Moble e Cortiza</familia>
+        <codigo>CMMMC01</codigo>
+        <nome>Carpintaría e Moble</nome>
+    </ciclo>
+</ciclos>-->
+
+ <!-- Apartado b) 
+<DOCTYPE paises[ 
+    <!ELEMENT paises (ciclo*)>
+    <!ELEMENT pais (nome, continente, G20?, oceano*)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT continente (#PCDATA)>
+    <!ELEMENT G20 EMPTY>
+    <!ELEMENT oceano (#PCDATA)>
+]>
+
+<paises>
+    <pais>
+        <nome>Sudáfrica</nome>
+        <continente>África</continente>
+        <G20/>
+        <oceano>Atlántico</oceano>
+        <oceano>Índico</oceano>
+    </pais>
+    <pais>
+        <nome>Colombia</nome>
+        <continente>América</continente>
+        <oceano>Pacífico</oceano>
+        <oceano>Atlántico</oceano>
+    </pais>
+    <pais>
+        <nome>Bolivia</nome>
+        <continente>América</continente>
+    </pais>
+    <pais>
+        <nome>India</nome>
+        <continente>Asia</continente>
+        <G20/>
+        <oceano>Índico</oceano>
+    </pais>
+</paises>-->
+
+<!-- Apartado c) 
+<DOCTYPE alumnos[ 
+    <!ELEMENT alumnos (alumno+)>
+    <!ELEMENT alumno (numeroExpedente, nome, dataNacemento, telefono+, (varon | muller))>
+    <!ELEMENT numeroExpedente (#PCDATA)>
+    <!ELEMENT dataNacemento (#PCDATA)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT varon EMPTY>
+    <!ELEMENT muller EMPTY>
+]>
+
+<alumnos>
+    <alumno>
+        <numeroExpedente>1023</numeroExpedente>
+        <nnome>Alba Prado</nnome>
+        <dataNacemento>25/04/1984</dataNacemento>
+        <telefono>6767676767</telefono>
+        <telefono>999888777</telefono>
+        <muller/>
+    </alumno>
+    <alumno>
+        <numeroExpedente>1444</numeroExpedente>
+        <nnome>Brais Seoane</nnome>
+        <dataNacemento>10/04/1985</dataNacemento>
+        <telefono>688668866</telefono>
+        <varon/>
+    </alumno>
+</alumnos>-->
+
+<!-- Apartado d) 
+<DOCTYPE datasImportantes[ 
+    <!ELEMENT datasImportantes (cumpleanos*,aniversarioBoda?)>
+    <!ELEMENT cumpleanos (persoa, data)>
+    <!ELEMENT aniversarioBoda (data)>
+    <!ELEMENT persoa (#PCDATA)>
+    <!ELEMENT data (mes,dia)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT dia EMPTY>
+]>
+
+<datasImportantes>
+    <cumpleanos>
+        <persoa>Marta</persoa>
+        <data>
+            <mes>Xullo</mes>
+            <dia>14</dia>
+        </data>
+    </cumpleanos>
+    <cumpleanos>
+        <persoa>Marga</persoa>
+        <data>
+            <mes>Maio</mes>
+            <dia>10</dia>
+        </data>
+    </cumpleanos>
+    <cumpleanos>
+        <persoa>Xurxo</persoa>
+        <data>
+            <mes>Xaneiro</mes>
+            <dia>9</dia>
+        </data>
+    </cumpleanos>
+    <aniversarioBoda>
+        <data>
+            <mes>Setembro</mes>
+            <dia>14</dia>
+        </data>
+    </aniversarioBoda>
+</datasImportantes>-->
+
+<!-- Apartado e) -->
+<DOCTYPE nota[ 
+    <!ELEMENT nota (#PCDATA | acronimo | ingles)*>
+    <!ELEMENT acronimo (#PCDATA)>
+    <!ELEMENT ingles (#PCDATA)>
+]>
+
+<nota>A linguaxe<acronimo>XML</acronimo>ou<ingles>Extensible Markup Language</ingles>
+    é un subconxunto de<acronimo>SGML</acronimo>que ten como propósito principal
+    facilitar a transferencia de datos a través de diferentes plataformas, especialmente
+    as conectadas a Internet
+</nota>
