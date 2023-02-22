@@ -1,0 +1,6 @@
+<!ELEMENT mensaxe (de, para+, asunto, cuerpo?, adjunto*)>
+    <!ELEMENT de (#PCDATA)>
+    <!ELEMENT para (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+    <!ELEMENT cuerpo (#PCDATA)>
+    <!ELEMENT adjunto (#PCDATA)>

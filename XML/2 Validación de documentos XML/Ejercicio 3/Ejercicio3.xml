@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <!-- Apartado A 
 <!DOCTYPE mensaxe [
 <!ELEMENT mensaxe (de,para+,asunto,corpo?,adxunto*)>

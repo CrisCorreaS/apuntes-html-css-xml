@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE mensaxe [
+<!ELEMENT mensaxe (de, para+, asunto, cuerpo?, adjunto*)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT asunto (#PCDATA)>
+<!ELEMENT cuerpo (#PCDATA)>
+<!ELEMENT adjunto (#PCDATA)>
+]>
+
+<mensaxe>
+    <de>maria@gmail.com</de>
+    <para>ignacio@gmail.com</para>
+    <para>pedro@edu.xunta.es</para>
+    <asunto>Envíoche os arquivos</asunto>
+    <adjunto>D:\fotos\dePesca.jpg</adjunto>
+    <adjunto>D:\docs\carta.odt</adjunto>
+    <adjunto>D:\fotos\naCea.jpg</adjunto>
+</mensaxe>
