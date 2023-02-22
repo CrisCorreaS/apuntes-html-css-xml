@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE departamento [
+  <!ELEMENT departamento EMPTY>
+  <!ATTLIST departamento 
+        nome NMTOKENS #REQUIRED
+        xefe NMTOKEN #IMPLIED>
+]>
+
+<departamento nome="Electricidade e electrónica" />
