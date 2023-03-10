@@ -1,0 +1,15 @@
+<!ELEMENT edificio (enderezo, dataConstrucion, material?)>
+    <!ELEMENT enderezo (rua, numero, poboacion, provincia, codigoPostal)>
+    <!ELEMENT rua (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT poboacion (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT codigoPostal (#PCDATA)>
+    <!ELEMENT dataConstrucion EMPTY>
+    <!ATTLIST dataConstrucion
+          mes CDATA #REQUIRED
+          ano CDATA #REQUIRED>
+    <!ELEMENT material (#PCDATA)>
+    <!ATTLIST edificio
+          valor CDATA #IMPLIED
+          alquiler (verdadeiro|falso) #REQUIRED>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comunidades SYSTEM "comunidades.dtd">
+<comunidades>
+    <comunidad codigo="GA" nombre="Galicia">
+        <presidente>Alberto Núñez Feijóo</presidente>
+        <diaComunidad dia="25" mes="07" />
+        <provincias>
+            <provincia codigo="C" nombre="A Coruña" costa="si">
+                <superficie unidad="%km2;">7092</superficie>
+                <capital>A Coruña</capital>
+                <localidades>
+                    <localidad nombre="A Coruña" habitantes="246056">
+                        <festivoLocal1 dia="17" mes="05" motivo="Día das Letras Galegas" />
+                        <festivoLocal2 dia="16" mes="08" />
+                    </localidad>
+                    <localidad nombre="Ferrol" habitantes="67152">
+                        <festivoLocal1 dia="24" mes="06" />
+                        <festivoLocal2 dia="08" mes="09" />
+                    </localidad>
+                </localidades>
+            </provincia>
+            <provincia codigo="LU" nombre="Lugo" costa="no">
+                <superficie unidad="%km2;">9856</superficie>
+                <capital>Lugo</capital>
+                <localidades>
+                    <localidad nombre="Lugo" habitantes="97516">
+                        <festivoLocal1 dia="17" mes="05" motivo="Día das Letras Galegas" />
+                        <festivoLocal2 dia="08" mes="09" />
+                    </localidad>
+                    <localidad nombre="Vilalba" habitantes="15159">
+                        <festivoLocal1 dia="08" mes="09" />
+                        <festivoLocal2 dia="14" mes="09" />
+                    </localidad>
+                </localidades>
+            </provincia>
+            <provincia codigo="O" nombre="Ourense" costa="no">
+                <superficie unidad="%km2;">7273</superficie>
+                <capital>Ourense</capital>
+                <localidades>
+                    <localidad nombre="Ourense" habitantes="105919">
+                        <festivoLocal1 dia="17" mes="05" motivo="Día das Letras Galegas" />
+                        <festivoLocal2 dia="01" mes="10" />
+                    </localidad>
+                    <localidad nombre="Verín" habitantes="14031">
+                        <festivoLocal1 dia="05" mes="08" />
+                        <festivoLocal2 dia="07" mes="10" />
+                    </localidad>
+                </localidades>
+            </provincia>
+        </provincias>
+    </comunidad>
+</comunidades>

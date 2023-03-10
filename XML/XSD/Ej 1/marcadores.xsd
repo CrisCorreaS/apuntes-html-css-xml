@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Esta línea define la versión y la codificación del documento XML (UTF-8) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Aquí se define el elemento raíz del esquema y se establece el espacio de nombres XML (xmlns) "http://www.w3.org/2001/XMLSchema" y se le asigna un prefijo "xs" para identificarlo en el código -->
+    <xs:element name="marcadores"><!-- Este elemento define el nombre del elemento raíz del documento XML que se validará -->
+        <xs:complexType><!-- Este define el tipo de elemento raíz como complex-->
+            <xs:sequence> <!-- Este define una secuencia de elementos que se espera que se encuentren en el documento XML. -->
+                <xs:element name="pagina" maxOccurs="unbounded"><!-- Este define un elemento pagina que puede ocurrir varias veces (maxOccurs="unbounded"). -->
+                    <xs:complexType><!-- Este define el tipo de elemento pagina -->
+                        <xs:sequence><!-- Este elemento define una secuencia de elementos que se espera que se encuentren dentro del elemento pagina-->
+                            <xs:element name="nombre" type="xs:string" /><!-- Este define el elemento "nombre" dentro del elemento pagina y su tipo de datos, que en este caso es un string -->
+                            <xs:element name="descripcion" type="xs:string" /><!-- Este define el elemento "descripcion" dentro del elemento pagina y su tipo de datos, que en este caso es una string -->
+                            <xs:element name="url" type="xs:string" /><!-- Este define el elemento "url" dentro del elemento "pagina" y su tipo de datos, que en este caso es una string -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

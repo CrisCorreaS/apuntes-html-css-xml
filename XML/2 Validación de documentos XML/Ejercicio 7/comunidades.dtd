@@ -1,0 +1,36 @@
+<!ELEMENT comunidades (comunidad+)>
+    <!ELEMENT comunidad (presidente, diaComunidad, provincias)>
+    <!ATTLIST comunidad
+        codigo CDATA #REQUIRED
+        nombre CDATA #REQUIRED>
+    <!ELEMENT presidente (#PCDATA)>
+    <!ELEMENT diaComunidad EMPTY>
+    <!ATTLIST diaComunidad
+        dia CDATA #REQUIRED
+        mes CDATA #REQUIRED>
+    <!ELEMENT provincias (provincia+)>
+
+    <!ELEMENT provincia (superficie, capital, localidades)>
+    <!ATTLIST provincia
+        codigo CDATA #REQUIRED
+        nombre CDATA #REQUIRED
+        costa (si | no) "si">
+    <!ELEMENT superficie (#PCDATA)>
+    <!ATTLIST superficie unidad CDATA #REQUIRED>
+    <!ELEMENT capital (#PCDATA)>
+    <!ELEMENT localidades (localidad+)>
+
+    <!ELEMENT localidad (festivoLocal1, festivoLocal2?)>
+    <!ATTLIST localidad
+        nombre CDATA #REQUIRED
+        habitantes CDATA #REQUIRED>
+    <!ELEMENT festivoLocal1 EMPTY>
+    <!ATTLIST festivoLocal1
+        dia CDATA #REQUIRED
+        mes CDATA #REQUIRED
+        motivo CDATA #IMPLIED>
+    <!ELEMENT festivoLocal2 EMPTY>
+    <!ATTLIST festivoLocal2
+        dia CDATA #REQUIRED
+        mes CDATA #REQUIRED
+        motivo CDATA #IMPLIED>

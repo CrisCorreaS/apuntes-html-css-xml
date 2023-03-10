@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE edificio SYSTEM "Tarefa5a.dtd">
+<edificio alquiler="verdadeiro">
+    <enderezo>
+        <rua>Ponzano</rua>
+        <numero>66</numero>
+        <poboacion>Madrid</poboacion>
+        <provincia>Madrid</provincia>
+        <codigoPostal>28003</codigoPostal>
+    </enderezo>
+    <dataConstrucion mes="Febreiro" ano="1989"/>
+    <material>Formigón</material>
+</edificio>
