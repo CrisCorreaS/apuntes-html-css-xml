@@ -1,4 +1,6 @@
 # Repositorio de Ejercicios de HTML, CSS y XML
+![Badge en Desarollo](https://img.shields.io/badge/STATUS-FINALIZADO-violet) <br/>
+<br/>
 Este repositorio contiene una colección de ejercicios de HTML, CSS y XML que realicé como parte de la asignatura de "Lenguajes de Marcas y Sistemas de Gestión de Información".
 
 ## Contenido
