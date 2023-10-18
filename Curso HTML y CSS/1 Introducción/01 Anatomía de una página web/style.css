@@ -1,0 +1,36 @@
+/* Cristina Correa */
+
+#mainContainer {
+    width: 600px;
+}
+
+#header {
+    background-color: #0026FF;
+    font-size: x-large;
+    color: white;
+}
+
+#header h1{
+    margin: 0px;
+    padding: 10px;
+}
+
+#sideBar{
+    background-color: #FF6A00;
+    width: 150px;
+    height: 300px;
+    float: left;
+}
+
+#mainContent{
+    background-color: #DDEEDD;
+    width: 450px;
+    height: 300px;
+    float: left;
+}
+
+#footer {
+    background-color: #FFD800;
+    clear: both;
+    text-align: center;
+}
