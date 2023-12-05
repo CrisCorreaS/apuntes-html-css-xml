@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Estas etiquetas "meta" ayudan con el SEO de la página un poco -->
+    <meta name="keywords" content="html,curso,seo" />
+    <meta name="description" content="Este repositorio de GitHub tiene todo lo necesario para aprender HTML y CSS. Esta etiqueta puede tener aproximadamente entre 70 y 130 caracteres" />
+    <meta name="author" content="Cristina Correa" />
+    <meta name="copyright" content="Mi Empresa S.A." /> <!-- Esta etiqueta es para poner el nombre de la empresa registrada -->
+    <meta name="robots" content="index" /><!-- Esta etiqueta dice si la página tiene que ser indexada o no dentro de las páginas de un navegador. Tiene los valores de "content" = "index" o "noindex" -->
+    <title>Forms</title>
+  </head>
+  <body>
+    <!-- 
+        En los forms hay tres tipos de formas de separar la información:
+          - inputs: entrada de datos
+          - procesamiento: procesa los datos
+          - outputs: la salida de datos, devuelve los datos procesados o el resultado del procesamiento
+    -->
+    <form method="get">
+      <input type="text" />
+      <input type="password" />
+      <input type="number" />
+      <input type="email" />
+      <input type="color" />
+      <input type="range" min="1" max="5" />
+      <input type="date" />
+      <input type="time" />
+      <input
+        type="button"
+        value="Botón"
+      /><!-- El input de tipo botón siempre tiene que llevar el atributo "value" -->
+      <textarea readonly>Esto es un textarea</textarea>
+      <input type="submit" />
+    </form>
+    <form method="post">
+      <input type="text" required />
+      <input type="password" required />
+      <input type="number" required />
+      <input type="email" required />
+      <input type="submit" required />
+    </form>
+  </body>
+</html>
