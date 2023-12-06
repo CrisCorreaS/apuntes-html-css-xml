@@ -12,6 +12,10 @@
         <!-- Enlaces internos -->
         <a href="#experiencia">Experiencia</a><!-- la etiqueta a así, es un anchor y funciona como una etiqueta de navegación que nos permite tanto navegar hacia fuera como hacia dentro de la página -->
         <a href="#proyectos">Proyectos</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#formulario">Formulario de contacto</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#modal">Dialog</a>
         <!-- Enlaces externos -->
         <a 
           href="https://www.google.com"
@@ -22,6 +26,9 @@
     </header>
     <main><!-- main es una etiqueta única (solo hay una etiqueta main en un html, un poco como h1), que marca y engloba el contenido principal de una página. El main es el contenido dinámico que cambia con la url y que es único para cada página. El nav y el footer de la página no deberían de estar en el main -->
       <h2 id="experiencia">Experiencia</h2>
+      <a download href="persona-random.png"> <!-- Si ponemos en "href" como el "src" de la foto, al hacer click nos envia directamente a la foto (Es como un abrir imagen en otra pestaña), pero si le ponemos el atributo booleano "download", al hacer click en la imagen abre la pestalla y la descarga. Por temas de seguridad, el "download" solo sirve para fotografías del propio dominio, no vale que pongas una referencia a fotografía random de internet -->
+        <img src="persona-random.png" alt="Fotografía de una persona random" title="Persona X">
+      </a>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
         eius optio aliquid nesciunt voluptates numquam aspernatur unde magnam.
@@ -38,10 +45,10 @@
         <header>
           <h3>Mis tecnologías favoritas</h3>
         </header>
-        <ol>
+        <ol type="1" reversed start="10">
           <li>Tecnología 1</li>
           <li>Tecnología 2</li>
-          <li>Tecnología 3</li>
+          <li value="5">Tecnología 3</li>
           <li>Tecnología 4</li>
           <li>Tecnología 5</li>
         </ol>
@@ -83,6 +90,148 @@
           </p>
           <footer><small>Tecnologías usadas: 3</small></footer>
         </article>
+      </section>
+      <section>
+        <h2 id="faq">Preguntas Frecuentes</h2>
+        <details> <!-- details nos permite tener una única caja desplegable. En un details no puede haber más de un summary, porque solo interpreta el primero -->
+            <summary>¿Qué estudios tienes?</summary> <!-- summary es el "título" de la caja desplegable y el párrafo es lo que se despliega al hacer click una vez, y lo que se recoje si se hace click una segunda vez -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis facilis ullam quos nobis libero eum</p>
+        </details>
+        <details open><!-- si details tiene el atributo booleano "open", por defecto, la caja aparece abierta, pero se puede cerrar manualmente -->
+            <summary>¿Cuáles son tus hobbies?</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis facilis ullam quos nobis libero eum</p>
+        </details>
+        <details>
+            <summary>¿Cuál es tu lenguaje de programación favorito?</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis facilis ullam quos nobis libero eum</p>
+        </details>
+      </section>
+      <section>
+        <h2 id="formulario">Formulario de Contacto</h2>
+        <form action="/" method="post">
+            <fieldset> <!-- fieldset es una agrupación de los diferentes inputs que vamos a tener según un criterio -->
+                <legend>Información personal</legend> <!-- legend indica el criterio de agrupación de los inputs del fieldset -->
+                <!-- Hay dos formas de usar un label y un input bien -> Al hacer click sobre el texto del label, te tiene que llevar directamente al input, si no, está mal -->
+                <!-- Forma 1: con el label con el atributo "for" igual al valor del "id" del input -->
+                <div role="doc-part"> <!-- Ponemos los divs en el formulario para que se haga un salto de página, pero lo correcto sería estilarlos con un display: block; -->
+                    <label for="name">Nombre:</label> 
+                    <input type="text" id="name" name="name" placeholder="Cristina" required>
+                </div>
+                <!-- Forma 2: con la label englobando el input -->
+                <div role="doc-part">
+                    <label>
+                        Apellidos:
+                        <input type="text" name="surname" placeholder="Correa Segade" required>
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Información Adicional</legend>
+                <div role="doc-part">
+                    <label>
+                        Email:
+                        <input type="email" name="mail" placeholder="cristina@gmail.com">
+                    </label>
+                </div>
+                <div role="doc-part">
+                    <label>
+                        Teléfono:
+                        <input type="tel" name="phone" placeholder="666666666" pattern="[0-9]{9}">
+                    </label>
+                </div>
+                <div role="doc-part">
+                    <label>
+                        Fecha de inscripción:
+                        <input type="datetime-local" name="dateInscr">
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Otros</legend>
+                <div role="doc-part">
+                    <label for="why">¿Por qué quieres contactar?</label>
+                    <select name="why" id="why">
+                        <option value="1">Trabajo</option>
+                        <option value="2">Dudas</option>
+                        <option value="3">Más Info</option>
+                    </select>
+                </div>
+                <div role="doc-part">
+                    <label for="terms">¿Aceptas los términos?</label>
+                    <input type="checkbox" name="terms" id="terms" required>
+                </div>
+                <div role="doc-part">
+                    <datalist id="languages"> <!-- datalist auna varias opciones que luego sirven para ayudar al autocompletado (de forma nativa) de diferentes valores en un input si le asignamos el "id" del datalist al atributo "list" de un input. El listado de datalist no se puede estilar, y es mejor solo utilizar esta etiqueta para cosas muy simples -->
+                        <option value="Java"></option>
+                        <option value="JavaScript"></option>
+                        <option value="Python"></option>
+                        <option value="C#"></option>
+                    </datalist>
+                    <label for="languages">¿Con qué lenguaje de programación necesitas ayuda?
+                        <input list="languages" name="languages">
+                    </label>
+                </div>
+            </fieldset>
+            <!-- El submit se puede hacer de tres formas -->
+            <input type="submit" value="Enviar Contacto (input)">
+            <button type="submit">Enviar Contacto (button con el "type" especificado)</button> <!-- Mejor que la anterior porque es más acorde a la semántica -->
+            <button>Enviar Contacto (button sin el "type")</button> <!-- A día de hoy, todos los buttons dentro de un formulario, son de type="submit" por defecto, a no ser que se ponga explícitamente type="button" -->
+        </form>
+      </section>
+      <section>
+        <h2 id="multimedia">Nuevos desafíos multimedia</h2>
+        <article>
+            <header>
+                <h4>Probando la etiqueta video</h4>
+            </header>
+            <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video> <!-- con "controls", nos aparecen los controles por defecto del vídeo -->
+            <video autoplay muted src="https://www.w3schools.com/html/mov_bbb.mp4"></video><!-- con "autoplay" únicamente, no va a funcionar porque es un atributo que solo funciona si ya hemos interactuado con la página anteriormente, pero si le ponemos el atributo "muted", sí que se ejecutaría automáticamente -->
+            <video autoplay muted loop src="https://www.w3schools.com/html/mov_bbb.mp4"></video><!-- con "loop", se va a recargar automáticamente una vez que se termine el vídeo -->
+            <video controls poster="persona-random.png" src="https://www.w3schools.com/html/mov_bbb.mp4"></video><!-- con "poster", la carátula o portada del vídeo es la imagen que hemos decidido poner -->
+        </article>
+        <article>
+            <header>
+                <h4>Probando la etiqueta audio</h4>
+            </header>
+            <audio controls src="https://www.w3schools.com/html/mov_bbb.mp4"></audio> <!-- con "controls", nos aparecen los controles por defecto del audio -->
+            <audio autoplay src="https://www.w3schools.com/html/mov_bbb.mp4"></audio><!-- con "autoplay", no va a funcionar a la primera porque es un atributo que solo funciona si ya hemos interactuado con la página anteriormente, podemos ponerle el atributo "muted" pero no tendría mucho sentido -->
+            <audio autoplay loop src="https://www.w3schools.com/html/mov_bbb.mp4"></audio><!-- con "loop", se va a recargar automáticamente una vez que se termine el audio -->
+        </article>
+        <article>
+            <header>
+                <h4>Jugando con las fotos</h4>
+            </header>
+            <img src="persona-random.png" alt="Persona Random" loading="lazy"> <!-- con "loading" elegimos cómo queremos que se cargue la imagen, en este caso elegimos "lazy" para que así se cargue más lenta si no se está visualizando (si no lo ponemos, se cargan todas las imágenes de la página al mismo tiempo y luego tarda mucho más en cargar la propia página). Al poner loading="lazy", carga la imagen solo cuando realmente la necesita, y el cálculo de la distancia lo hace dependiendo de tu conexión (cuanto mejor sea tu conexión, hay más posibilidades de que intente cargar la imagen aunque no la veas, para que ya la tengas cargada cuando bajes el scroll. Esto lo haría una vez cargue todos los recursos, carga la imagen con loading="lazy") -->
+            <img src="persona-random.png" alt="Persona Random" loading="lazy"> <!-- el loading="lazy" deberíamos de evitarlo en imágenes que están muy arriba porque, esas son las imágenes que es importante que se carguen cuanto antes -->
+        </article>
+        <article>
+            <header>
+                <h4>Probando la etiqueta iframe</h4>
+            </header>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EacciRr04cE?si=6sltssxs0a7yS3ys"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+                <!-- iframe es una etiqueta especial que permite incrustar otra página web -->
+        </article>
+      </section>
+      <section>
+        <h2 id="modal">Prueba rápida con la etiqueta dialog</h2>
+        <dialog id="dialog"> <!-- Es como una mini pestaña emergente superpuesta a la página, tipo un alert de js. Puede llevar el atributo "open" para que esté abierta por defecto o podemos hacer lo que verás a continuación con un poco de js -->
+            <h1>Se puede abrir una modal desde HTML</h1>
+            <p>Es totalmente nativo</p>
+            <button id="hide">Cerrar modal</button>
+        </dialog>
+        <button id="show">Ver más información sobre las modales</button>
+        <script>
+            window.show.addEventListener("click", ()=>{
+                window.dialog.showModal();
+            })
+            
+            window.hide.addEventListener("click", ()=>{
+                window.dialog.close();
+            })
+        </script>
       </section>
     </main>
     <footer>
