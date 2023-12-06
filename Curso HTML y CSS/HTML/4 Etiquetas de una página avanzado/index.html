@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas de una página web</title>
+  </head>
+  <body>
+    <header><!-- Los headers se pueden repetir y poner dentro de varias otras etiquetas como un aside, article... -->
+      <h1>Ejemplo de una página web porfolio</h1>
+      <nav> <!-- nav hace referencia a la navegación de una página. Es importante pensar en que el nav se va a mantener igual para todas las páginas, como vimos anteriormente en el punto 3 Etiquetas de una página introducción -->
+        <!-- Enlaces internos -->
+        <a href="#experiencia">Experiencia</a><!-- la etiqueta a así, es un anchor y funciona como una etiqueta de navegación que nos permite tanto navegar hacia fuera como hacia dentro de la página -->
+        <a href="#proyectos">Proyectos</a>
+        <!-- Enlaces externos -->
+        <a 
+          href="https://www.google.com"
+          target="_blank"
+          rel="noreferrer"
+        >Google</a><!-- rel="noreferrer" -> es por un tema de seguridad, ya que al redirigirnos a una nueva página, podemos enviar un montón de datos del cliente (ej: useragent), por lo que es una buena práctica -->
+      </nav>
+    </header>
+    <main><!-- main es una etiqueta única (solo hay una etiqueta main en un html, un poco como h1), que marca y engloba el contenido principal de una página. El main es el contenido dinámico que cambia con la url y que es único para cada página. El nav y el footer de la página no deberían de estar en el main -->
+      <h2 id="experiencia">Experiencia</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+        eius optio aliquid nesciunt voluptates numquam aspernatur unde magnam.
+        Quas sit eius quos error aut voluptatem quod eveniet. Asperiores,
+        molestiae culpa.
+      </p>
+      <ul>
+        <li>Trabajo 1</li>
+        <li>Trabajo 2</li>
+        <li>Trabajo 3</li>
+      </ul>
+      <h2 id="proyectos">Proyectos realizados</h2>
+      <aside><!-- aside hace referencia a algo que está totalmente separado del contenido principal, pero sirve como un contenido de contexto o un anexo -> Está dentro de proyectos realizados, pero las tecnologías favoritas no son parte de los proyectos, sino que acompañan a esta sección y le dan peso -->
+        <header>
+          <h3>Mis tecnologías favoritas</h3>
+        </header>
+        <ol>
+          <li>Tecnología 1</li>
+          <li>Tecnología 2</li>
+          <li>Tecnología 3</li>
+          <li>Tecnología 4</li>
+          <li>Tecnología 5</li>
+        </ol>
+      </aside>
+      <section><!-- section marca secciones genéricas independientes de un documento (puede habler una etiqueta section dentro de otra).Es una sección que engloba el contenido puro de Proyectos realizados -->
+        <article><!-- article es un elemento con información propia contenida que no depende de ningún otro elemento, por lo que si extraemos un article, sigue teniendo sentido en cualquier otro sitio. Hay tres etiquetas article en la section porque son bloques independientes de elementos. Un article puede tener un header, un footer, un encabezado -->
+          <header>
+            <h4>Nombre del proyecto 1</h4>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            atque architecto tempore possimus error qui laboriosam consequuntur,
+            libero, quo unde exercitationem odit repellendus molestias amet,
+            corrupti quibusdam repellat! Fugiat, totam?
+          </p>
+          <footer><small>Tecnologías usadas: 5</small></footer><!-- small no solo es para que se vea más pequeño, sino que también es como un contenido anexo que sirve para dar información que no es tan importante como el resto. Se puede ver como una aclaración cortita. Se suele usar para temas de Copyright, dar una explicación muy secundaria o que no tiene tanta importancia... -->
+        </article>
+        <article>
+          <header>
+            <h4>Nombre del proyecto 2</h4>
+          </header>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur earum deserunt neque quia praesentium amet alias harum,
+            ut asperiores! Alias vitae quod tempore sed aliquam, adipisci
+            eligendi voluptatibus unde officia!
+          </p>
+          <footer><small>Tecnologías usadas: 7</small></footer>
+        </article>
+        <article>
+          <header>
+            <h4>Nombre del proyecto 3</h4>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            similique eum fugit magni molestiae ipsum labore officia laborum
+            architecto a. Consequatur neque, atque perferendis dolorem nulla
+            laborum commodi natus consectetur.
+          </p>
+          <footer><small>Tecnologías usadas: 3</small></footer>
+        </article>
+      </section>
+    </main>
+    <footer>
+        <small>Copyright © 2023 - Un portfolio de prueba</small>
+        <!-- Enlaces especiales que se rigen por otro protocolo diferente al de HTTP -->
+        <a href="mailto:correo@dominio.loquesea">Enviar un mail a un correo por defecto</a>
+        <a href="tel:+34666666666">Llamar a un número por defecto (español)</a>
+        <a href="skype:cristinacorrea?call">Llamar a cristinacorrea por skype</a>
+        <a href="whatsapp://send?text=Hola Cristina">Enviar "Hola Cristina" por whatsapp</a>
+    </footer>
+  </body>
+</html>
