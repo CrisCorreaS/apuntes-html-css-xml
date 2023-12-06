@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia</title>
+    <link rel="icon" href="x.ico" />
+    <!-- El icono de arriba tiene que ser un .ico -->
+  </head>
+  <body>
+    <h1>Primera Imagen:</h1>
+    <p>Aquí va la <b>imagen</b></p>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+      alt="Imagen de unos dados"
+      title="Dados"
+    /> <!-- El atributo "alt" es vital para el SEO. "title" hace que al pasar por encima de la imagen, aparezca ese texto -->
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+      alt="Imagen de unos dados"
+      title="Dados"
+      hidden
+    />
+    <!-- El atributo "alt" es vital para el SEO. "title" hace que al pasar por encima de la imagen, aparezca ese texto -->
+    <br />
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+    <!-- Para que el vídeo se reproduzca y no quede como una imagen, hay que poner el atributo "controls" -->
+    <br />
+    <audio src="https://www.w3schools.com/html/mov_bbb.mp4" controls></audio>
+    <!-- Para que el audio se reproduzca y se vea, hay que poner el atributo "controls". Este es el audio de un vídeo -->
+  </body>
+</html>
+<!-- 
+  Las etiquetas pueden tener atributos:
+  <img
+    src="..."
+    alt="..."
+    title="..."
+    hidden
+  />
+  Esta etiqueta "img" tiene los atributos "src", "alt", "title" y "hidden"
+  - La mayoría de los atributos tienen que ser igualados a un valor x (normalmente siempre se ponen comillas, aunque solo son necesarias cuando es una cadena de texto)
+  - Hay algunos atributos como "hidden", que son atributos booleanos, así que si están presentes, son "true" y si no lo están, son "false"
+    - Da igual si poner hidden="true" o hidden="false", ya que el valor de hidden siempre será "true" si pones el atributo en la etiqueta (el true y el false únicamente dependen de si hidden está presente como atributo en la etiqueta o no)
+    -> <img src="..." alt="..." title="..." hidden /> -> "hidden" es "true"
+    -> <img src="..." alt="..." title="..." /> -> "hidden" es "false"
+ -->
