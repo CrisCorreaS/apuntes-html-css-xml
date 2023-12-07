@@ -4,29 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multimedia</title>
-    <link rel="icon" href="x.ico" /> <!-- El icono de arriba tiene que ser un .ico si no le ponemos el atributo type="png/jpg", si se lo ponemos sirve cualquier imagen png o jpg -->
+    <link rel="icon" href="x.ico" />
+    <!-- El icono de arriba tiene que ser un .ico si no le ponemos el atributo type="png/jpg", si se lo ponemos sirve cualquier imagen png o jpg -->
   </head>
   <body>
-    <h1>Primera Imagen:</h1>
+    <h1>Imagenes:</h1>
     <p>Aquí va la <b>imagen</b></p>
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
       alt="Imagen de unos dados"
       title="Dados"
-    /> <!-- El atributo "alt" es vital para el SEO. "title" hace que al pasar por encima de la imagen, aparezca ese texto -->
+    /><!-- El atributo "alt" es vital para el SEO. "title" hace que al pasar por encima de la imagen, aparezca ese texto -->
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
       alt="Imagen de unos dados"
       title="Dados"
       hidden
-    />
-    <!-- El atributo "alt" es vital para el SEO. "title" hace que al pasar por encima de la imagen, aparezca ese texto -->
+    /><!-- hidden es un atributo booleano que hace que la imagen se oculte. Si ponemos hidden significa que es true, y si no lo ponemos significa que es false -->
     <br />
-    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
-    <!-- Para que el vídeo se reproduzca y no quede como una imagen, hay que poner el atributo "controls" -->
+    <img
+      src="../4 Etiquetas de una página avanzado/persona-random.png"
+      alt="Persona Random"
+      loading="lazy"
+    /><!-- loading="lazy" lo explicamos en el punto 4 -->
     <br />
-    <audio src="https://www.w3schools.com/html/mov_bbb.mp4" controls></audio>
-    <!-- Para que el audio se reproduzca y se vea, hay que poner el atributo "controls". Este es el audio de un vídeo -->
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video><!-- Para que el vídeo se reproduzca y no quede como una imagen, hay que poner el atributo "controls" -->
+    <br />
+    <audio src="https://www.w3schools.com/html/mov_bbb.mp4" controls></audio><!-- Para que el audio se reproduzca y se vea, hay que poner el atributo "controls". Este es el audio de un vídeo -->
   </body>
 </html>
 <!-- 
