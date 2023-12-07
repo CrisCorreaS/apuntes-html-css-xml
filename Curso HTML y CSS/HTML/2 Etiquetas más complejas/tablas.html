@@ -6,27 +6,43 @@
     <title>Tablas</title>
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Ciudad</th>
-      </tr>
-      <tr>
-        <td>Sushma</td>
-        <td>Padín</td>
-        <td>Ferrol</td>
-      </tr>
-      <tr>
-        <td>José Manuel</td>
-        <td>Carrera</td>
-        <td>Ourense</td>
-      </tr>
-      <tr>
-        <td>Aldán</td>
-        <td>Creo</td>
-        <td>Santiago de Compostela</td>
-      </tr>
+    <table border="1"><!-- El atributo "border" no deberíamos de ponerlo, pero lo hacemos para que se vea más visual ya que aún no vamos a aplicar estilos con css -->
+      <thead> <!-- Sirve para indicar que es la cabecera de la tabla, pueden contener una etiqueta "tr" o varias -->
+        <tr>
+          <th>Personas</th>          
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Ciudad</th>
+          <th>Número</th>
+        </tr>
+      </thead>
+      <tbody><!-- Sirve para agrupar todas las filas (etiquetas tr) que pertenecen al body -->
+        <tr>
+          <td rowspan="3"></td><!-- rowspan une rows (filas), por lo que crea un elemento vertical con x celdas de la misma columna fusionadas -->
+          <td>Sushma</td>
+          <td>Padín</td>
+          <td>Ferrol</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>José Manuel</td>
+          <td>Carrera</td>
+          <td>Ourense</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Aldán</td>
+          <td>Creo</td>
+          <td>Santiago de Compostela</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+      <tfoot><!-- Es el footer de la tabla -->
+        <tr>
+          <td colspan="4">Número total de amigos en la tabla</td> <!-- colspan une cols (columnas), por lo que crea un elemento horizontal con x celdas de la misma fila fusionadas -->
+          <td>3 amigos</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
