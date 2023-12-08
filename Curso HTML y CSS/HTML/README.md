@@ -5,6 +5,8 @@
 - [Repositorio learning-area de mdn](https://github.com/mdn/learning-area)
 
 ## Apuntes o cursos gratis
+- [Página de MDN Web Docs sobre HTML](https://developer.mozilla.org/es/docs/Web/HTML) -> Página con un montón de recursos de HTML. Es muy buena y un sitio de referencia para mirar documentación sobre HTML, CSS, JS y mucho más.
+
 - [Página de Manz Dev para aprender HTML](https://lenguajehtml.com/) -> Página para aprender HTML, tener una cheat sheet de referencia, vídeos centrados en el tema e información adicional
 
 ## Páginas y herramientas para mejorar

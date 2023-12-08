@@ -16,32 +16,63 @@
       <input type="text" />
       <input type="password" />
       <input type="number" />
-      <input type="tel">
+      <input type="tel" />
       <input type="email" />
-      <input type="url">
+      <input type="url" />
       <input type="color" />
       <input type="range" min="1" max="5" />
       <input type="date" />
       <input type="time" />
       <input type="datetime-local" />
-      <input type="week">
-      <input type="month">
-      <input type="image">
-      <input type="file">
-      <input type="search">
-      <input type="radio">
-      <input type="hidden">
-      <input type="button" value="Botón" /><!-- El input de tipo botón siempre tiene que llevar el atributo "value" -->
+      <input type="week" />
+      <input type="month" />
+      <input type="image" />
+      <input type="file" />
+      <input type="search" />
+      <input type="radio" />
+      <input type="hidden" />
+      <input
+        type="button"
+        value="Botón"
+      /><!-- El input de tipo botón siempre tiene que llevar el atributo "value" -->
       <textarea readonly>Esto es un textarea</textarea>
-      <input type="reset">
+      <input type="reset" />
       <input type="submit" />
     </form>
+    <hr />
     <form method="post">
-      <input type="text" required />
-      <input type="password" required />
-      <input type="number" required />
-      <input type="email" required />
-      <input type="submit" required />
+      <label>Nombre: <input type="text" name="nombre" required /></label> <br />
+      <label>Contraseña: <input type="password" name="password" required /></label>
+      <br />
+      <label>Número empleado: <input type="number" name="number" required /></label>
+      <br />
+      <label>Mail: <input type="email" name="email" required /></label> <br />
+
+      <!-- Si ponemos el mismo name en dos inputs diferentes que sean booleanos (type="radio" o está checked o unchecked), si se marca uno, se desmarca el otro -->
+      <label for="acepto">Acepto</label>
+      <input type="radio" name="acepto-deniego" id="acepto" value="acepto" checked /> <!-- con el atributo "checked", se selecciona por defecto esta opción -->
+      <label
+        >Deniego<input type="radio" name="acepto-deniego" id="deniego" value="deniego"
+      /></label>
+      <br />
+
+      <!--  -->
+      
+      <br />
+      <input type="submit" value="Enviar Form" />
     </form>
   </body>
 </html>
+
+<!-- 
+  A la hora de hacer forms, hay que pensar que el servidor va a obtener los datos en forma de pares "clave: valor" en donde:
+  - El atributo "name" es el nombre
+  - El atributo "value" es el valor
+
+  -> El servidor obtiene "name: value"
+  <label>Nombre: <input type="text" name="nombre" required /></label> -> El servidor recibe "nombre: El nombre que introdujéramos"
+  <input type="radio" name="acepto-deniego" id="acepto" value="acepto" checked /> -> El servidor recibe "acepto-deniego: acepto"
+  
+  Es por eso que todos los inputs deben de tener el atributo "name"
+  Y todos los inputs donde haya que hacer click para hacer check o elegir una opción por defecto, hay que darles un "value"
+ -->
