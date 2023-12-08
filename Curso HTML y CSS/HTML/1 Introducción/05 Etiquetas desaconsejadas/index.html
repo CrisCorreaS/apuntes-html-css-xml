@@ -6,6 +6,180 @@
     <title>Document</title>
   </head>
   <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th rowspan="3">Etiqueta obsoleta</th>
+          <th rowspan="3">Descripción</th>
+          <th colspan="3">Alternativa</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Desaconsejada</th>
+          <th colspan="2">Aconsejada</th>
+        </tr>
+        <tr>
+          <th>Etiqueta</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;applet&gt;</td>
+          <td>Etiqueta para applets Java.</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>&lt;acronym&gt;</td>
+          <td>Indica un acrónimo.</td>
+          <td></td>
+          <td>&lt;abbr&gt;</td>
+          <td>&lt;p&gt;I do &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;&lt;/p&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;bgsound&gt;</td>
+          <td>Especifica un sonido de fondo.</td>
+          <td></td>
+          <td>&lt;audio&gt;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;dir&gt;</td>
+          <td>Indica una lista de archivos o carpetas.</td>
+          <td></td>
+          <td>&lt;ul&gt;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;frame&gt;</td>
+          <td>Define un marco específico.</td>
+          <td></td>
+          <td>&lt;iframe&gt;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;frameset&gt;</td>
+          <td>Define un conjunto de marcos.</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>&lt;noframes&gt;</td>
+          <td>Indica una alternativa si el navegador no soporta marcos.</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>&lt;hgroup&gt;</td>
+          <td>Agrupa encabezados.</td>
+          <td></td>
+          <td>&lt;header&gt;, &lt;div&gt;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;isindex&gt;</td>
+          <td>Campo para buscar en el documento.</td>
+          <td></td>
+          <td>&lt;input&gt;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;listing&gt;, &lt;xmp&gt;</td>
+          <td>Fragmentos de código fuente.</td>
+          <td></td>
+          <td>&lt;pre&gt;&lt;code&gt;</td>
+          <td>&lt;code&gt; #include main() { for(;;) { printf ("Hello World!\n"); } } &lt;/code&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;noembed&gt;</td>
+          <td>Alternativa (fallback) para contenidos.</td>
+          <td></td>
+          <td>&lt;object&gt;</td>
+          <td>&lt;object data="movie.swf" type="application/x-shockwave-flash"&gt;&lt;/object&gt;</td>
+        </tr>
+        <tr>
+          <td>&lt;strike&gt;</td>
+          <td>Muestra un texto tachado.</td>
+          <td>&lt;s&gt;</td>
+          <td>CSS: text-decoration</td>
+          <td>text-decoration: underline;</td>
+        </tr>
+        <tr>
+          <td>&lt;basefont&gt;</td>
+          <td>Define una tipografía por defecto.</td>
+          <td></td>
+          <td>CSS: font-family</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;big&gt;</td>
+          <td>Aumenta el tamaño del texto.</td>
+          <td></td>
+          <td>CSS: font-size</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;blink&gt;</td>
+          <td>Muestra el texto de forma parpadeante.</td>
+          <td></td>
+          <td>CSS: animation</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;center&gt;</td>
+          <td>Centra el texto.</td>
+          <td></td>
+          <td>CSS: text-align</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;font&gt;</td>
+          <td>Cambia la tipografía o sus características.</td>
+          <td></td>
+          <td>CSS: font-family</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;marquee&gt;</td>
+          <td>Muestra el texto moviéndose de un lado a otro.</td>
+          <td></td>
+          <td>CSS: animation</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;multicol&gt;</td>
+          <td>Columnas múltiples.</td>
+          <td></td>
+          <td>CSS: columnas</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;nobr&gt;</td>
+          <td>Evita que un texto haga un salto de línea.</td>
+          <td></td>
+          <td>CSS: white-space</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;spacer&gt;</td>
+          <td>Inserta un espacio horizontal.</td>
+          <td></td>
+          <td>&amp;nbsp;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;tt&gt;</td>
+          <td>Muestra el texto con una fuente monoespaciada.</td>
+          <td></td>
+          <td>CSS: font-family</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;menu&gt;</td>
+          <td>Crea menús de listados.</td>
+          <td></td>
+          <td>&lt;ul&gt;</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
     <!-- Cualquier etiqueta que está pensada para cambiar cómo se ve el texto pero no cómo describe el texto es desaconsejada, ya que HTML describe los elementos y CSS se encarga de cómo se ven estos elementos -->
     <b>Es desaconsejada</b>
     <i>Es desaconsejada</i>
