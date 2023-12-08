@@ -6,6 +6,11 @@
     <title>Primera página</title>
   </head>
   <body>
+    <div id="pagina">
+      <div class="anuncio primero">Aquí irá un anuncio</div>
+      <div id="articulo">Aquí irá el contenido de texto del artículo</div>
+      <div class="anuncio ultimo">Aquí irá un anuncio</div>
+    </div>
     <!-- Etiquetas que completan la línea (se ajustan al ancho de la caja que las contienen) -->
     <h1>Encabezado 1</h1>
     <h2>Encabezado 2</h2>
@@ -19,12 +24,14 @@
       blanditiis dignissimos dicta minima alias hic reiciendis, maiores suscipit
       tempora quia.
     </p>
+    <p>Fuí a ver una película de <span translate="no">StarWars</span>.</p>
     <!-- Etiquetas que se adaptan al contenido -->
     <b>Negrita</b>
     <i>Italica / Cursiva</i>
     <!-- <strike>Tachada</strike> -> Not Supported in HTML5. -->
     <small>Letra pequeñita</small>
     <p>Estoy estudiando <strong>HTML</strong></p>
+    <a href="cualquier ruta" target="_blank" download>Ruta random</a>
     <a href="https://www.google.com">Enlace ruta externa</a> <!-- Usamos una ruta externa con el https -->
     <a href="facebook.com">Enlace ruta interna</a> <!-- Usamos una ruta interna que nos redirige a un archivo, este, en este caso no existe -->
     <a href="prueba/pagina2.html">Enlace ruta interna funcional</a> <!-- Usamos una ruta interna que nos redirige a un archivo -->
@@ -32,6 +39,12 @@
   </body>
 </html>
 <!-- 
+Aclaración:
+-> En html, css y js no se usa camelCase, snake_case o PascalCase, se usa kebab-case (las palabras separadas mediante un guión)
+Ej: 
+  id="parrafo-documento1" -> está bien y es la forma que hay que utilizar
+  id="parrafoDocumento1"/id="parrafo_documento1"/id="ParrafoDocumento1" -> están mal. camelCase se usa en Java, así que ten cuidado de utilizar kebab-case en html, css o js
+
 Conceptos básicos: 
 1 - Elemento vs etiqueta
   <b>Negrita</b>
@@ -44,4 +57,56 @@ Conceptos básicos:
 2 - Elementos anidados
   <p>Estoy estudiando <strong>HTML</strong></p>
     - "<strong>HTML</strong>" -> es un elemento anidado dentro de otro 
+
+3 - Atributos
+  En algunas etiquetas HTML, existen algunos atributos específicos (que pueden ser opcionales u obligatorios) y en todas las etiquetas se pueden poner los atributos globales "id", "class" o "style" ("style" es mejor no utilizarlo ya que es buena práctica usar el css externo), entre otros
+  Nunca se debe repetir el mismo atributo en una misma etiqueta varias veces, ya que sobreescribiría al anterior.
+  El orden de los atributos no importa
+
+  3.1 Existen 3 tipos de atributos dependiendo de sus valores:
+    - Conjunto de valores: Son aquellos atributos en los que sólo se permiten unos valores concretos. Cualquier otro valor diferente, no será válido.
+    - Valores libres: Son los atributos en los que puedes especificar un valor libremente, como una dirección URL o un texto, y no existe una serie de valores específicos para escribir.
+    - Valores booleanos: Son los atributos que deben tener un valor verdadero (true) o un valor falso (false). En HTML5 un atributo sin valor (solo el atributo) significa verdadero y si se omite el atributo se considera falso.
+
+    Ej:<a href="cualquier ruta" target="_blank" download>Enlace random</a>
+      - "href" -> es un atributo de valores libres
+      - "target" -> es un atributo de conjunto de valores
+      - "download" -> es un atributo booleano
+  
+
+  3.2 Atributos globales de identificación -> "id" y "class":
+    - id -> es un identificador que tiene un valor único para cada elemento. Solo puede haber un id="valorX" en todo nuestro código
+    - class -> sirve para identificar elementos que se repiten y agruparlos. Establece una clase (género) a una etiqueta HTML y puede tener varios valores
+
+    Ej: 
+    <div id="pagina">
+      <div class="anuncio primero">Aquí irá un anuncio</div>
+      <div id="articulo">Aquí irá el contenido de texto del artículo</div>
+      <div class="anuncio ultimo">Aquí irá un anuncio</div>
+    </div>
+
+
+  3.3 Atributos globales de idioma -> "lang", "translate", "dir":
+    - lang -> indica el idioma del contenido de la etiqueta. Es obligatorio poner este atributo en la etiqueta "html" para establecer el idioma del documento (<html lang="en">)
+    - translate -> indica si el contenido de la etiqueta se debería traducir o no -> boolean que acepta valores "yes" o "no". Si no se indica el atributo translate en una etiqueta, se asume que tiene el valor yes por defecto. Ej: <p>Fuí a ver una película de <span translate="no">StarWars</span>.</p>
+    - dir -> establece la direccionalidad del texto (left to right o right to left) -> solo puede tener los valores "ltr" o "rtl". Si no se indica, por defecto su valor es "ltr"
+
+
+  3.4 Otros atributos globales -> "title", "data-*", "accesskey":
+    - title -> mensaje, usualmente descriptivo, mostrado en un tooltip (aviso emergente) al mover el ratón encima. Ej: Al ponerte encima de una foto de un pepino con un title="Pepino", aparecerá la palabra "Pepino" al lado del cursor
+    - data-* -> metadatos en la propia etiqueta. Se puede usar cualquier nombre con prefijo data-.
+    - accesskey -> combinación de teclas que puede pulsar el usuario para activar el elemento.
+  
+    3.4.1 Atributo "data-*":
+      En un documento HTML, la mayoría de los metadatos (información adicional) se incluyen en el interior de la etiqueta <head> del documento HTML. Sin embargo, también se pueden incluir metadatos en una etiqueta a través de un atributo que comienza con el prefijo data-.
+      De esta forma, podemos inventarnos cualquier atributo que contenga información, habitualmente orientada a utilizarse desde Javascript o CSS.
+
+      Ej:
+        <div id="social-networks">
+          <a href="https://twitter.com/" data-clientes="44000">Twitter</a>
+          <a href="https://youtube.com/" data-clientes="10000">Youtube</a>
+          <a href="https://twitch.tv/" data-clientes="13000">Twitch</a>
+        </div>
+      
+      En este ejemplo, guardamos en el atributo data-clientes el número de clientes que tiene el usuario en la red social mencionada. Posteriormente, podremos acceder a esa información desde CSS o desde Javascript y utilizarla.
  -->
