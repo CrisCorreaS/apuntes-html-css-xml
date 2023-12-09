@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas redes sociales</title>
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Título del post">
+    <meta property="og:url" content="https://pagina.com/posts/32/titulo-del-post">
+    <meta property="og:image" content="https://pagina.com/assets/post-32.jpg">
+    <meta property="og:description" content="Descripción del post de la página">
+
+    <!-- TWITTER (X) CARDS -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:creator" content="@UsuarioTwitter" />
+    <meta property="twitter:title" content="Título" />
+    <meta property="twitter:url" content="https://pagina.com/posts/32/titulo-del-post">
+    <meta property="twitter:image" content="https://pagina.com/assets/post-32.jpg" />
+    <meta property="twitter:description" content="Descripción" />
+  </head>
+  <body></body>
+</html>
+<!-- 
+    Al igual que vimos como establecer un título y descripción para un documento HTML, es posible definir una serie de etiquetas de metadatos orientadas a establecer información de previsualización para los usuarios que indiquen enlaces a nuestro sitio web desde herramientas o redes sociales que lo permitan, como por ejemplo, Twitter, Facebook, WhatsApp, Mastodon, etc...
+    Al margen de los datos que ya incorporemos en el documento HTML, también podemos indicar títulos, descripciones o imágenes de previsualización diferentes, de modo que incluso puedan estar orientadas a públicos determinados.
+
+    1 Mediante Open Graph
+      -> Meta (Facebook) utiliza Open Graph, un protocolo que permite dotar de metadatos orientados a redes sociales. Al compartir un enlace de una página en Facebook, WhatsApp, Instagram (o alguna herramienta o red que soporte este protocolo) de forma automática, analizarán el código HTML en busca de metadatos para utilizarlos.
+      -> En el caso de no encontrarlos, se podría crear sus propios metadatos en base a criterios internos (que podrían ser incorrectos) o simplemente no añade ninguna previsualización. Por ejemplo, Facebook o WhatsApp podrían analizar el enlace de una página y, como no existen metadatos, poner como imagen de presentación del enlace, una imagen que ha encontrado en la página, y no ser la imagen más apropiada para representarla.
+      -> Utilizando Open Graph podemos personalizar los datos que queremos que se ofrezcan cuando un usuario comparta el enlace en Facebook o lo envíe por un mensaje privado. Un ejemplo básico para páginas genéricas (con título, imagen, descripción y tipo de página) utilizando Open Graph podría ser el de esta página.
+
+      -> Recuerda que la URL de la imagen de previsualización debe ser una ruta absoluta. Las URL relativas no serán procesadas correctamente.
+
+      -> Una vez hecho, es altamente recomendable introducir la URL de nuestra página en el Open Graph Debugger, una herramienta de validación de Open Graph que nos permite revisar si el código Open Graph que hemos escrito es correcto y no hay ningún error en la utilización del protocolo.
+
+
+    2 Mediante Twitter (X) Cards
+      -> Por su parte, Twitter incorpora un sistema similar denominado Twitter Cards. Twitter Cards permite integrar metadatos para su uso en la red social de Twitter (o cualquiera que la soporte) y enriquecer la información de tweets donde se mencionan o enlazan páginas de nuestro sitio web.
+      -> Datos como el formato y tipo de la información mostrada, el nombre del autor de la página del enlace, el título, descripción e imagen de presentación son perfectamente personalizables desde Twitter Cards.
+      
+      -> En el caso de Twitter, se suele recomendar utilizar una imagen con un ratio de aspecto de 2:1 donde el tamaño mínimo sería 300x157 y el tamaño máximo 4096x4096 (5MB como máximo). En cuanto a formatos, se recomienda JPG, PNG, WEBP o GIF. En el caso de usar GIF animados se utilizará solo el primer frame y los SVG no están soportados.
+      
+      -> De la misma forma, un buen consejo sería revisar la web Twitter Cards Validator, donde podemos encontrar una herramienta de validación para revisar si nuestro código de Twitter Cards es correcto o existen errores.
+ -->
