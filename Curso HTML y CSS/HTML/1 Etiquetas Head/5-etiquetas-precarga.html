@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas de precarga</title>
+    <!-- POR DOMINIO -->
+    <link rel="dns-prefetch" href="https://fonts.google.com/">
+    <link rel="preconnect" href="https://cdnjs.com/">
+
+    <!-- POR URL -->
+    <link rel="prerender" href="https://ejemplo/parte-importante">
+
+    <!-- POR RECURSO -->
+    <link rel="prefetch" href="https://ejemplo/additional.css" as="styles">
+    <link rel="preload" href="https://ejemplo/fonts/montserrat.woff2" as="font">
+    <link rel="modulepreload" href="https://ejemplo/modules/module.js">
+
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo rel</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>dns-prefetch</td>
+          <td>Indica un nombre de dominio que debería resolverse lo antes posible.</td>
+        </tr>
+        <tr>
+          <td>preconnect</td>
+          <td>Indica una URL a la que debería preconectarse (DNS, handshake, TLS...) lo antes posible.</td>
+        </tr>
+        <tr>
+          <td>prefetch</td>
+          <td>Indica una URL que se necesitará en el futuro y debería prepararse.</td>
+        </tr>
+        <tr>
+          <td>prerender</td>
+          <td>Indica una URL que debería renderizarse porque es muy probable que el usuario acceda.</td>
+        </tr>
+        <tr>
+          <td>modulepreload</td>
+          <td>Indica una URL con un módulo Javascript que debe precargar lo antes posible.</td>
+        </tr>
+        <tr>
+          <td>preload</td>
+          <td>Indica una URL que debe precargarse inmediatamente para su utilización posterior.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo as</th>
+          <th>Descripción</th>
+          <th>Formatos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>document</td>
+          <td>Documento HTML o enlaces utilizados en elementos &lt;iframe&gt;.</td>
+          <td>.html</td>
+        </tr>
+        <tr>
+          <td>script</td>
+          <td>Documento Javascript.</td>
+          <td>.js</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>Archivo de audio que se puede utilizar en un elemento &lt;audio&gt;.</td>
+          <td>.mp3, .ogg, .opus, ...</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>Archivo de video que se puede utilizar en un elemento &lt;video&gt;.</td>
+          <td>.mp4, .webm, ...</td>
+        </tr>
+        <tr>
+          <td>image</td>
+          <td>Imagen o documento gráfico que es posible utilizar en &lt;img&gt; o &lt;picture&gt;.</td>
+          <td>.jpg, .png, .webp, ...</td>
+        </tr>
+        <tr>
+          <td>font</td>
+          <td>Tipografía cargada mediante la regla @font-face de CSS.</td>
+          <td>.woff2, .woff, .ttf</td>
+        </tr>
+        <tr>
+          <td>style</td>
+          <td>Documento de estilos CSS.</td>
+          <td>.css</td>
+        </tr>
+        <tr>
+          <td>track</td>
+          <td>Archivo de subtítulos utilizado en elementos &lt;track&gt;.
+          </td>
+          <td>.vtt</td>
+        </tr>
+        <tr>
+          <td>fetch</td>
+          <td colspan="2">Enlace al que se hace una petición XHR o fetch. Necesita el atributo crossorigin.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+    -> Las etiquetas HTML de precarga (resource hints) son una serie de etiquetas <link> que permiten dar al navegador algo de información adicional para saber a que recursos debe darles mayor prioridad, cargar de forma anticipada, posponer o incluso prerenderizar.
+
+    -> Por norma general, el navegador establece una prioridad concreta a cada recurso de una web, ya sea al propio fichero .html inicial, a los archivos .css o .js relacionados con el documento HTML, a las imágenes, tipografías, etc. Esta prioridad depende de una gran variedad de factores y casuísticas complejas, pero se dividen en las siguientes:
+      - HIGHEST (Altísima prioridad)
+      - HIGH
+      - MEDIUM
+      - LOW
+      - LOWEST (bajísima prioridad)
+
+    1 Etiquetas de precarga
+    -> Estos valores se pueden modificar de muchas formas, pero uno de los métodos para modificarlos es utilizar las etiquetas <link> que comentamos en la tabla
+    -> Recuerda que el proceso de optimización de una página es delicado y complejo. No se trata de añadir una etiqueta de precarga por cada fichero, sino elegir cuales son los que producen cuellos de botella y anticiparlos. Añadir muchas etiquetas de precarga conseguiría justo el efecto contrario: relentizar la carga.
+
+
+      1.1 POR DOMINIO
+        1.1 Precarga de resolución DNS
+          -> Antes de cargar un enlace con un recurso, ya sea una imagen, un fichero css, html o de cualquier otro tipo, el navegador debe resolver las DNS. Básicamente es un proceso que debe hacer al principio de cada recurso que esté alojado en un dominio desconocido, para conocer la IP que está detrás de ese dominio y por lo tanto poderse comunicar de forma más rápida y efectiva.
+          -> En muchas ocasiones, esta carga del dominio DNS se realiza muy tarde y se puede perder algún tiempo precioso en ello. Con esta etiqueta, podremos aprovechar «tiempos muertos» iniciales en realizar esa tarea, de modo que cuando descubra esos recursos ya pueda acceder a ellos sin perder el tiempo en resolver el DNS. Es decir, anticipamos esa tarea de resolver DNS.
+
+            <link rel="dns-prefetch" href="https://fonts.google.com/">
+
+          -> Como se puede ver, en este caso estamos indicando que resuelva las DNS de la página https://fonts.google.com, donde en muchas ocasiones se enlazan tipografías desde nuestro sitio. Ten muy en cuenta que en muchos casos, dentro de estas páginas, se cargan más recursos con nuevos dominios o CDN diferentes que también habría que incluir para que sea 100% efectiva esta tarea.
+
+        
+        1.2 Preconexión a un dominio
+          -> Cada vez que el navegador tiene que realizar la carga de un recurso, por cada dominio debe realizar varias tareas:
+            - Búsqueda y resolución de DNS
+            - Negociación TCP (Handshake)
+            - Negociación TLS (Opcional)
+          
+          -> Estas tareas se pueden realizar de forma anticipada para ganar algún tiempo y aprovecharlo en otras tareas.
+
+            <link rel="preconnect" href="https://cdnjs.com/">
+          
+          -> Observa que mientras que la etiqueta anterior sólo realiza el proceso de resolución DNS, esta etiqueta incorpora más
+
+
+
+      2 POR URL
+        2.1 Prerender
+          -> En algunas situaciones, el usuario se encuentra navegando por una página donde, posteriormente, tiene un enlace para acceder a una página donde la probabilidad de acceder es bastante alta. Ejemplos de este caso suelen ser landing page o páginas similares, donde la intención directa es enviar al usuario a una sección específica.
+          -> Con la siguiente etiqueta podemos indicar al navegador que esa probabilidad es tan alta, que queremos que la página se vaya no sólo precargando sino prerenderizando de forma transparente en el navegador. Esto hará que cuando el usuario haga click en el enlace, la página esté instantáneamente precargada y predibujada en el navegador.
+
+            <link rel="prerender" href="https://ejemplo/parte-importante">
+
+          -> Ten en cuenta que esta etiqueta debe usarse sólo en casos muy específicos donde el usuario es muy probable que acceda, ya que el navegador va a precargar todo su contenido y dibujarlo en el navegador, por lo que si finalmente no entra, habrá desperdiciado tiempo y recursos.
+
+
+
+      3 POR RECURSO
+        3.1 Descarga anticipada
+          -> Mediante la etiqueta <link rel="prefetch"> podemos indicar al navegador que queremos que un recurso de la página se proponga para ser descargado desde que el navegador tenga tiempo libre en su proceso de carga inicial.
+
+            <link rel="prefetch" href="https://ejemplo/additional.css" as="styles">
+
+          -> Observa que es necesario indicar en el atributo as la naturaleza del recurso especificado, ya que de lo contrario el navegador no tiene forma de saber de que tipo de recursos se trata (y muchas veces no se debe confiar en la extensión del fichero). En la tabla de tipos de recursos puedes ver más información de los valores a utilizar.
+          -> Mucho cuidado con confundir prefetch con preload, que aunque tienen un objetivo parecido, hay ciertos matices que los diferencian.
+
+
+        3.2 Precarga de archivo
+          -> Si lo que necesitamos es realizar la precarga de un archivo por anticipado, la etiqueta <link rel="preload"> es la opción correcta. Esta etiqueta permite precargar recursos inmediatamente, con altísima prioridad. Suele ser una buena práctica para tipografías que utilizas en el primer impacto visual de la página o de imágenes que tienes de cabecera o que producen un parpadeo a la hora de cargarlas.
+
+            <link rel="preload" href="https://ejemplo/fonts/montserrat.woff2" as="font">
+
+          -> Observa que esta etiqueta requiere el uso del atributo as, donde deberás indicar el tipo de recurso.
+
+
+        3.3 Precarga de módulo
+          -> Aunque la etiqueta anterior puede utilizarse para precargar archivos javascript .js, existe una especialización de esta etiqueta denominada <link rel="modulepreload">. Funciona exactamente igual a la etiqueta anterior, sin embargo tiene una pequeña diferencia: además de precargar el recurso, lo añade a la lista de módulos por cargar del navegador, y revisa las dependencias que tiene para precargarlas también, lo que lo hace muy adecuado para módulos Javascript.
+
+            <link rel="modulepreload" href="https://ejemplo/modules/module.js">
+
+          -> En este caso, el atributo as tiene por defecto el valor script, por lo que se puede omitir. El soporte de esta modalidad de etiqueta aún no es completa, por lo que puede que no funcione correctamente en algunos navegadores.
+
+
+      
+    2 Tipos de recursos
+      -> En algunas de las etiquetas anteriores habrás comprobado que existe un atributo as donde hay que indicar el tipo de fichero a referenciar. Se pueden ver en la tabla de tipos de recursos
+      -> Recuerda indicar el valor apropiado en el atributo as, ya que de lo contrario no se sabrá de forma anticipada que tipo de recurso es, y no podrá precargarse el recurso indicado correctamente.
+ -->
