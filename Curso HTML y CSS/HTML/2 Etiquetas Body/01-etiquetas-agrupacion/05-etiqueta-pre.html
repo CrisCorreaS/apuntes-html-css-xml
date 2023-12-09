@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;pre&gt;</title>
+    <!-- Librería Prism -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+    <script type="module">
+      Prism.highlightAll();
+    </script>
+  </head>
+  <body>
+      <div>
+        function mensaje(str) {
+        console.log(str);
+        }
+      </div>
+      
+      <pre>
+        function mensaje(str) {
+          console.log(str);
+        }
+      </pre>
+      
+      <pre>
+        <code class="language-javascript">
+          function mensaje(str) {
+            console.log(str);
+          }
+        </code>
+      </pre>
+
+      <!-- Prueba Librería Prism -->
+      <pre>
+        <code class="language-javascript">
+          function mensaje(str) {
+            console.log(str);
+          }
+        </code>
+      </pre>
+
+      <pre class="language-javascript">
+        <code class="language-javascript">
+          <span class="token keyword">function</span>
+          <span class="token function">mensaje</span>
+          <span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span>
+            <span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+            <span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        </code>
+      </pre>
+  </body>
+</html>
+<!-- 
+  -> Quizás hayas comprobado que si quieres escribir un fragmento de código en HTML, el navegador no suele respetar los espacios consecutivos que escribes, así como otros carácteres especiales como los "Enter" (saltos de línea), colocándolos todos en la misma línea.
+  -> La etiqueta <pre> se puede utilizar para mostrar texto respetando el formato con el que está escrito (espacios en blanco, saltos de línea, etc...). Observa en el siguiente fragmento de código, en el primer lugar utilizamos un <div> y en el segundo lugar utilizamos un <pre>:
+
+      <div>
+        function mensaje(str) {
+        console.log(str);
+        }
+      </div>
+      
+      <pre>
+      function mensaje(str) {
+        console.log(str);
+      }
+      </pre>
+
+    -> En el primero de los casos, el texto se mostrará todo en línea, eliminando los saltos de línea y espacios de indentado. Sin embargo, si utilizamos una etiqueta <pre> aparecerá formateado tal cual, respentando dicha estructura y, por defecto, colocando una tipografía apropiada para fragmentos de texto (monoespaciada).
+
+
+
+  1 Bloques de código
+    -> También es muy habitual utilizarlo junto a la etiqueta <code> anidada en su interior, de forma que tenemos un bloque de código preformateado. En esta situación, en la etiqueta <code> del interior, se suele incluir una clase específica, generalmente prefijada por "language-" o "lang-", que a continuación indica el lenguaje que se indica en el fragmento de código:
+
+      <pre>
+        <code class="language-javascript">
+          function mensaje(str) {
+            console.log(str);
+          }
+        </code>
+      </pre>
+
+    -> Realmente, esta clase no realizará ninguna tarea de forma nativa en HTML, pero suele ser un convenio muy utilizado para usar en conjunto a librerías Javascript que leerán el fragmento de código y lo convertirán a un marcado HTML listo y preparado para resaltar con colores el código del mismo.
+
+
+  2 Librerías de resaltado de código
+    -> Por ejemplo, utilizando Prism, incluyendo el código de la librería Javascript y añadiendo una hoja de estilos para el tema de colores de código, podemos prepararnos para utilizar esta librería:
+
+      <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+      <script type="module">
+        Prism.highlightAll();
+      </script>
+      
+      <pre>
+        <code class="language-javascript">
+      function mensaje(str) {
+        console.log(str);
+      }
+        </code>
+      </pre>
+
+
+    -> La línea de código Prism.highlightAll() indica a Prism que revise toda la página HTML y las etiquetas <pre><code> sean modificadas para resaltarlas con colores mediante CSS. El código anterior, es modificado a lo siguiente:
+
+      <pre class="language-javascript">
+        <code class="language-javascript">
+          <span class="token keyword">function</span>
+          <span class="token function">mensaje</span>
+          <span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span>
+            <span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+            <span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        </code>
+      </pre>
+
+
+  3 Otras librerías de resaltado
+    -> Algunas de estas librerías de resaltado de sintaxis en Javascript, podrían ser las siguientes:
+      - Prism -> Librería de resaltado de sintaxis, extensible con plugins y temas.
+      - Highlight -> Librería de resaltado de sintaxis.
+      - Shiki -> Resaltado de sintaxis al estilo de VSCode.
+
+    -> Por ejemplo, la página de Manz utiliza una versión modificada de la librería Prism.js adaptada para resaltar la sintaxis teniendo en cuenta el rendimiento, en un sitio web desarrollado en Eleventy.
+ -->
