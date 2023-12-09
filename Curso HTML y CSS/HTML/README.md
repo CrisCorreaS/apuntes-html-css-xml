@@ -16,9 +16,15 @@
 
 - [caninclude.glitch.me](https://caninclude.glitch.me/) -> Nos ayuda a comprobar si una etiqueta HTML puede incluirse dentro de otra. Para ello, debemos introducir la etiqueta padre y la etiqueta hijo y la web mostrará un mensaje indicando si la inclusión es válida o no
 
+- [seotoolseye.com](https://seotoolseye.com/) -> Proporciona una variedad de herramientas gratuitas para ayudar a mejorar el rendimiento de un sitio web y atraer más tráfico. Las herramientas disponibles en SEOToolsEye están diseñadas para ayudar con varias tareas como por ejemplo: gener etiquetas meta, sugerencias de palabras clave (keywords), generar tarjetas de Twitter...
+
 - [ogp.me](https://ogp.me/) -> Es el sitio oficial de Open Graph donde podemos leer todo el protocolo
 
 - [opengraph.xyz](https://www.opengraph.xyz/) -> Nos permite previsualizar y generar etiquetas Open Graph, las cuales son metadatos utilizados por plataformas sociales como Facebook para mejorar la presentación de enlaces compartidos
+
+- [Herramienta para revisar etiquetas de Open Graph](https://developers.facebook.com/tools/debug/) -> Herramienta de validación de Open Graph de Meta for Developers, que nos permite revisar si el código Open Graph que hemos escrito es correcto y no hay ningún error en la utilización del protocolo
+
+- [Herramienta para revisar etiquetas de Twitter (X) Cards](https://cards-dev.twitter.com/validator) -> Herramienta de validación de Twitter (X) Cards de Twitter (X), que nos permite revisar si el código de las Twitter (X) Cards que hemos escrito es correcto y no hay ningún error en la utilización del protocolo
 
 - [Página de mdn sobre el atributo "role"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -> Da más información sobre el atributo "role". También indica especificaciones y da consejos de clean code y buen uso de este atributo
 
