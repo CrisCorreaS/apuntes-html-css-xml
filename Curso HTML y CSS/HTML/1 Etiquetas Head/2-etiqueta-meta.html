@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Estas etiquetas "meta" ayudan con el SEO de la página un poco -->
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Hace que el ancho del contenido de la página, sea el ancho de la pantalla -->
+
+    <meta name="keywords" content="html,curso,seo" />
+    <meta name="description" content="Repositorio de GitHub que tiene todo lo necesario para aprender HTML y CSS. Esta etiqueta puede tener aproximadamente entre 50 y 160 caracteres"/> <!-- La descripción es importante porque ayuda en el SEO y cuando buscan tu página, normalmente, es el texto en pequeño debajo del enlace que aparece en las búsquedas -->
+    <meta name="author" content="Cristina Correa" />
+    <meta name="application-name" content="CrisCorreaS" />
+    <meta name="generator" content="VSCode" />
+    <meta name="theme-color" content="#772727" /><!-- Le da un color a la barra de navegación del buscador, como cuando tienes varios perfiles y uno está en verde, otro en rosa y así. Es para personalizar la página y darle un toque de calidad -->
+
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="index, nofollow" /><!-- Esta etiqueta dice si la página tiene que ser indexada o no dentro de las páginas de un navegador y si tiene que seguir o no los enlaces. Tiene los valores de "content" = "index" o "noindex", lo ideal es poner "index" y "follow" -->
+
+    
+    <meta name="copyright" content="Mi Empresa S.A." /><!-- Esta etiqueta es para poner el nombre de la empresa registrada -->
+    <link rel="alternate" href="ruta de tu página web/en" hreflang="en-GB"><!-- Aquí indicamos que nuestra página web tiene una alternativa en inglés de UK -> Le decimos a Google que la página que estamos viendo, también, si la encuentras en inglés, sería esta con el mismo contenido pero traducido a inglés de UK. Evita que Google perciba que veas el contenido duplicado  -->
+    <link rel="canonical" href="ruta de tu página web"><!-- Le decimos cual es nuestra página web principal. Si entramos a www.rutaPagina.com o rutaPagina.com, las va a tratar como la misma página -->
+    <link rel="icon" type="image/jpg" href="https://cdn-icons-png.flaticon.com/512/263/263100.png">
+    <title>Etiqueta &lt;meta&gt;</title>
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Curso de Metadatos en HTML"><!-- Este es el título del enlace, puede ser igual al texto de la etiqueta "title" o diferente -->
+    <meta property="og:description" content="Repositorio de GitHub que tiene todo lo necesario para aprender HTML y CSS">
+    <meta property="og:image" content="x.png">
+    <meta property="og:image:alt" content="Foto de una x">
+  </head>
+  <body>
+    <h2>Valores clásicos del atributo "name" y "content"</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Valor name</th>
+          <th>Valor content</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>description</td>
+          <td>texto</td>
+          <td>Indica la descripción de la página que aparece en buscadores.</td>
+          <td>&lt;meta name="description" content="Repositorio de GitHub donde aprender HTML y CSS"&gt;</td>
+        </tr>
+        <tr>
+          <td>keywords</td>
+          <td>palabras clave</td>
+          <td>Lista de palabras clave separadas por comas. Google no la tiene en cuenta.</td>
+          <td>&lt;meta name="keywords" content="html, lenguaje, lenguaje de marcado, código html, etiqueta"&gt;</td>
+        </tr>
+        <tr>
+          <td>author</td>
+          <td>nombre</td>
+          <td>Indica el nombre del autor de la página.</td>
+          <td>&lt;meta name="author" content="Cristina Correa"&gt;</td>
+        </tr>
+        <tr>
+          <td>application-name</td>
+          <td>nombre</td>
+          <td>Indica el nombre de la aplicación web. Debería usarse sólo si es una webapp.</td>
+          <td>&lt;meta name="application-name" content="CrisCorreaS"&gt;</td>
+        </tr>
+        <tr>
+          <td>generator</td>
+          <td>software</td>
+          <td>Indica el software utilizado para crear la página web.</td>
+          <td>&lt;meta name="generator" content="HTML"&gt;</td>
+        </tr>
+        <tr>
+          <td>theme-color</td>
+          <td>color</td>
+          <td>Color en hexadecimal de la barra de navegación</td>
+          <td>&lt;meta name="theme-color" content="#772727"&gt;</td>
+        </tr>
+        <tr>
+          <td>viewport</td>
+          <td>parámetros</td>
+          <td>Comportamiento de la región visible del navegador</td>
+          <td>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table border="1">
+      <thead>
+        <legend>Parámetros del atributo "content" de &lt;meta name="viewport" content=""&gt;</legend>
+        <tr>
+          <th>Parámetro</th>
+          <th>Valor por defecto</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>device-width</td>
+          <td>Establece el tamaño del viewport. Permite valores numéricos.</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>device-height</td>
+          <td>Idem al anterior, pero respecto al alto. Permite valores numéricos.</td>
+        </tr>
+        <tr>
+          <td>initial-scale</td>
+          <td>1</td>
+          <td>Establece la escala inicial que tendrá el dispositivo. Valores entre 0.1 y 10.</td>
+        </tr>
+        <tr>
+          <td>minimum-scale</td>
+          <td>0.1</td>
+          <td>Idem al anterior, pero estableciendo la escala mínima que tendrá el dispositivo.</td>
+        </tr>
+        <tr>
+          <td>maximum-scale</td>
+          <td>10</td>
+          <td>Idem al anterior, pero estableciendo la escala máxima que tendrá el dispositivo.</td>
+        </tr>
+        <tr>
+          <td>user-scalable</td>
+          <td>1</td>
+          <td>Mediante 1 o yes se permite que el usuario haga zoom. Con 0 o no, se impide.</td>
+        </tr>
+        <tr>
+          <td>interactive-widget</td>
+          <td>resizes-visual</td>
+          <td>Comportamiento de widgets de UI como el teclado virtual. Otros valores posibles: resizes-content o overlays-content.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Metadatos SEO para Google</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Valor name</th>
+          <th>Valor content</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>google</td>
+          <td>nositelinkssearchbox</td>
+          <td>Indica a Google que no muestre el minibuscador en los sitelinks</td>
+          <td>&lt;meta name="google" content="nositelinkssearchbox"&gt;</td>
+        </tr>
+        <tr>
+          <td>google</td>
+          <td>notranslate</td>
+          <td>Indica a Google que no debe traducir la página</td>
+          <td>&lt;meta name="google" content="notranslate"&gt;</td>
+        </tr>
+        <tr>
+          <td>robots</td>
+          <td>parámetros</td>
+          <td>Indica al robot de un buscador si debe indexar o no la página</td>
+          <td>&lt;meta name="robots" content="index, nofollow"&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table border="1">
+      <thead>
+        <legend>Parámetros del atributo "content" la etiqueta &lt;meta name="robots" content=""&gt;</legend>
+        <tr>
+          <th>Parámetros</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>index</td>
+          <td>Sugiere a Google que se quiere indexar el contenido de la página en el buscador.</td>
+        </tr>
+        <tr>
+          <td>noindex</td>
+          <td>Indica a Google que no debe indexar el contenido de la página en el buscador.</td>
+        </tr>
+        <tr>
+          <td>follow</td>
+          <td>Sugiere a Google que siga los enlaces que encuentre en la página.</td>
+        </tr>
+        <tr>
+          <td>nofollow</td>
+          <td>Indica a Google que no debe seguir los enlaces que encuentre en la página.</td>
+        </tr>
+        <tr>
+          <td>nosnippet</td>
+          <td>Indica a Google que no muestre fragmentos (descripción, etc...).</td>
+        </tr>
+        <tr>
+          <td>noodp</td>
+          <td>Indica a Google que no use la descripción alternativa de DMOZ. Obsoleto actualmente.</td>
+        </tr>
+        <tr>
+          <td>noarchive</td>
+          <td>Indica a Google que no almacene una versión en caché de la página.</td>
+        </tr>
+        <tr>
+          <td>unavailable_after fecha</td>
+          <td>Establece una fecha de caducidad para que no se rastree más la página.</td>
+        </tr>
+        <tr>
+          <td>noimageindex</td>
+          <td>Indica a Google que no indexe la página en resultados de Google Imágenes.</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>Equivalente a indicar los parámetros noindex, nofollow.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Metadatos simulados de servidor - Etiquetas de caché</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Valor http-equiv</th>
+          <th>Valor content</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>expires</td>
+          <td>fecha</td>
+          <td>Fecha a partir de la cuál se considera caché expirada.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>max-age=N</td>
+          <td>Indica que la caché es válida hasta que transcurran N segundos.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>must-revalidate</td>
+          <td>Usado con el anterior, permite guardar y evaluar si se puede usar caché.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>public</td>
+          <td>Indica al navegador que puede ser guardada en una caché pública.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>private</td>
+          <td>Indica al navegador que sólo puede guardarse en caché de navegador.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>no-cache</td>
+          <td>Indica al navegador que evalue si utilizar el caché o no.</td>
+        </tr>
+        <tr>
+          <td>cache-control</td>
+          <td>no-store</td>
+          <td>Indica al navegador que la página no debería guardarse en caché.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+  La etiqueta <meta> nos permite indicar metadatos o información interna del documento HTML. Estos datos no se suelen mostrar visualmente en la página, sino que el navegador los lee para conocer información relevante y utilizarlos en situaciones específicas.
+  -> Por norma general, la etiqueta <meta> tiene los atributos "name" y "content". Dependiendo del valor que le demos a "name", tendremos que indicar un valor "content" correspondiente. Sin embargo, también existen algunas excepciones donde no hay que añadir estos atributos, sino otros diferentes.
+  -> Existen etiquetas <meta> donde se utilizan los atributos "name" y "content" para indicar metadatos en el documento. Podemos ver algunos de los más conocidos que sirven para indicar datos importantes de una página en la tabla del <body>
+
+  1- La etiqueta meta name="description" sirve para indicar unas breves frases donde se explique el contenido de la página actual. Entre otras cosas, sirve para las descripciones que salen bajo los enlaces de los resultados de búsqueda en Google, cuando la página es indexada. En general, suele ser un texto entre 50-160 carácteres.
+  
+  2- La etiqueta meta name="keywords" solicita una lista de palabras clave separadas por comas que tengan relación con el sitio web. Actualmente, Google no las considera (se abusaba de ellas para hacer spam), sin embargo, otros buscadores o sistemas sí que lo hacen.
+
+  3- La etiqueta meta name="theme-color" hace que el navegador coloree la barra de direcciones con el color hexadecimal indicado en el atributo content de nuestro fragmento de código
+    -> Actualmente, el soporte para esta característica es muy irregular, y muchos navegadores aún no lo soportan. Por ejemplo, en Chrome, sólo funciona en dispositivos móviles donde el sistema tenga el modo claro activado.
+
+
+  4- Metadatos SEO para Google
+    -> Algunas de las etiquetas <meta> son bien conocidas como etiquetas que pueden mejorar el SEO (posicionamiento) de una página en buscadores como Google. Al margen de etiquetas <meta> como description o <title>, que son las principales en temas de posicionamiento, Google es capaz de leer otros metadatos que le indicarán como realizar ciertas acciones
+    -> Observa que la etiqueta <meta name="robots"> puede tener varios parámetros (separados por comas) para indicarle a Google diferentes detalles.
+
+
+  5- Otro metadato muy utilizado hoy en día es <meta name="viewport">. Para entenderlo, hay que tener muy claro primero que significa exactamente viewport: la región visible del navegador, esto es, la parte que se ve a simple vista de la página en nuestro navegador.
+    -> Y es que esta etiqueta permite establecer como se va a comportar el responsive en nuestra página.
+    -> Con esta etiqueta, podemos establecer una escala mucho más grande, para luego con CSS aplicar una configuración diferente para dispositivos móviles, donde sea más cómoda su visualización e interacción.
+    -> Todos los parámetro se incluyen en el atributo "content", separándose con comas y estableciendo sus valores con "=". Habitualmente, los valores indicados suelen ser width y initial-scale, sin embargo, el desarrollador puede especificar los que considere necesarios.
+
+
+  6- Metadatos simulados de servidor 
+    -> Existe una serie de etiquetas de metadatos especiales que indican a los robots del buscador o al navegador, que deben modificar las cabeceras HTTP para realizar acciones que suelen hacerse habitualmente desde el lado del servidor. Estas operaciones, en la mayoría de los casos, es mejor hacerlas directamente desde el servidor, sin embargo, proporcionan una alternativa en el caso que no sea posible.
+    -> Para diferenciarlas, en lugar de utilizar el atributo name, se utiliza el atributo http-equiv. Sin embargo, estas etiquetas pueden ser ignoradas por algunos navegadores o robots de búsqueda, o incluso ser contraproducentes o afectar negativamente al rendimiento. Muchas de ellas existen sólo por motivos históricos.
+
+    6.1- Etiquetas de caché
+      -> Otros ejemplos clásicos de etiquetas <meta http-equiv> son las que tienen que ver con el caché de la página. Nuevamente, mencionar que estos detalles hoy en día suelen definirse en el lado del servidor, en lugar de mediante estas etiquetas. Algunos ejemplos de los atributos que se pueden utilizar se pueden ver en la tabla del body. Ej:
+        <head>
+          <meta http-equiv="expires" content="Fri, 29 Apr 2016 12:56:00 GMT">
+          <meta http-equiv="cache-control" content="no-cache">
+        </head>
+
+
+  7- Antiguamente también existían algunas etiquetas como <meta http-equiv="pragma"> que actualmente se encuentran marcadas como obsoletas y que deben evitar utilizarse.
+-->
+<!-- 
+  OPEN GRAPH:
+  Es un conjunto de etiquetas utilizadas por plataformas sociales como Facebook para mejorar la presentación de enlaces compartidos
+-->
