@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;div&gt;</title>
+  </head>
+  <body>
+    <!-- EJEMPLOS -->
+    <!-- Capas o divisores  -->
+    <div class="text">
+      <p>Esto es un párrafo de texto.</p>
+    </div>
+
+    <div class="movie-data">
+      <h2>Interstellar</h2>
+      <p class="description">
+        <strong>Interstellar</strong> es una película dirigida por
+        <strong>Christopher Nolan</strong>.
+      </p>
+    </div>
+
+    <!-- Representación visual -->
+    <div style="background-color: blue; color: white;">Etiqueta div 1.</div>
+    <div style="background-color: blue; color: white;">Etiqueta div 2.</div>
+    
+    <span style="background-color: red">Etiqueta span 1.</span>
+    <span style="background-color: red">Etiqueta span 2.</span>
+
+    <!--  -->
+
+    <hr />
+
+    <div role="doc-introduction">
+      <h2>Grupo 1</h2>
+      <p>Los divs separan y agrupan contenido</p>
+    </div>
+    <div role="doc-part">
+      <h2>Grupo 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolores
+        asperiores obcaecati laudantium officiis doloribus quibusdam, modi quae
+        et vitae temporibus quod aspernatur atque, quaerat ex ad. Quia, illum
+        fugiat? Obcaecati soluta sunt similique minus facilis labore illum cum
+        consequuntur repudiandae. Ratione veniam atque eaque, tenetur delectus
+        animi odio possimus expedita minus nesciunt. Beatae quae culpa,
+        doloribus voluptatem dignissimos dolorum!
+      </p>
+    </div>
+
+    <hr />
+
+    <table border="1">
+      <thead>
+        <legend>Atributo "role"</legend>
+        <th>Valor</th>
+        <th>Descripción</th>
+        <th>Mejor usar</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">Document structure roles</td>
+        </tr>
+        <tr>
+          <td>toolbar</td>
+          <td>Barra de herramientas, comúnmente utilizada en aplicaciones web para agrupar funciones relacionadas.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>tooltip</td>
+          <td>Información adicional que se muestra al colocar el cursor sobre un elemento, generalmente utilizado para proporcionar descripciones breves.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>feed</td>
+          <td>Contenedor para contenido dinámico o actualizaciones en tiempo real, como feeds de redes sociales o noticias.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>math</td>
+          <td>Área que contiene contenido matemático, como ecuaciones o fórmulas.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>presentation / none</td>
+          <td>Indica que el elemento no tiene un rol semántico específico o que se está utilizando solo para presentación visual sin significado estructural.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>note</td>
+          <td>Nota o comentario, utilizado para resaltar información secundaria o explicativa.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>Indica que el elemento representa una aplicación o una parte de una aplicación web.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>article</td>
+          <td>Indica que el elemento representa un artículo independiente, como un periódico o una entrada de blog.</td>
+          <td>&lt;article&gt;</td>
+        </tr>
+        <tr>
+          <td>cell</td>
+          <td>Celda de una tabla, debe usarse con la etiqueta &lt;td&gt;.</td>
+          <td>&lt;td&gt;</td>
+        </tr>
+        <tr>
+          <td>columnheader</td>
+          <td>Encabezado de columna en una tabla, debe usarse con la etiqueta &lt;th scope="col"&gt;.</td>
+          <td>&lt;th scope="col"&gt;</td>
+        </tr>
+        <tr>
+          <td>definition</td>
+          <td>Definición, debe usarse con la etiqueta &lt;dfn&gt;.</td>
+          <td>&lt;dfn&gt;</td>
+        </tr>
+        <tr>
+          <td>directory</td>
+          <td>Lista de elementos organizados jerárquicamente, se puede lograr con listas HTML.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>document</td>
+          <td>Representa un documento o un contenido independiente.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>figure</td>
+          <td>Contenido independiente, como imágenes, gráficos, etc., debe usarse con la etiqueta &lt;figure&gt;.</td>
+          <td>&lt;figure&gt;</td>
+        </tr>
+        <tr>
+          <td>group</td>
+          <td>Grupo de elementos relacionados, generalmente utilizado para formar una estructura de contenido.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>heading</td>
+          <td>Encabezado, debe usarse con las etiquetas &lt;h1&gt; a &lt;h6&gt;.</td>
+          <td>&lt;h1&gt; a &lt;h6&gt;</td>
+        </tr>
+        <tr>
+          <td>img</td>
+          <td>Elemento de imagen, debe usarse con la etiqueta &lt;img&gt; o &lt;picture&gt;.</td>
+          <td>&lt;img&gt; o &lt;picture&gt;</td>
+        </tr>
+        <tr>
+          <td>list</td>
+          <td>Lista de elementos, debe usarse con las etiquetas &lt;ul&gt; o &lt;ol&gt;.</td>
+          <td>&lt;ul&gt; o &lt;ol&gt;</td>
+        </tr>
+        <tr>
+          <td>listitem</td>
+          <td>Elemento de lista, debe usarse con la etiqueta &lt;li&gt;.</td>
+          <td>&lt;li&gt;</td>
+        </tr>
+        <tr>
+          <td>meter</td>
+          <td>Representación de una medida escalar en un rango conocido, debe usarse con la etiqueta &lt;meter&gt;.</td>
+          <td>&lt;meter&gt;</td>
+        </tr>
+        <tr>
+          <td>row</td>
+          <td>Fila de una tabla, debe usarse con la etiqueta &lt;tr&gt; dentro de &lt;table&gt;.</td>
+          <td>&lt;tr&gt; dentro de &lt;table&gt;</td>
+        </tr>
+        <tr>
+          <td>rowgroup</td>
+          <td>Grupo de filas relacionadas en una tabla, debe usarse con las etiquetas &lt;thead&gt;, &lt;tfoot&gt; y &lt;tbody&gt;.</td>
+          <td>&lt;thead&gt;, &lt;tfoot&gt; y &lt;tbody&gt;</td>
+        </tr>
+          <td>rowheader</td>
+          <td>Encabezado de fila en una tabla, debe usarse con la etiqueta &lt;th scope="row"&gt;.</td>
+          <td>&lt;th scope="row"&gt;</td>
+        </tr>
+        <tr>
+          <td>separator</td>
+          <td>Separador, debe usarse con la etiqueta &lt;hr&gt; si no tiene foco interactivo.</td>
+          <td>&lt;hr&gt;</td>
+        </tr>
+        <tr>
+          <td>table</td>
+          <td>Tabla, debe usarse con la etiqueta &lt;table&gt;.</td>
+          <td>&lt;table&gt;</td>
+        </tr>
+        <tr>
+          <td>term</td>
+          <td>Término o definición, debe usarse con la etiqueta &lt;dfn&gt;.</td>
+          <td>&lt;dfn&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Widget roles</td>
+        </tr>
+        <tr>
+          <td>scrollbar</td>
+          <td>Barra de desplazamiento, utilizada para desplazar contenido dentro de un área determinada.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>searchbox</td>
+          <td>Caja de búsqueda, permite a los usuarios introducir y buscar texto.</td>
+          <td>&lt;input type="search"&gt;</td>
+        </tr>
+        <tr>
+          <td>separator (when focusable)</td>
+          <td>Separador con enfoque interactivo, utilizado para dividir y organizar elementos.</td>
+          <td>&lt;div role="separator" tabindex="0"&gt;</td>
+        </tr>
+        <tr>
+          <td>slider</td>
+          <td>Control deslizante, permite a los usuarios seleccionar un valor dentro de un rango.</td>
+          <td>&lt;input type="range"&gt;</td>
+        </tr>
+        <tr>
+          <td>spinbutton</td>
+          <td>Botón giratorio, utilizado para incrementar o disminuir valores numéricos.</td>
+          <td>&lt;input type="number"&gt;</td>
+        </tr>
+        <tr>
+          <td>switch</td>
+          <td>Interruptor de encendido/apagado, permite a los usuarios cambiar entre dos estados.</td>
+          <td>&lt;input type="checkbox" role="switch"&gt;</td>
+        </tr>
+        <tr>
+          <td>tab</td>
+          <td>Pestaña, utilizado para la navegación entre diferentes secciones de contenido.</td>
+          <td>&lt;button role="tab"&gt;</td>
+        </tr>
+        <tr>
+          <td>tabpanel</td>
+          <td>Panel asociado a una pestaña, muestra el contenido correspondiente.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>treeitem</td>
+          <td>Elemento en un árbol de navegación, utilizado para representar un nodo.</td>
+          <td>&lt;li role="treeitem"&gt;</td>
+        </tr>
+        <tr>
+          <td>combobox</td>
+          <td>Caja combinada, permite a los usuarios seleccionar una opción de una lista desplegable o ingresar un valor
+            personalizado.</td>
+          <td>&lt;select role="combobox"&gt;</td>
+        </tr>
+        <tr>
+          <td>menu</td>
+          <td>Menú, conjunto de opciones o comandos que los usuarios pueden seleccionar.</td>
+          <td>&lt;ul role="menu"&gt;</td>
+        </tr>
+        <tr>
+          <td>menubar</td>
+          <td>Barra de menú, contenedor de menús relacionados.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>tablist</td>
+          <td>Lista de pestañas, contenedor de pestañas relacionadas.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>tree</td>
+          <td>Árbol de navegación, estructura jerárquica de elementos expandibles.</td>
+          <td>&lt;ul role="tree"&gt;</td>
+        </tr>
+        <tr>
+          <td>treegrid</td>
+          <td>Rejilla de árbol, estructura de datos tabular con jerarquía.</td>
+          <td>&lt;table role="treegrid"&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Landmark roles</td>
+        </tr>
+        <tr>
+          <td>banner</td>
+          <td>Banner, una región de contenido de primer nivel que generalmente contiene el encabezado de un sitio web o una sección principal.</td>
+          <td>&lt;header&gt;</td>
+        </tr>
+        <tr>
+          <td>complementary</td>
+          <td>Contenido complementario, como una barra lateral (&lt;aside&gt;) que no es parte del flujo principal del documento.</td>
+          <td>&lt;aside&gt;</td>
+        </tr>
+        <tr>
+          <td>contentinfo</td>
+          <td>Información de contenido, como el pie de página (&lt;footer&gt;) que proporciona información sobre el contenido del documento.</td>
+          <td>&lt;footer&gt;</td>
+        </tr>
+        <tr>
+          <td>form</td>
+          <td>Formulario, se utiliza para agrupar y organizar controles de formulario y sus etiquetas asociadas.</td>
+          <td>&lt;form&gt;</td>
+        </tr>
+        <tr>
+          <td>main</td>
+          <td>Región principal del contenido, representa el contenido central o principal del documento.</td>
+          <td>&lt;main&gt;</td>
+        </tr>
+        <tr>
+          <td>navigation</td>
+          <td>Sección de navegación, como un menú de navegación (&lt;nav&gt;) que contiene enlaces a otras páginas o secciones.</td>
+          <td>&lt;nav&gt;</td>
+        </tr>
+        <tr>
+          <td>region</td>
+          <td>Región de contenido, generalmente utilizada para agrupar contenido relacionado y proporcionar un punto de referencia para la navegación.</td>
+          <td>&lt;section</td>
+        </tr>
+        <tr>
+          <td>search</td>
+          <td>Caja de búsqueda o formulario de búsqueda, permite a los usuarios ingresar términos de búsqueda.</td>
+          <td>&lt;search&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Live region roles</td>
+        </tr>
+        <tr>
+          <td>alert</td>
+          <td>Alerta, indica un mensaje importante o crítico para el usuario que requiere atención inmediata.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>log</td>
+          <td>Registro o consola de registro, se utiliza para mostrar mensajes de registro o información de depuración.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>marquee</td>
+          <td>Elemento desplazable, históricamente utilizado para hacer que el texto se desplace horizontal o verticalmente.
+          </td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>status</td>
+          <td>Estado, indica el estado actual o la información de estado en una interfaz de usuario.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>timer</td>
+          <td>Cronómetro o temporizador, se utiliza para indicar la duración de una operación o para contar el tiempo transcurrido.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td colspan="3">Window roles</td>
+        </tr>
+        <tr>
+          <td>alertdialog</td>
+          <td>Diálogo de alerta, una ventana emergente que requiere la atención inmediata del usuario.</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>dialog</td>
+          <td>Diálogo, una ventana emergente que forma parte del flujo de la aplicación y puede contener contenido interactivo o de formulario.</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+  Dentro de las etiquetas HTML existentes, quizás una de las más conocidas es la etiqueta <div>. Sin embargo, es una de las etiquetas menos especiales que existen, es más, es de las más genéricas, y ese es precisamente su característica estrella. Las características y propiedades de esta etiqueta son:
+    1 Capas o divisores <div>
+      -> La etiqueta <div> es una etiqueta muy simple que se suele utilizar para crear una agrupación de una o varias etiquetas y organizarlas en una división específica. De forma opcional, se le puede poner un atributo id o clase para referenciarla más facilmente:
+
+        <div class="text">
+          <p>Esto es un párrafo de texto.</p>
+        </div>
+
+      -> De la misma forma, la etiqueta <div> se puede usar para agrupar elementos dentro de otros, y así crear nuevas agrupaciones. Se trata de un elemento que no tiene ningún significado especial más allá de ello. Lo ideal es mantener una cierta lógica a la hora de agrupar y no crear grupos adicionales que sean redundantes:
+
+        <div class="movie-data">
+          <h2>Interstellar</h2>
+          <div class="description">
+            <p>
+              <strong>Interstellar</strong> es una película dirigida
+              por <strong>Christopher Nolan</strong>.
+            </p>
+          </div>
+        </div>
+
+      -> En este caso, utilizamos un elemento <div class="movie-data"> para agrupar toda la información relacionada con la película. En su interior, tenemos otro elemento <div class="description"> para agrupar la descripción de la película. Sin embargo, si nos fijamos detenidamente, en el interior de este último <div> solo hay un párrafo <p>, por lo que en este caso, quizás lo ideal sería pasar la clase al párrafo y no utilizar ese <div> adicional, ya que no es necesario:
+
+        <div class="movie-data">
+          <h2>Interstellar</h2>
+          <p class="description">
+            <strong>Interstellar</strong> es una película dirigida
+            por <strong>Christopher Nolan</strong>.
+          </p>
+        </div>
+
+      -> Sin embargo, si nos planteamos la posibilidad de añadir más elementos a la descripción que no van a estar dentro del párrafo <p>, si sería necesario ese <div> de agrupación.
+
+
+
+    2 Representación visual
+      -> Aunque visualmente, los elementos <div> no tienen ningún aspecto por defecto, esto no es del todo cierto. Por defecto, una etiqueta HTML <div> se conoce como un elemento en bloque, lo que tiene ciertas implicaciones visuales.
+      -> En HTML existen algunas otras etiquetas diferentes para realizar agrupaciones. Por ejemplo, la etiqueta <span> tiene un objetivo muy similar al que tiene la etiqueta <div>. Sin embargo, todas las etiquetas tienen una representación visual específica, y en el caso de <div> y <span> tienen una diferencia que se observa muy bien si colocamos dos etiquetas de cada tipo una al lado de la otra:
+
+        <div style="background-color: blue">Etiqueta div 1.</div>
+        <div style="background-color: blue">Etiqueta div 2.</div>
+        <span style="background-color: red">Etiqueta span 1.</span>
+        <span style="background-color: red">Etiqueta span 2.</span>
+
+      -> Hay algunos detalles que no se consideran una buena práctica en este ejemplo, pero vamos a obviarlos ya que la finalidad es entender el ejemplo que se va a explicar. Observa que hemos utilizado el atributo style para darle color de fondo. Comprobarás que las etiquetas <div> se comportan de forma diferente a las etiquetas <span>.
+        -> Mientras que las etiquetas <div> se han colocado una debajo de la otra, las etiquetas <span> se han colocado una a continuación de la otra. Esto ocurre porque todas las etiquetas HTML tienen un tipo de representación visual ("display"), la de las etiquetas <div> es "block", mientras que la de las etiquetas <span> es "inline".
+
+
+
+    3 Ubicación del elemento
+      -> Ten presente que en HTML, las etiquetas no se pueden colocar libremente en cualquier lugar. Dependiendo de la etiqueta que estemos utilizando, será posible colocarla en un determinado sitio o no. Esto depende principalmente de la etiqueta padre.
+      -> Por ejemplo, en el caso de una etiqueta <div>, por defecto, se trata de un elemento en bloque. Un elemento en bloque se utiliza para agrupar otros elementos menores, por lo tanto, lo podemos utilizar para esta propósito. Sin embargo, existen otras etiquetas que son elementos en línea. Esta otra categoría se utiliza para dar formato o agrupar fragmentos de texto que pertenecen a una agrupación en bloque.
+
+        <div class="movie-data">
+          <h2>Interstellar</h2>
+          <p class="description">
+            <strong>Interstellar</strong> es una película dirigida
+            por <strong>Christopher Nolan</strong>.
+          </p>
+        </div>
+
+      -> En este caso, <strong> es un elemento en linea, mientras que <div class="movie-data"> es un elemento en bloque. Es correcto utilizar un <div> para agrupar todo su contenido interior, incluyendo elementos en bloque como <h2> y elementos en línea como <strong>. 
+      -> Sería incorrecto que dentro de un elemento en línea como <strong> escribieramos un elemento en bloque <div>.
+
+
+
+    4 Excesivas etiquetas anidadas
+      -> Cuando estamos desarrollando aplicaciones web, muchas veces utilizamos frameworks o librerías Javascript, donde frecuentemente por la forma en la que trabajan y están diseñadas, anidan elementos HTML <div> uno dentro de otro, de forma excesiva. Aunque esto es muy habitual en las aplicaciones web, no lo es tanto en las páginas web, las cuales deben tener más relación con la semántica, el posicionamiento SEO, la accesibilidad o el diseño web, y en estos contextos se debe cuidar la forma de escribir el HTML.
+      -> El siguiente fragmento de código HTML está extraído de una página real de Instagram (creada con React):
+
+      <div class="x9f619 x1n2onr6 x1ja2u2z">
+        <div class="x78zum5 xdt5ytf x1n2onr6 x1ja2u2z">
+          <div class="x78zum5 xdt5ytf x1n2onr6">
+            <div class="x78zum5 xdt5ytf x1n2onr6 xat3117 xxzkxad">
+              <div class="x78zum5 xdt5ytf x10cihs4 x1t2pt76 x1n2onr6 x1ja2u2z">
+                ............
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      -> En la medida de lo posible, intenta siempre evitar anidar elementos HTML uno dentro de otros si no es estrictamente necesario. Una gran cantidad de elementos adicionales que no son estrictamente obligatorios, proporcionarán múltiples desventajas:
+        - El código HTML ocupará más tamaño
+        - Al ser más grande, tardará más en descargarse (sobre todo en conexiones lentas)
+        - El navegador tardará más tiempo en renderizar la página (dibujarla)
+        - Hay más probabilidades de que sea menos accesible
+
+      ->Las aplicaciones web y las páginas web son tipos de webs diferentes. Las primeras están enfocadas en proporcionar un panel, dashboard o aplicación que el usuario utilizará, mientras que las segundas suelen estar más enfocadas en proporcionar contenido e información navegable para el usuario.
+
+
+
+    5 Agrupaciones semánticas
+      -> Las etiquetas <div> son excelentes herramientas para crear divisiones o separaciones de elementos y categorizarlos en nuestro HTML. Sin embargo, también son un peligro ya que muchas veces abusamos de estos elementos, aprovechando que no tienen significado.
+      -> Aunque probablemente aún no las conozcamos, existen una serie de etiquetas HTML semánticas que funcionan exactamente igual que un <div>. Sin embargo, ofrecen algo más de información, ya que no sólo son una etiqueta contenedora y agrupadora como <div>, sino que etiquetas como <header>, <footer> o <section> dan a entender la naturaleza del contenido van a agrupar.
+
+      -> Aún es muy pronto para utilizar estas etiquetas HTML semánticas especializadas, pero más adelante hablaremos de ellas y veremos que ventajas tienen y por qué deben ser utilizadas en lugar de etiquetas como <div> siempre que sea posible.
+      -> En HTML, muchos elementos semánticos tienen un rol por defecto, como por ejemplo, <input type="radio"> tiene el rol "radio". Los elementos no semánticos, como <div> y <span>, no tienen semántica añadida, su rol es "generic"; pero atributo "role" puede proporcionar semántica.
+      -> Los roles ARIA se añaden a elementos HTML mediante role="tipo de rol", donde el tipo de rol es el nombre de un rol en la especificación ARIA. Algunos roles requieren la inclusión de estados o propiedades ARIA asociados, mientras que otros solo son válidos en asociación con otros roles.
+ -->
+<!-- 
+  Los divs y spans no tienen semántica, solo agrupan, por lo que es importante tener en cuenta que es preferible usar las etiquetas que tengan semántica antes que divs o spans.
+  Si tenemos que utilizar un div para agrupar, es una muy buena práctica, sobre todo de cara a accesibilidad, poner en los divs el atributo "role"
+  Si el "role" que ponemos es el nombre de una de las etiquetas que ya existen en html, lo correcto sería sustituír ese div por esa etiqueta
+  
+  En este ejemplo, deberíamos de englobar todo en un main y sustituír los divs por etiquetas section
+ -->
