@@ -26,6 +26,8 @@
 
 - [Herramienta para revisar etiquetas de Twitter (X) Cards](https://cards-dev.twitter.com/validator) -> Herramienta de validación de Twitter (X) Cards de Twitter (X), que nos permite revisar si el código de las Twitter (X) Cards que hemos escrito es correcto y no hay ningún error en la utilización del protocolo
 
+-[Página para ampliar información sobre el atributo "role"](https://w3c.github.io/aria/#introroles) -> Es la página web oficial de W3C donde se tratan temas como la accesibilidad gracias a los WAI-ARIA Roles.
+
 - [Página de mdn sobre el atributo "role"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -> Da más información sobre el atributo "role". También indica especificaciones y da consejos de clean code y buen uso de este atributo
 
 - [frontendchecklist.io](https://frontendchecklist.io/) -> Nos ayuda a verificar una lista de 92 comprobaciones, organizadas por prioridad y categoría, de todos los elementos que debe tener un Front-End para que esté completo y optimizado. Estas comprobaciones están divididas por temas, como el head, el SEO, CSS, accesibilidad... Es muy útil porque permite asegurar que no se pasa nada por alto en el desarrollo de un sitio web
