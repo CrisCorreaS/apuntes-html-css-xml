@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;link&gt;</title>
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- FLAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico"> <!-- HTML4 -->
+    <link rel="icon" sizes="64x64" href="/favicon.png"> <!-- HTML5 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"> <!-- iPhone/iPad -->
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png"> <!-- Windows Phone -->
+
+    <!-- VERSIONES ALTERNATIVAS -->
+    <link rel="alternate" href="document.pdf" type="application/pdf">
+    <link rel="alternate" href="document-en.html" hreflang="en">
+    
+    <!-- PINGBACK -->
+    <link rel="pingback" href="https://dominio.com/pingback/">
+
+    <!-- POSICIONAMIENTO SEO (Google) -->
+    <link rel="canonical" href="https://ejemplo/posts/el-lenguaje-html-parte-2.html">
+    <link rel="prev" href="https://ejemplo/posts/el-lenguaje-html-parte-1.html">
+    <link rel="next" href="https://ejemplo/posts/el-lenguaje-html-parte-3.html">
+
+    <!-- INFORMACIÓN ADICIONAL O DATOS -->
+    <link rel="author" href="https://www.linkedin.com/in/cristina-correa-segade/" />
+    <link rel="help" href="https://ejemplo.com/ayuda/">
+    <link rel="search" href="https://ejemplo.com/search/">
+    <link rel="license" href="https://ejemplo.com/license/">
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo rel</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">Información Visual</td>
+        </tr>
+        <tr>
+          <td>stylesheet</td>
+          <td>Establece una relación con un documento .css para aplicar sus estilos.</td>
+          <td>&lt;link rel="stylesheet" href="estilos.css" type="text/css"&gt;</td>
+        </tr>
+        <tr>
+          <td>icon</td>
+          <td>Indica un icono para utilizar a modo de favicon (icono de pestaña).</td>
+          <td>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Documento</td>
+        </tr>
+        <tr>
+          <td>alternate</td>
+          <td>Indica una versión alternativa del documento actual.</td>
+          <td>&lt;link rel="alternate" href="otra_version.html" type="text/html" title="Otra Versión"&gt;</td>
+        </tr>
+        <tr>
+          <td>pingback</td>
+          <td>Indica un enlace al que se debe hacer ping cuando se haga referencia a este documento.</td>
+          <td>&lt;link rel="pingback" href="pingback.php"&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Posicionamiento SEO</td>
+        </tr>
+        <tr>
+          <td>canonical</td>
+          <td>Establece el enlace real para el documento actual para evitar URL duplicadas.</td>
+          <td>&lt;link rel="canonical" href="url_canonica.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>prev</td>
+          <td>Indica si existe una URL anterior al documento actual. Útil en enlaces con varias partes.</td>
+          <td>&lt;link rel="prev" href="url_anterior.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>next</td>
+          <td>Indica si existe una URL siguiente al documento actual. Útil en enlaces con varias partes.</td>
+          <td>&lt;link rel="next" href="url_siguiente.html"&gt;</td>
+        </tr>
+        <tr>
+          <td colspan="3">Información o Datos Extra</td>
+        </tr>
+        <tr>
+          <td>author</td>
+          <td>Indica un enlace con más información sobre el autor del documento actual.</td>
+          <td>&lt;link rel="author" href="info_autor.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>help</td>
+          <td>Indica un enlace con información de ayuda.</td>
+          <td>&lt;link rel="help" href="ayuda.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>search</td>
+          <td>Indica un enlace donde se puede encontrar un buscador del sitio actual.</td>
+          <td>&lt;link rel="search" href="buscador.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>license</td>
+          <td>Indica un enlace con la información de licencia de la página actual.</td>
+          <td>&lt;link rel="license" href="licencia.html"&gt;</td>
+        </tr>
+        <tr>
+          <td>manifest</td>
+          <td>Indica un enlace con una URL con un archivo .json con un manifiesto de aplicación.</td>
+          <td>&lt;link rel="manifest" href="manifest.json"&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table border="1">
+      <thead>
+        <legend>Atributos posicionamiento SEO (Google)</legend>
+        <tr>
+          <th>Atributo rel</th>
+          <th>Atributo href</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>canonical</td>
+          <td>Dirección URL</td>
+          <td>URL exacta que indica a Google la URL real del documento. Cualquier variación será descartada.</td>
+        </tr>
+        <tr>
+          <td>prev</td>
+          <td>Dirección URL</td>
+          <td>Si el documento actual tiene varias partes, indica la URL de la página anterior.</td>
+        </tr>
+        <tr>
+          <td>next</td>
+          <td>Dirección URL</td>
+          <td>Si el documento actual tiene varias partes, indica la URL de la página siguiente.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+    La etiqueta <link> sirve para establecer relaciones con otros documentos, enlaces o archivos. De esta forma, el navegador o cualquier sistema capaz de leer código HTML puede saber que un documento está relacionado con otro (independientemente del formato que tenga) y así pueden establecerse ciertas relaciones.
+      Ej:
+        <head>
+          <link rel="stylesheet" href="index.css">
+          <link rel="icon" href="favicon.png">
+        </head>
+
+      -> el atributo "rel" generalmente establece el tipo de relación que estamos determinando. 
+      -> el atributo "href" establecemos la dirección del documento en cuestión relacionado.
+
+    
+  1 RELACIONES VISUALES
+    1.1 Cargar estilos CSS
+      -> Probablemente el uso más extendido de la etiqueta HTML <link> es utilizarlas para hacer una relación con un documento CSS. De esta forma, se indica al navegador que al documento HTML actual se le debe aplicar el estilo CSS que tenemos en el documento ".css" referenciado en el atributo "href".
+      
+        <head>
+          <link rel="stylesheet" href="index.css">
+        </head>
+      
+      -> En el atributo "rel" de la etiqueta <link> se indica que se trata de una relación de tipo stylesheet, es decir, se hace referencia a las hojas de estilo CSS. Con esto, el documento HTML estará relacionado con el documento CSS indicado en el atributo "href", por lo que aplicará todos el código CSS que se encuentre en él al documento HTML actual.
+      -> En algunos casos, podremos observar que existe un atributo type="text/css". Este atributo era obligatorio antiguamente, pero en la actualidad se puede omitir, ya que el tipo por defecto de las hojas de estilos ya es text/css.
+
+    
+    1.2 Favicon (icono de pestañas)
+      -> Cuando tenemos varias pestañas en nuestro navegador, para una búsqueda más fácil e intuitiva entre pestañas, el navegador suele colocarnos unos iconos a la izquierda del título de las pestañas. Estos iconos son conocidos como favicons (iconos de favoritos) ya que originalmente fue un invento de Internet Explorer para colocar el icono cuando el usuario añadía una página a favoritos, aunque actualmente se utiliza para identificar rápidamente las pestañas de un navegador.
+      -> Desgraciadamente, esta característica no está fuertemente definida en la especificación, por lo que cada navegador (y cada sistema operativo) la implementa a su propia forma. Hay navegadores que sólo soportan favicon en formato PNG, otros que solo soportan resoluciones específicas, etc
+        
+        <head>
+          <link rel="shortcut icon" href="/favicon.ico"> -> Para HTML4
+          <link rel="icon" sizes="64x64" href="/favicon.png"> -> Para HTML5
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"> -> Para iPhone/iPad
+          <meta name="msapplication-TileImage" content="/mstile-144x144.png"> -> Para Windows Phone
+        </head>
+
+      -> Si quieres generar los favicon de una forma más cómoda, aconsejo usar la herramienta Real Favicon Generator, a la cuál le pasamos un logo a alta resolución de nuestra página o sitio, y nos generará un fichero .zip con el código HTML y diferentes versiones.
+
+    
+
+  2 RELACIONES DEL DOCUMENTO
+    2.1 Versiones alternativas
+      -> Con la etiqueta <link rel="alternate"> podemos indicar que el documento actual tiene versiones alternativas en otros formatos o idiomas.
+      -> El siguiente ejemplo se indica que el documento HTML que estamos leyendo tiene una versión en PDF, y además, una versión HTML en inglés:
+
+        <head>
+          <link rel="alternate" href="document.pdf" type="application/pdf">
+          <link rel="alternate" href="document-en.html" hreflang="en">
+        </head>
+
+      -> Observa que en la primera etiqueta, indicamos el atributo type="application/pdf", donde el valor application/pdf es el denominado MIME para identificar los archivos PDF. Un valor MIME es simplemente una cadena de texto que identifica un tipo de formato de fichero.
+      -> Por otro lado, en la segunda etiqueta, indicamos el atributo hreflang, mediante el cuál indicamos el idioma en el que se encuentra el documento referenciado por el atributo href. En este caso, indicamos el valor en, que se refiere a que se encuentra en idioma inglés.
+
+
+    2.2 Referencias mediante pingback
+      -> Aunque no es muy utilizado hoy en día debido a que fue un sistema altamente sensible al spam, los pingbacks son un mecanismo mediante el cuál, cuando un usuario escribe un artículo en una web y menciona o hace referencia a otro documento, puede «avisar a su autor» de que ha hecho mención de su artículo.
+        
+        <head>
+          <link rel="pingback" href="https://dominio.com/pingback/">
+        </head>
+
+      -> Esto significa que en la URL https://dominio.com/pingback/ existe un servidor de pingbacks que van a estar continuamente leyendo las peticiones, para que, si se realiza alguna, se lea la información asociada y se registre que alguien ha hecho una mención del artículo. Sistemas como Wordpress u otros CMS famosos, tienen plugins o sistemas para soportarlo.
+
+
+
+
+    3 POSICIONAMIENTO SEO (Google)
+      -> La etiqueta <link> también nos permite indicar algunos datos interesantes de cara al buscador para evitar ser marcado como contenido duplicado. De esta forma le indicamos al buscador exactamente las URLs que debe tener en cuenta, algo muy interesante de cara al posicionamiento SEO en buscadores.
+        
+        <head>
+          <link rel="canonical" href="https://ejemplo/posts/el-lenguaje-html-parte-2.html">
+          <link rel="prev" href="https://ejemplo/posts/el-lenguaje-html-parte-1.html">
+          <link rel="next" href="https://ejemplo/posts/el-lenguaje-html-parte-3.html">
+        </head>
+        
+      -> Mientras que las etiquetas con rel="prev" y rel="next" indican el enlace a dichas partes, la etiqueta <link rel="canonical"> establece la URL canónica, es decir, aunque tuvieramos varias formas de acceder a esta página (y las 3 carguen la página correctamente):
+        
+        https://ejemplo/posts/el-lenguaje-html-parte-2.html
+        https://ejemplo/posts/el-lenguaje-html-parte-2/
+        https://ejemplo/posts/el-lenguaje-html-parte-2
+
+      -> En la etiqueta anterior hemos definido que la URL canónica es la que termina en .html, por lo que Google entenderá que las demás son formas alternativas pero que debe utilizar la primera.
+
+
+
+    4 INFORMACIÓN ADICIONAL O DATOS
+      -> Existen varios tipos de etiquetas <link> donde podemos hacer referencia a información o datos relevantes sobre nuestro documento. Mediante el atributo rel podemos indicar valores como author, help, search o license para indicar información que puede ser útil para el navegador, buscador o usuario.
+
+      <head>
+        <link rel="author" href="https://www.linkedin.com/in/cristina-correa-segade/" />
+        <link rel="help" href="https://ejemplo.com/ayuda/">
+        <link rel="search" href="https://ejemplo.com/search/">
+        <link rel="license" href="https://ejemplo.com/license/">
+      </head>
+
+      -> Observa que en cada uno de los casos hemos hecho referencia a detalles e información relacionada:
+        - URL del autor de la página
+        - URL de ayuda o más información
+        - URL donde puedes encontrar un buscador de la página
+        - URL donde puedes encontrar la licencia de los contenidos de la página
+
+
+      4.1 Manifiesto de aplicación
+        -> En algunos casos, también podemos encontrar lo que se denomina un manifiesto de aplicación. Suele ser más frecuente encontrarlo en aplicaciones web que en páginas web, pero no es más que una etiqueta que hace referencia a un archivo .json donde se encuentran varios datos sobre la página.
+        -> Para indicarlos, sólo se tiene que hacer referencia a la etiqueta <link rel="manifest">
+
+          <head>
+            <title>La web de Warren Sánchez</title>
+            <link rel="manifest" href="manifest.webmanifest">
+          </head>
+        
+        -> En el documento manifest.webmanifest referenciado, que no es más que un archivo JSON, podemos encontrar algunos de los datos de nuestra aplicación web:
+        Ej:
+            {
+            "lang": "es",
+            "dir": "ltr",
+            "name": "La web de Warren Sánchez",
+            "short_name": "WarrenWeb",
+            "icons": [
+            { "src": "icon-64x64.webp", "sizes": "64x64", "type": "image/webp" },
+            { "src": "icon-128x128.png", "sizes": "128x128" }
+            ],
+            "id": "warrenweb",
+            "start_url": "/index.html",
+            "display": "fullscreen",
+            "orientation": "landscape",
+            "background_color": "indigo",
+            "theme_color": "hotpink"
+            }
+
+      -> No obstante, insistir en que los manifiestos suelen ser elementos incluidos en una **aplicación web**, en lugar de incluirlo en un documento de una página web.
+ -->
