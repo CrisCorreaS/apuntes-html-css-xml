@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;head&gt;</title>
+  </head>
+  <body>
+    <h2>Etiquetas que se pueden usar en la etiqueta &lt;head&gt;</h2>
+    <table border="1">
+        <thead>
+          <tr>
+              <th rowspan="2">Etiqueta HTML</th>
+              <th colspan="2">¿Donde se pueden usar?</th>
+              <th rowspan="2">Descripción</th>
+          </tr>
+          <tr>
+              <th>&lt;head&gt;</th>
+              <th>&lt;body&gt;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td><code>&lt;title&gt;</code></td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>Indica el título de la página (pestaña del navegador o título de resultados en Google).</td>
+          </tr>
+          <tr>
+              <td><code>&lt;base&gt;</code></td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>URL base de los enlaces (usado para gestionar rutas relativas)</td>
+          </tr>
+          <tr>
+              <td><code>&lt;link&gt;</code></td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>Establece una relación del documento actual con otro externo</td>
+          </tr>
+          <tr>
+              <td><code>&lt;meta&gt;</code></td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>Establece un metadato específico en el documento actual</td>
+          </tr>
+          <tr>
+              <td><code>&lt;style&gt;</code></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Crea estilos CSS que afectarán únicamente al documento actual</td>
+          </tr>
+          <tr>
+              <td><code>&lt;script&gt;</code></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Indica un script a cargar o ejecutar en la página actual</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+  1 La etiqueta <head> se encarga de contener las etiquetas HTML de metadatos (información sobre el documento) así como establecer relaciones con otros documentos
+    En el interior de la etiqueta <head> es aconsejable, como mínimo, indicar siempre las siguientes dos etiquetas:
+
+      <head>
+        <title>Título del documento</title>
+        <meta charset="utf-8" />
+      </head>
+    
+
+    1.1 La etiqueta <title> sirve para indicar un título de nuestro documento. Es una etiqueta que debe aparecer de forma obligatoria en un documento HTML, ya que siempre debería tener un título. El título puede servir para varias cosas:
+        - Determinará el título de la ventana o pestaña del navegador.
+        - Si la página se indexa en Google, es muy posible que use ese título para el resultado en el buscador.
+        - Es un título identificativo que pueden usarlo bots o sistemas automáticos que lean la página.
+
+
+    1.2 En este ejemplo, también hemos incluído la etiqueta <meta> más básica que existe. Es una etiqueta para indicar al navegador que utilice la codificación UTF-8 para mostrar el texto. Es muy importante utilizar siempre, de forma coherente, una misma codificación en todos nuestros documentos, de esta forma evitaremos problemas con vocales acentuadas, o carácteres como ñ , ¿ , ¡ u otros
+        En resumen, con la etiqueta <meta> se pueden indicar aspectos generales, información o metadatos para que el documento HTML tenga en cuenta. 
+        Existen muchísimas más etiquetas <meta> a parte de la etiqueta <meta charset>, que es una de las más básicas.
+
+    
+    1.3 La etiqueta <base> se puede utilizar en el documento HTML para establecer una ruta base de los enlaces relativos utilizados en nuestro documento.
+        Ej: Sin usar etiqueta <base> desde nuestra página https://ejemplo:
+
+            <head>
+              <title>Documento HTML sin usar base</title>
+            </head>
+            <body>
+              <a href="/index.html">Primer enlace</a>
+              <a href="/about-us/">Segundo enlace</a>
+            </body>
+        -> En este caso: 
+          -> el primer enlace nos lleva a la ruta https://ejemplo/index.html
+          -> el segundo enlace nos lleva a la página https://ejemplo/about-us/. 
+          Simplemente, el enlace se añade al final de la URL donde nos encontramos (https://ejemplo)
+
+        Ej: Usando la etiqueta <base> desde nuestra página https://ejemplo:
+
+            <head>
+              <title>Documento HTML utilizando base</title>
+              <base href="https://ejemplo/links/" target="_blank">
+            </head>
+            <body>
+              <a href="index.html">Primer enlace</a>
+              <a href="./about-us/">Segundo enlace</a>
+              <a href="/other/">Tercer enlace</a>
+            </body>
+        -> Ahora, aunque nos encontremos en la página https://ejemplo/, hemos establecido la URL base https://ejemplo/links para los enlaces, por lo que: 
+          -> el primer enlace del documento nos llevará a https://ejemplo/links/index.html 
+          -> el segundo enlace nos llevará a la página https://ejemplo/links/streams/ 
+          -> el tercer enlace nos llevará a la página https://ejemplo/other/, la razón por la cual no nos lleva a la ruta relativa de la etiqueta <base>, es que estamos utilizando una ruta relativa que comienza por "/"
+          Como se puede ver, la ruta establecida en la etiqueta <base> (debe ser ruta relativa) se utiliza como base de las URLs utilizadas. En el caso de utilizar una ruta absoluta o una ruta relativa que comience por /, no se tendrá en cuenta la ruta indicada en <base>.
+        -> Además, también hemos establecido en la etiqueta <base> el atributo target="a _blank", por lo que los enlaces se abrirán en una pestaña nueva.
+  
+  
+  2 Valores del atributo "target":
+    - "_self" -> El enlace se abre en la misma pestaña. Es el valor por defecto, incluso si se omite el atributo.
+    - "_blank" -> El enlace se abre en una nueva pestaña o ventana.
+    -> Otros valores como "_parent" o "_top" permiten abrir el enlace en un contexto superior al actual, si existe. En casocontrario, se actua como si se hubiera indicado un valor "_self".
+-->
