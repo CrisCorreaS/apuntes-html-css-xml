@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;dl&gt;</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Etiqueta</th>
+          <th>Significado</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;dl&gt;</td>
+          <td>Description List</td>
+          <td>Define una lista de descripciones. Es la etiqueta contenedora.</td>
+        </tr>
+        <tr>
+          <td>&lt;dt&gt;</td>
+          <td>Description Term</td>
+          <td>Término de la descripción. Contiene el nombre o término a describir.</td>
+        </tr>
+        <tr>
+          <td>&lt;dd&gt;</td>
+          <td>Description Details</td>
+          <td>Descripción o valor asociado al término. Pueden existir varios por término.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <dl>
+      <dt>Gallina</dt>
+      <dd>Ave doméstica del orden de las galliformes.</dd>
+      <dd>Cobarde, pusilánime.</dd>
+    
+      <dt>Gato</dt>
+      <dd>Animal que en algún momento dominó Internet y en el futuro dominará el mundo.</dd>
+    </dl>
+  </body>
+</html>
+<!-- 
+  -> De la misma forma que podemos crear listas genéricas con las etiquetas <ol> o <ul>, podemos crear listas de descripciones. La diferencia principal, es que este tipo de listas se suele utilizar cuando queremos asociar pares de nombre-valor, es decir, una lista de términos, donde cada término tiene una definición asociada.
+
+  -> Listas de descripción
+    -> Veamos un ejemplo práctico de como utilizar este tipo de listas:
+
+      <dl>
+        <dt>Gallina</dt>
+        <dd>Ave doméstica del orden de las galliformes.</dd>
+        <dd>Cobarde, pusilánime.</dd>
+
+        <dt>Gato</dt>
+        <dd>Animal que en algún momento dominó Internet y en el futuro dominará el mundo.</dd>
+      </dl>
+
+    -> Observa que se trata de una lista de valores, pero no tiene porqué estar asociado a una sola definición. En el caso de la Gallina hay dos definiciones <dd> asociadas a la etiqueta del término <dt>. Sin embargo, en el segundo caso de la palabra Gato, hay sólo una definición.
+ -->
