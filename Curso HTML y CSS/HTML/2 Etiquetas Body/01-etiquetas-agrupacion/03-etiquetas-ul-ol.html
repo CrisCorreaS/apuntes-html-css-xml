@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas &lt;ul&gt; y &lt;ol&gt;</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+      voluptate eveniet neque maxime? Quia quidem repellendus enim, eum
+      exercitationem similique excepturi sapiente sed assumenda voluptatibus
+      aut? Voluptatum aspernatur minima veniam. Ipsum illo nemo voluptates, eius
+      ab excepturi, dolorum laboriosam, porro nisi a iure dignissimos beatae quo
+      sint quibusdam. Impedit quis aut, accusantium tenetur corrupti ut illo.
+      Tempore odit praesentium quod. <br />
+      Ullam consequuntur minima reiciendis excepturi, beatae porro cumque
+      tempora ut voluptatibus quibusdam? Velit accusantium at in voluptatibus
+      vel maxime reprehenderit amet corporis, debitis harum nobis autem. Soluta
+      molestiae provident nam. Debitis exercitationem eum nostrum, a voluptatum
+      rem et quidem cumque velit delectus natus iusto veritatis.
+    </p>
+    <h1 id="encabezado1" class="encabezados">Lista de la compra</h1>
+    <ul>
+      <li class="list-item">Leche</li>
+      <li class="list-item">Harina</li>
+      <li class="list-item">Hevos</li>
+      <li class="list-item">Pan</li>
+    </ul>
+
+    <ul>
+      <li>Primer ítem.
+      <li>Segundo ítem.
+      <li>Tercer ítem.
+    </ul>
+
+    <h2 id="encabezado2" class="encabezados">Lista de la compra ordenada</h2>
+    
+    <ol>
+      <li class="list-item">Leche</li>
+      <li class="list-item">Harina</li>
+      <li class="list-item">Hevos</li>
+      <li class="list-item">Pan</li>
+    </ol>
+
+    <ol>
+      <li value="5">Primer ítem.</li>
+      <li value="50">Segundo ítem.</li>
+      <li value="25">Tercer ítem.</li>
+    </ol>
+
+    <h3>Atributos listas ordenadas</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Valor</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>start</td>
+          <td>número</td>
+          <td>Indica el número del primer ítem de la lista y del que empezará a contar.</td>
+        </tr>
+        <tr>
+          <td>reversed</td>
+          <td>-</td>
+          <td>Si se indica este atributo, la lista se numera en orden inverso. Es un atributo booleano</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>1 | a | A | i | I</td>
+          <td>Lista con números enteros, letras o números romanos (minúsculas o mayúsculas).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ol start="5">
+      <li>Primer ítem.</li>
+      <li>Segundo ítem.</li>
+      <li>Tercer ítem.</li>
+    </ol>
+
+    <ol type="i" start="5">
+      <li>Primer ítem.</li>
+      <li>Segundo ítem.</li>
+      <li>Tercer ítem.</li>
+    </ol>
+
+    <ol type="I" start="5" reversed>
+      <li>Primer ítem.</li>
+      <li>Segundo ítem.</li>
+      <li>Tercer ítem.</li>
+    </ol>
+  </body>
+</html>
+<!-- 
+  -> Si necesitamos crear una lista de elementos en HTML, debemos utilizar uno de los dos siguientes elementos contenedores: la etiqueta <ul> o la etiqueta <ol>. Además, independientemente de la etiqueta que utilices, en su interior, cada elemento utilizará la etiqueta <li>
+  -> En primer lugar, debemos elegir la etiqueta HTML correcta para crear la lista. Antes de continuar, tenemos que preguntarnos si vamos a crear una lista donde importa el orden (lista con los pasos para hacer un postre), o por el contrario, una donde el orden no es importante (lista de objetos que tengo en una maleta).
+
+    1 Lista no enumerada <ul>
+      -> Empecemos con una lista donde no importa el orden. Las listas no enumeradas se crean mediante la etiqueta contenedora <ul> (unorderer list). Esta etiqueta contendrá una serie de elementos <li> donde cada uno de ellos contendrá la información de uno de los puntos de la lista:
+
+        <ul>
+          <li>Primer ítem.</li>
+        </ul>
+
+      -> Observa que este fragmento de código crearía una lista, donde en su interior se pueden añadir los ítems que aparecerían con un círculo o cuadrado de color negro. El aspecto visual no importa demasiado, ya que veremos más adelante que se puede modificar, o cambiará ligeramente dependiendo del sistema operativo que estemos utilizando.
+
+  
+  
+  2 Lista enumerada <ol>
+    -> Si en lugar de utilizar <ul>, utilizamos una etiqueta contentedora <ol> (orderer list) tendremos una lista enumerada, es decir, una lista donde el orden es importante. Cada elemento <li> de la etiqueta pasará a estar numerado, por lo que en lugar de encontrarnos puntos, pasaremos a observar que aparece un número (del 1 en adelante):
+
+      <ol>
+        <li>Primer ítem.</li>
+        <li>Segundo ítem.</li>
+        <li>Tercer ítem.</li>
+      </ol>
+
+    -> Las listas creadas con la etiqueta HTML <ol> tienen una serie de atributos HTML interesantes, que permiten cambiar como se interpreta y se muestra la lista por el navegador, y por lo tanto, como se muestra al usuario. En la tabla de este documento tenemos más información.
+    -> Veamos cada uno de estos atributos con algunos ejemplos.
+
+      2.1 Número del primer ítem
+        -> Por defecto, las listas comiezan empezando a contar desde el 1. Mediante el atributo start se puede indicar el número con el que vas a empezar la lista. En este ejemplo que verás a continuación, indicamos que se empiece desde el 5, en lugar del 1:
+          
+          <ol start="5">
+            <li>Primer ítem.</li>
+            <li>Segundo ítem.</li>
+            <li>Tercer ítem.</li>
+          </ol>
+
+        -> Por lo tanto, nuestra lista tendría los elementos 5, 6 y 7. Esto puede resultar interesante si queremos hacer un alto en una lista, añadir algun fragmento de código HTML, y luego continuar la lista por donde nos encontrabamos.
+
+
+      2.2 Tipo de numeración
+        -> Mediante el atributo type podemos cambiar el sistema de numeración e indicar otro diferente. Por defecto, las listas numeradas se muestran con números decimales. Sin embargo, de forma alternativa podemos establecer otros valores con el atributo type, como por ejemplo i, que lo establece con números romanos (minúsculas):
+
+          <ol type="i" start="5">
+            <li>Primer ítem.</li>
+            <li>Segundo ítem.</li>
+            <li>Tercer ítem.</li>
+          </ol>
+
+        -> Los valores que podemos indicar en el atributo type son los siguientes:
+          - 1 -> Usa números decimales (valor por defecto): 1, 2, 3, 4, 5...
+          - a / A -> Letras minúsculas o mayúsculas: a, b, c, d... ó A, B, C, D...
+          - i / I -> Números romanos en minúsculas o mayúsculas: i, ii, iii, iv, v... ó I, II, III, IV, V...
+        
+        -> Observa que además, en el elemento <ol> hemos indicado el atributo start. Con esto, empezaremos a contar en el 5, pero como además tenemos establecido el atributo type a números romanos, pues empezará a contar con v, luego vi y luego vii.
+
+      
+      2.3 Invertir orden
+        -> Por último, tenemos otro atributo interesante que es el reversed. Como te habrás podido imaginar, es un atributo booleano (no requiere valor), que permite «darle la vuelta a la lista», es decir, que empiece a contar desde el último número y vaya descendiendo.
+        -> El siguiente ejemplo muestra una lista numerada con números romanos en mayúsculas, que empiezan en V, pero irán descendiendo, por lo que terminarán en III:
+
+          <ol type="I" start="5" reversed>
+            <li>Primer ítem.</li>
+            <li>Segundo ítem.</li>
+            <li>Tercer ítem.</li>
+          </ol>
+
+        -> Si no indicamos el atributo start="5", los elementos empezarían en III e irían descendiendo hasta I.
+
+
+
+  3 Elemento de la lista <li>
+    -> Como habrás podido observar en el ejemplo anterior, la etiqueta <li> sirve para indicar los elementos internos de una lista HTML, ya sea no enumerada o lista enumerada (que veremos más adelante). Podemos añadir los ítems que deseemos:
+
+      <ul>
+        <li>Primer ítem.</li>
+        <li>Segundo ítem.</li>
+        <li>Tercer ítem.</li>
+      </ul>
+
+    -> Simplemente abrimos la etiqueta, escribimos el contenido y la cerramos
+
+    3.1 Omisión del cierre
+      -> Una particularidad poco conocida de las listas HTML es que los elementos <li> pueden omitir sus etiquetas de cierre </li> si van inmediatamente seguidas de determinadas etiquetas, como por ejemplo otra etiqueta de apertura <li>.
+
+        <ul>
+          <li>Primer ítem.
+          <li>Segundo ítem.
+          <li>Tercer ítem.
+        </ul>
+
+      -> Este fragmento de código sería equivalente al anterior. Aunque parezca incompleto, es correcto y los navegadores lo interpretarán sin problemas. No obstante, mi recomendación es que se cierren cada etiqueta HTML, de modo que el código sea más coherente y lógico, y por lo tanto, más fácil de mantener.
+
+    3.2 Ponderar elementos
+      -> En algunos casos en los que nos interese, se puede establecer una ponderación como metadato en los elementos de la lista mediante el atributo value. De esta forma, cada ítem de la lista tendrá asignado, por ejemplo, un valor numérico.
+
+        <ol>
+          <li value="5">Primer ítem.</li>
+          <li value="50">Segundo ítem.</li>
+          <li value="25">Tercer ítem.</li>
+        </ol>
+
+      -> Ten en cuenta que visiblemente esa cantidad no se verá reflejada a menos que se trate de una lista enumerada <ol>. En una lista <ul> se trata simplemente de metadatos que podríamos utilizar luego desde CSS o Javascript.
+ -->
+
+<!-- 
+  Atributos globales -> Atributos que puede tener cualquier elemento
+  
+  Atributos globales "id" y "class":
+  - id -> es un identificador que tiene un valor único para cada elemento. Solo puede haber un id="encabezado1" en todo nuestro código
+  - class -> sirve para identificar elementos que se repiten y agruparlos
+
+  <h1 id="encabezado1" class="encabezados">Lista de la compra</h1>
+ -->
