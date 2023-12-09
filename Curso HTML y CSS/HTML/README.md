@@ -10,11 +10,16 @@
 - [Página de Manz Dev para aprender HTML](https://lenguajehtml.com/) -> Página para aprender HTML, tener una cheat sheet de referencia, vídeos centrados en el tema e información adicional
 
 ## Páginas y herramientas para mejorar
+#### Páginas para HTML en general
 - [Validador HTML W3C](https://validator.w3.org/) -> Es el validador oficial de la W3C que verifica que el código HTML de un sitio web esté bien estructurado y cumpla con los estándares de la W3C
 
 - [Validador Links W3C](https://validator.w3.org/checklink) -> Se utiliza para verificar problemas en los enlaces, anclajes y objetos referenciados en una página web, una hoja de estilo CSS o de manera recursiva en un sitio web completo 
 
 - [caninclude.glitch.me](https://caninclude.glitch.me/) -> Nos ayuda a comprobar si una etiqueta HTML puede incluirse dentro de otra. Para ello, debemos introducir la etiqueta padre y la etiqueta hijo y la web mostrará un mensaje indicando si la inclusión es válida o no
+
+- [frontendchecklist.io](https://frontendchecklist.io/) -> Nos ayuda a verificar una lista de 92 comprobaciones, organizadas por prioridad y categoría, de todos los elementos que debe tener un Front-End para que esté completo y optimizado. Estas comprobaciones están divididas por temas, como el head, el SEO, CSS, accesibilidad... Es muy útil porque permite asegurar que no se pasa nada por alto en el desarrollo de un sitio web
+
+#### Páginas para las etiquetas de "head"
 
 - [seotoolseye.com](https://seotoolseye.com/) -> Proporciona una variedad de herramientas gratuitas para ayudar a mejorar el rendimiento de un sitio web y atraer más tráfico. Las herramientas disponibles en SEOToolsEye están diseñadas para ayudar con varias tareas como por ejemplo: gener etiquetas meta, sugerencias de palabras clave (keywords), generar tarjetas de Twitter...
 
@@ -26,10 +31,20 @@
 
 - [Herramienta para revisar etiquetas de Twitter (X) Cards](https://cards-dev.twitter.com/validator) -> Herramienta de validación de Twitter (X) Cards de Twitter (X), que nos permite revisar si el código de las Twitter (X) Cards que hemos escrito es correcto y no hay ningún error en la utilización del protocolo
 
+- [Generador de flavicons](https://realfavicongenerator.net/) -> Nos permite generar favicons de alta calidad, adaptados a diferentes plataformas y navegadores, para nuestro sitio web. Podemos enviar una imagen de nuestro logo y nos crea los flavicons
+
+#### Páginas para las etiquetas de "body"
+
 -[Página para ampliar información sobre el atributo "role"](https://w3c.github.io/aria/#introroles) -> Es la página web oficial de W3C donde se tratan temas como la accesibilidad gracias a los WAI-ARIA Roles.
 
 - [Página de mdn sobre el atributo "role"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -> Da más información sobre el atributo "role". También indica especificaciones y da consejos de clean code y buen uso de este atributo
 
-- [frontendchecklist.io](https://frontendchecklist.io/) -> Nos ayuda a verificar una lista de 92 comprobaciones, organizadas por prioridad y categoría, de todos los elementos que debe tener un Front-End para que esté completo y optimizado. Estas comprobaciones están divididas por temas, como el head, el SEO, CSS, accesibilidad... Es muy útil porque permite asegurar que no se pasa nada por alto en el desarrollo de un sitio web
 
-- [Generador de flavicons](https://realfavicongenerator.net/) -> Nos permite generar favicons de alta calidad, adaptados a diferentes plataformas y navegadores, para nuestro sitio web. Podemos enviar una imagen de nuestro logo y nos crea los flavicons
+#### Librerías interesantes
+- [Prism.js](https://prismjs.com/) -> Es una biblioteca de JavaScript ligera y fácil de usar para resaltar la sintaxis en bloques de código en páginas web. Tiene un tamaño de archivo pequeño, lo que la hace ideal para su uso en sitios web de todos los tamaños.
+
+- [Highlight.js](https://highlightjs.org/) -> Es una biblioteca de JavaScript que se utiliza para resaltar la sintaxis de los bloques de código en una página web. Es muy útil para mejorar la legibilidad de los bloques de código, especialmente en tutoriales, documentación y blogs de programación.
+
+- [Shiki](https://shiki.matsu.io/) -> Es una biblioteca de JavaScript que se utiliza para resaltar la sintaxis de código en una página web. Utiliza la gramática TextMate para tokenizar las cadenas de código y colorea los tokens con los temas de VSCode. En resumen, Shiki genera HTML que se parece exactamente a tu código en VSCode, y funciona bien tanto en un generador de sitios web estático como en un generador de sitios web dinámico
+
+- [Eleventy](https://www.11ty.dev/) -> Es una herramienta de código abierto que permite a los desarrolladores crear sitios web estáticos a partir de archivos de texto plano.
