@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;blockquote&gt;</title>
+  </head>
+  <body>
+    <!-- Paso 1 - Hacerlo simple -->
+    <p>Observa la siguiente cita:</p>
+    <blockquote>
+      La primera regla del Club de la Lucha es:
+      Nadie habla sobre el Club de la Lucha.
+    </blockquote>
+
+    <!-- Paso 2 - Poner etiquetas anidadas básicas dentro de blockquote -->
+    <p>Observa la siguiente cita:</p>
+    <blockquote>
+      <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+      <p class="author">Tyler Durden en El Club de la Lucha</p>
+    </blockquote>
+
+    <!-- Paso 3 - Poner el atributo "cite" -->
+    <p>Observa la siguiente cita:</p>
+    <blockquote cite="http://es.wikiquote.org/wiki/Fight_Club">
+      <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+      <p class="author">Tyler Durden en El Club de la Lucha</p>
+    </blockquote>
+
+    <!-- Paso 4 - Añadirle un poco de semántica a las etiquetas anidadas -->
+    <p>Observa la siguiente cita:</p>
+    <blockquote cite="http://es.wikiquote.org/wiki/Fight_Club">
+      <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+      <footer>
+        <cite class="author">Tyler Durden</cite> en
+        <cite class="title">El Club de la Lucha</cite>
+      </footer>
+    </blockquote>
+
+    <hr />
+
+    <div class="page">
+      <div class="comment">
+        <strong>Paco</strong> <em>hace 5 horas</em>
+        <p>Me encanta esto.</p>
+    
+        <div class="comment">
+          <strong>Ana</strong> <em>hace 3 horas</em>
+          <blockquote>
+            <p>Me encanta esto</p>
+          </blockquote>
+          <p>¿Por qué lo dices?</p>
+    
+          <div class="comment">
+            <strong>Paco</strong> <em>hace 1 hora</em>
+            <blockquote>
+              <blockquote>
+                <p>Me encanta esto</p>
+              </blockquote>
+              <p>¿Por qué lo dices?</p>
+            </blockquote>
+            <p>Es que me parece fantástico.</p>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+<!-- 
+  -> Una etiqueta que no suele ser bien comprendida en el Lenguaje HTML es la etiqueta <blockquote>. Muchos desarrolladores utilizan las etiquetas de enlaces <a> o la de párrafos <p> para escribir un texto y enlazar la fuente, sin embargo, HTML tiene herramientas mucho más apropiadas para este objetivo.
+  -> La etiqueta <blockquote> se utiliza, como su propio nombre indica, para crear un bloque o sección donde aparezca un texto que es una cita o referencia a una obra o fuente de información. Dicha fuente de información puede ser un libro, una canción, un documento, una serie de televisión, etc...
+  ->En definitiva, una obra o documento de cualquier tipo. Veamos un ejemplo, con una cita de una película:
+
+    <p>Observa la siguiente cita:</p>
+    <blockquote>
+      La primera regla del Club de la Lucha es:
+      Nadie habla sobre el Club de la Lucha.
+    </blockquote>
+
+  -> Este ejemplo podría servirnos y es correcto. Sin embargo, no es muy específico y podría ser mucho mejor. Vamos a mejorarlo un poco, diferenciando sus partes y añadiendo información útil, utilizando <blockquote> como una etiqueta de agrupación.
+  -> Pondremos la cita en un párrafo <p>, y en otro párrafo <p> diferente, añadiremos el nombre del autor de la cita, y el nombre de la película:
+
+    <p>Observa la siguiente cita:</p>
+    <blockquote>
+      <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+      <p class="author">Tyler Durden en El Club de la Lucha</p>
+    </blockquote>
+
+
+
+  1 El atributo cite
+    -> Otro detalle interesante de la etiqueta <blockquote> es que posee un atributo opcional cite, mediante el cuál se puede indicar una URL de referencia sobre la obra o fuente de información mencionada. No funciona como un link o enlace para acceder a esa información, sino como metadato de información disponible para máquinas que lean dicha información.
+
+      <blockquote cite="http://es.wikiquote.org/wiki/Fight_Club">
+        <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+        <p class="author">Tyler Durden en El Club de la Lucha</p>
+      </blockquote>
+
+    -> Sin embargo, el contenido de la etiqueta <blockquote> aún se puede mejorar un poco más. Como hemos visto, <blockquote> puede contener simplemente texto, o agrupar una serie de etiquetas que estén relacionadas con la obra a citar.
+
+    -> Aunque el ejemplo anterior ya está bastante bien, aún podríamos mejorarlo con varias etiquetas HTML que no hemos visto aún (y veremos más adelante), haciendo mucho más semántico nuestro ejemplo:
+
+      <blockquote cite="http://es.wikiquote.org/wiki/Fight_Club">
+        <p>La primera regla del Club de la Lucha es: Nadie habla sobre el Club de la Lucha.</p>
+        <footer>
+          <cite class="author">Tyler Durden</cite> en
+          <cite class="title">El Club de la Lucha</cite>
+        </footer>
+      </blockquote>
+
+    -> Hemos modificado la parte inferior del bloque de cita donde indicabamos la información del autor de la cita. Ahora está contenido en una etiqueta semántica <footer>, que a su vez, posee dos etiquetas <cite> que amplían la información del autor y nombre de la obra.
+
+
+
+  2 Citas encadenadas
+    -> Otro detalle interesante acerca de <blockquote> es que se puede anidar dentro de otros elementos <blockquote>, formando un significado especial que tiene relación sobre su elemento padre <blockquote>.
+    -> Por ejemplo, imaginemos una serie de comentarios en una página. Observa el siguiente ejemplo donde tenemos varios comentarios <div class="comment"> que se encuentran anidados unos dentro de otros. Ten en cuenta que algunos comentarios tienen un <blockquote> e incluso pueden tener otros anidados:
+
+      <div class="page">
+        <div class="comment">
+          <strong>Paco</strong> <em>hace 5 horas</em>
+          <p>Me encanta esto.</p>
+
+          <div class="comment">
+            <strong>Ana</strong> <em>hace 3 horas</em>
+            <blockquote><p>Me encanta esto</p></blockquote>
+            <p>¿Por qué lo dices?</p>
+
+            <div class="comment">
+              <strong>Paco</strong> <em>hace 1 hora</em>
+              <blockquote>
+                <blockquote><p>Me encanta esto</p></blockquote>
+                <p>¿Por qué lo dices?</p>
+              </blockquote>
+              <p>Es que me parece fantástico.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    -> Por defecto, y sin añadir una línea de CSS, los <blockquote> añadirán un sangrado o indentación a la izquierda del texto por cada <blockquote>, colocando visualmente los comentarios como si fueran respuestas del anterior.
+ -->
