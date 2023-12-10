@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiqueta &lt;img&gt;</title>
+  </head>
+  <body>
+    <h2>Atributos principales de la etiqueta img</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Obligatorio</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>src</td>
+          <td>Sí</td>
+          <td>Indica el nombre o la URL de la imagen a mostrar.</td>
+        </tr>
+        <tr>
+          <td>alt</td>
+          <td>Sí</td>
+          <td>
+            Establece un texto alternativo que describa la imagen a mostrar.
+            Atributo obligatorio.
+          </td>
+        </tr>
+        <tr>
+          <td>width</td>
+          <td>No</td>
+          <td>
+            Indica el ancho de la imagen en píxels (sin la unidad). Se puede
+            hacer desde CSS.
+          </td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>No</td>
+          <td>
+            Indica el alto de la imagen en píxels (sin la unidad). Se puede
+            hacer desde CSS.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Formatos de las imágenes</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Formato</th>
+          <th>Características</th>
+          <th>¿Recomendado?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">Formatos tradicionales</td>
+        </tr>
+        <tr>
+          <td>PNG</td>
+          <td>
+            Soporta transparencia. Compresión sin pérdidas. Imágenes «lisas».
+          </td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>JPG</td>
+          <td>Compresión con pérdidas. Ideal para imágenes con texturas.</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>SVG</td>
+          <td>Formato vectorial. Ideal para imágenes escalables.</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>GIF</td>
+          <td>Imágenes pequeñas. Soporta animación. Pesado. Poca calidad.</td>
+          <td>⚠️ Evitar. Usar MP4 o APNG.</td>
+        </tr>
+        <tr>
+          <td colspan="3">Formatos modernos</td>
+        </tr>
+        <tr>
+          <td>WEBP</td>
+          <td>
+            Alternativa libre de Google al JPEG, PNG y GIF. Transparencias y
+            animaciones.
+          </td>
+          <td>✅ Buen soporte</td>
+        </tr>
+        <tr>
+          <td>JPEG2000</td>
+          <td>Formato evolución de JPEG. Poco utilizado.</td>
+          <td>❌ Solo Safari</td>
+        </tr>
+        <tr>
+          <td>JPEG-XR</td>
+          <td>Alternativa libre de Microsoft al JPEG. Poco utilizado.</td>
+          <td>❌ Solo IE</td>
+        </tr>
+        <tr>
+          <td>APNG</td>
+          <td>
+            Alternativa libre a GIF. Compatible con PNG. Soporta animaciones.
+          </td>
+          <td>✅ Buen soporte</td>
+        </tr>
+        <tr>
+          <td colspan="3">Formatos de nueva generación</td>
+        </tr>
+        <tr>
+          <td>AVIF</td>
+          <td>Formato de imagen basado en AV1. No confundir con videos AVI.</td>
+          <td>⚠️ Con precaución</td>
+        </tr>
+        <tr>
+          <td>JPEG-XL</td>
+          <td>Alternativa competidora a AVIF. Evolución moderna de JPEG.</td>
+          <td>⚠️ Aún poco soporte</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Ejemplos</h2>
+    <img src="https://lenguajehtml.com/assets/logo.png" alt="Logo de HTML5" />
+
+    <img
+      src="https://lenguajehtml.com/assets/logo.png"
+      alt="Logo de HTML5"
+      width="400"
+      height="453"
+    />
+
+    <img
+      src="https://lenguajehtml.com/assets/logo.png"
+      alt="Logo de HTML5"
+      style="width: 100%; aspect-ratio: 400/453"
+    />
+    <img
+      src="img/aspect-ratio.png"
+      alt="Imagen aspect-ratio"
+      style="width: 100%; aspect-ratio: 1041/635"
+    />
+
+    <img
+      src="imagen_400w.jpg"
+      alt="Logotipo HTML5"
+      srcset="
+        imagen_400w.jpg   400w,
+        imagen_900w.jpg   900w,
+        imagen_1200w.jpg 1200w
+      "
+    />
+
+    <img
+      src="imagen_1200w.jpg"
+      alt="Logotipo HTML5"
+      srcset="
+        imagen_1200w.jpg 1200w,
+        imagen_900w.jpg   900w,
+        imagen_400w.jpg   400w
+      "
+      sizes="
+				(width > 900px) 900px, 
+				((width > 480px) and (width <= 800px)) 480px,
+				((width <= 480px)) 320px
+			"
+    />
+  </body>
+</html>
+<!-- 
+    Antes de colocar una imagen en una página web debemos preguntarnos y tener claro cuál es el objetivo de dicha imagen en nuestro sitio web. Las imágenes utilizadas en una página web pueden ser de dos tipos:
+			- Imágenes que pretenden mostrarse como parte del contenido de la web.
+			- Imágenes que se muestran como parte de decoración de la web.
+    
+		-> En el primer caso, si la imagen pertenece al contenido y tema tratado en esa página, sería conveniente incluirla mediante la etiqueta HTML <img>. Un ejemplo muy sencillo sería el siguiente:
+
+			<img src="https://lenguajehtml.com/assets/logo.png" alt="Logo de HTML5">
+
+    -> Si por el contrario, la imagen pertenece a la decoración de la página, sería más conveniente incluirla como un fondo mediante la propiedad CSS background-image.
+
+
+
+	1 Atributos principales
+		-> Como hemos mencionado, para incluir imágenes en el contenido de una página utilizaremos la etiqueta <img>. Se trata de una etiqueta muy sencilla, que como hemos visto, necesita al menos incluir obligatoriamente los atributos src y alt.
+
+		1.1 El atributo src
+			-> El atributo src sirve para indicar la dirección o URL de una imagen, ya sea mediante una ruta relativa o absoluta. El navegador descargará esa imagen y la mostrará en el lugar donde se indica en el documento HTML. Este atributo es obligatorio y debe ser indicado siempre en una etiqueta <img>.
+			-> La imagen puede estar en varios formatos diferentes, dependiendo del soporte del navegador, como por ejemplo .jpg, .png, .gif u otros que comentaremos un poco más adelante.
+
+
+		1.2 El atributo alt
+			-> El atributo alt sirve para indicar un texto alternativo a la imagen, que se mostrará en el caso que la imagen no pueda ser mostrada o descargada. Este atributo también es obligatorio en la etiqueta <img>, por lo que siempre debe ser utilizado.
+			-> Este atributo es muy importante en aspectos de accesibilidad, ya que en el caso de que estemos leyendo una página web con un lector de voz para invidentes, la imagen no podrá ser leída, por lo que leerá el texto alternativo.
+
+			
+		1.3 Los atributos width y height
+			-> Aunque estos atributos no son obligatorios como los anteriores, es posible indicar los atributos width y height en la etiqueta <img> con valores numéricos (que se interpretarán como píxels) o porcentajes. De indicar sólo uno de estos atributos, los navegadores actuales adaptarán el otro para respetar la proporción de la imagen.
+
+				<img src="https://lenguajehtml.com/assets/logo.png"	alt="Logo de HTML5" width="400" height="453" />
+
+			-> Aunque pueda parecer lo contrario, indicar los atributos width y height en una etiqueta <img> se considera una buena práctica, ya que se fuerza a reservar el espacio necesario incluso antes de la descarga. Ten en cuenta que la imagen tendrá unas dimensiones específicas que el navegador desconoce hasta que descarga y procesa la imagen, por lo que durante ese tiempo las dimensiones serán 0 si no se indican y provocarán un molesto comportamiento de salto al cambiar el tamaño.
+			
+			-> Para hacer: <img src="ruta" alt="texto" style="width: 100%; aspect-ratio: 400/453;" /> y poder tener el valor del aspect-ratio tenemos que:
+				- Ir a las herramientas de desarrollador de Google Chrome > "Network" > "Img" > Seleccionar la imagen > "Preview"
+
+
+
+	2 Formatos de imágenes
+		-> En el ámbito informático existen múltiples formatos de imágenes (¡muchísimos!) pero no todos son aptos o adecuados para utilizar en web. Demos un repaso a los formatos más utilizados y apropiados para sitios webs que podemos ver en la tabla
+
+	
+
+	3 Carga de imágenes
+		-> En muchos casos, podríamos tener una página que está repleta de imágenes que deben descargarse y que, por lo tanto, ralentizarán la página y harán que la experiencia de usuarios sea peor. Existen ciertos atributos que tienen que ver con el rendimiento a la hora de cargar imágenes y mediante las cuales podemos ajustar la forma en que se van a procesar y descargar las imágenes de las etiquetas <img>.
+		-> Son los siguientes atributos:
+			- loading ->	Indica si el navegador debe descargar inmediatamente la imagen o posponer la descarga.
+			- decoding -> Indica como y cuando debe procesar el navegador las imágenes para mostrarlas.
+			- fetchpriority ->	Indica la prioridad que va a tener la descarga del recurso de imagen.
+
+
+		3.1 El atributo loading
+			-> El atributo loading es un atributo mediante el cuál podemos hacer Lazy Loading en imágenes. El término lazy loading (carga perezosa) se refiere a que podemos posponer la descarga de ciertas imágenes, para que el navegador le de prioridad a otras que son más importantes.
+			-> Se suele utilizar en páginas donde hay muchas imágenes que no están inicialmente en la región visible del navegador del usuario y, puede ser probable que nunca lo lleguen a estar, ya sea porque el usuario no llega hasta esa parte de la página o porque requiere una acción específica para que se muestren, por lo que no tiene sentido gastar recursos en descargarla si el usuario no la va a ver.
+			
+			-> Los valores que se pueden indicar en este atributo son los siguientes:
+				- eager -> Valor por defecto. El navegador descarga inmediatamente la imagen.
+				- lazy -> El navegador pospone la descarga de este recurso hasta que sea necesario.
+				
+			->Algunos navegadores permiten hacer lazy loading mediante el atributo loading en etiquetas <iframe>, y no sólo en etiquetas de imagen <img>.
+
+
+		3.2 El atributo fetchpriority
+			-> Mediante el atributo fetchpriority podemos establecer la prioridad con la que se descargará la imagen. Esto es útil para refinar el rendimiento de una página y darle prioridad a elementos que visualmente son muy importantes en el primer impacto visual de carga de la página, e incluso pueden ayudar para mejorar las Core Web Vitals (métricas de Google para determinar la velocidad de carga de una página).
+			
+			-> Este atributo puede tomar los siguientes valores:
+				- auto -> Valor por defecto. El navegador establece automáticamente la prioridad.
+				- high -> Se establece una prioridad alta para este elemento.
+				- low ->	Se establece una prioridad baja para este elemento.
+
+
+		3.3 El atributo decoding
+			-> El atributo decoding permite indicarle al navegador como debe hacer el proceso de decodificación de la imagen, esto es, convertir los datos de la imagen en un formato más apto para representarlo visualmente en el navegador. Este proceso puede tardar tiempo, por lo que podemos modificar como actua el navegador para mejorar el rendimiento.
+
+			-> Los valores que puede tomar son los siguientes:
+				- auto ->	Valor por defecto. El navegador decidirá cómo y cuando decodificar la imagen.
+				- sync ->	El navegador se centrará en decodificar esta imagen antes de pasar a otras.
+				- async -> El navegador se centrará en decodificar otras imágenes antes de esta.
+
+
+		3.4 Múltiples imágenes
+			-> En algunas ocasiones nos podría interesar indicar al navegador que debe descargarse una imagen concreta si el dispositivo tiene una cierta resolución (por ejemplo, dispositivo móvil), pero en el caso de ser un dispositivo de alta resolución (por ejemplo, escritorio) descargue una imagen de mayor resolución. De esta forma no desperdiciamos recursos o tiempo de descarga. Lo mismo con pantallas que tengan una densidad de píxeles mayor, y pueda mostrar imágenes a mejores resoluciones.
+				- srcset -> Indica un conjunto de imágenes y cargará una cuando se cumplan ciertos criterios.
+				- sizes ->	Indica un conjunto de condiciones de medios para aplicar al srcset.
+
+
+			3.4.1 El atributo srcset
+				-> Mediante el atributo srcset se puede indicar una lista de recursos (imágenes) separados por coma, que se utilizarán en situaciones concretas cuando se cumplan determinados criterios como los indicados anteriormente. Los valores de srcset tendrían el siguiente formato:
+
+					imagen_400w.jpg 400w, imagen_900w.jpg 900w, imagen_1200w.jpg 1200w
+				
+				-> En este caso, observa que se indican 3 imágenes, cada una de ellas separada por espacio con un número y una letra que indica el criterio para cargar dicha imagen.
+
+				-> Dicho criterio se define de la siguiente forma:
+					- Ancho ->	Ancho de pantalla en píxeles, seguido de la letra w -> Ej:	400w, 800w
+					- Densidad ->	Densidad de píxeles con decimales, seguido de la letra x -> Ej:	3x, 2.5x
+				
+				-> Veamos un ejemplo real utilizando la etiqueta <img> con estos atributos:
+
+					<img src="imagen_400w.jpg" alt="Logotipo HTML5"	srcset="imagen_400w.jpg 400w, imagen_900w.jpg 900w, imagen_1200w.jpg 1200w">
+
+				-> Observamos varias cosas:
+					- Los atributos src y alt son obligatorios, por lo que deben indicarse siempre.
+					- Si el navegador es muy antiguo y no soporta srcset, hará lo definido en src.
+					- Si el dispositivo cumple uno de los criterios definidos, usa esa imagen en src.
+
+
+			3.4.2 El atributo sizes
+				-> De la misma forma que vimos con el atributo srcset, con el atributo sizes se puede establecer una lista de condiciones de medios, ver media queries, que se aplicarán en cada uno de los criterios del srcset.
+				-> Estos seguirán el siguiente formato:
+
+					<img 
+						src="imagen_1200w.jpg" 
+						alt="Logotipo HTML5"
+						srcset="imagen_1200w.jpg 1200w,
+										imagen_900w.jpg 900w,
+										imagen_400w.jpg 400w"
+						sizes="(width > 900px) 900px,
+										((width > 480px) and (width <= 800px)) 480px,
+										((width <= 480px)) 320px"/>
+
+				-> Observa que ahora estamos estableciendo una condición que en el caso de cumplirse, se aplicará el recurso correspondiente del atributo srcset. Observa que el atributo sizes está formado por una consulta de medios con el mismo formato que los media queries, y una medida optativa que se utilizará para la imagen cuando se cumpla una cierta consulta de medios.
+ -->
