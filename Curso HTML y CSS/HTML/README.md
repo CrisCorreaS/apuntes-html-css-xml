@@ -3,9 +3,10 @@
 - [w3schools](https://www.w3schools.com/html/default.asp)
 - Buscar en un navegador: mdn + nombre-etiqueta + html 
 - [Repositorio learning-area de mdn](https://github.com/mdn/learning-area)
+- [Página web oficial del WHATWG](https://html.spec.whatwg.org/multipage/) -> es la página oficial completa del grupo de trabajo de HTML (WHATWG). Es un documento detallado que describe la sintaxis y el comportamiento de HTML. Si al buscar en mdn tienes alguna duda, es bueno tener esta página como referencia ya que aquí todo lo que pongan va a misa y vas a hilar super fino.
 
 ## Apuntes o cursos gratis
-- [Página de MDN Web Docs sobre HTML](https://developer.mozilla.org/es/docs/Web/HTML) -> Página con un montón de recursos de HTML. Es muy buena y un sitio de referencia para mirar documentación sobre HTML, CSS, JS y mucho más.
+- [Página de MDN Web Docs sobre HTML](https://developer.mozilla.org/en/docs/Web/HTML) -> Página con un montón de recursos de HTML. Es muy buena y un sitio de referencia para mirar documentación sobre HTML, CSS, JS y mucho más. Lo mejor es verla en Inglés, ya que en Español no está tan completa y algunas cosas que pone están regulinchi.
 
 - [Página de Manz Dev para aprender HTML](https://lenguajehtml.com/) -> Página para aprender HTML, tener una cheat sheet de referencia, vídeos centrados en el tema e información adicional
 
