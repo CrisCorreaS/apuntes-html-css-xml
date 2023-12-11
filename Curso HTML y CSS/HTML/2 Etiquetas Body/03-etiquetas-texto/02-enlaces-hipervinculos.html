@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enlaces hipervinculos</title>
+  </head>
+  <body>
+    <h2>Rutas relativas o absolutas</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Tipo de ruta</th>
+          <th>Ejemplo</th>
+          <th>¿Dónde busca el archivo?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sin ruta</td>
+          <td>imagen.jpg</td>
+          <td>El recurso se encuentra en la carpeta actual.</td>
+        </tr>
+        <tr>
+          <td>Ruta relativa ascendente</td>
+          <td>img/imagen.jpg</td>
+          <td>El recurso se encuentra en la carpeta img/ de la ruta actual.</td>
+        </tr>
+        <tr>
+          <td>Ruta relativa descendente</td>
+          <td>../imagen.jpg</td>
+          <td>El recurso se encuentra en la carpeta anterior a la actual.</td>
+        </tr>
+        <tr>
+          <td>Ruta relativa global</td>
+          <td>/img/imagen.jpg</td>
+          <td>El primer / simboliza el principio de la URL (root, raíz).</td>
+        </tr>
+        <tr>
+          <td>Ruta absoluta</td>
+          <td>https://dominio.com/img/imagen.jpg</td>
+          <td>Exactamente la URL indicada.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!-- 
+  -> Para crear enlaces (o hipervínculos) en una página web utilizaremos la etiqueta <a>, pero antes de empezar a ver esa parte, es conveniente entender lo que son las URL (o direcciones web).
+  -> La palbra URL proviene de Uniform Resource Location, es decir, una dirección única para hacer referencia a un documento o fichero concreto. Es la forma que tenemos de referenciar elementos en Internet como ficheros .html, .css, .js, .jpg, etc. Sin embargo, hay muchos factores que influyen a la hora de crear o indicar una URL, vamos a dar un repaso y a entenderlos.
+
+  
+  1 Esquema URL
+    -> Al escribir una URL, tenemos que respetar un formato de modo que la URL sea válida y no tenga errores. Conviene conocer bien la estructura de una URL, para diferenciar cada una de sus partes. Lo que veremos a continuación, es una URL dividida en varias secciones o partes, que vamos a comenzar a explicar:
+
+    -> Ej: https://sub.dominio.com/ruta/pagina.html#ancla:~:text=text
+    - https:// -> protocol 
+    - 3 partes del dominio:
+      - sub. -> subdomain
+      - dominio -> domain name
+      - .com -> tld (top-level domain)
+    - /ruta/ -> path
+    - pagina.html -> document
+    - #ancla -> anchor
+    - :~:text=text -> text fragment
+
+
+    1.1 - Protocolo
+      -> La parte inicial de la URL es el denominado protocolo. Hay varios protocolos que podemos establecer una URL, pero probablemente, el más utilizado sea https://, aunque http:// también es bastante utilizado. En el primer caso, la información viaja cifrada, por lo que la transmisión es más segura. En el segundo caso, no hay cifrado, por lo que los datos enviados van en texto plano y es una comunicación que será menos segura.
+
+      -> Al escribir una URL nunca debemos olvidarnos del protocolo y escribir sólamente la dirección, ya que el vínculo podría no funcionar correctamente en algunos navegadores.
+
+      -> Veamos algunos protocolos de ejemplo:
+        - https:// ->	El más común. Protocolo seguro de transferencia de hipertexto. Usado para cifrar información enviada.
+        - http:// ->	Protocolo de transferencia de hipertexto sin cifrado. La información viaja en texto plano.
+        - ftp:// ->	Protocolo de transferencia de ficheros. Similar a HTTP, pero orientado a enviar ficheros.
+        - whatsapp:// ->	Protocolo de WhatsApp. Se puede interactuar con WhatsApp si el usuario lo tiene instalado.
+      
+      -> **¿Sabías que puedes utilizar la abreviatura // en lugar de https:// en las URL de tu documentos web? Al indicar // al inicio de un enlace, le decimos al navegador que establezca http:// o https:// dependiendo del protocolo del documento actual cargado. Si el documento actual se cargó como http:// reemplazará // por http://, pero si el documento se cargó como https:// reemplazará // por https://. Esto nos permite más flexibilidad a la hora de cargar documentos o recursos.
+
+
+    1.2 - Dominio
+      -> La siguiente parte de la URL es el dominio del sitio web que queremos enlazar. El dominio generalmente se compone de un subdominio (opcional), el nombre de dominio y el dominio de nivel superior o TLD. Por ejemplo, las famosas www no son más que un subdominio utilizado tradicionalmente para páginas webs.
+
+      -> Existen muchísimos TLD para sitios web:
+
+        - .com ->	Originalmente para sitios comerciales, actualmente el más utilizado. Difícil conseguir dominio libre.
+        - .net ->	Quizás, la segunda opción por excelencia. Su nombre proviene de la palabra Internet.
+        - .org ->	Originalmente para organizaciones, actualmente es la tercera opción más utilizada.
+        - .es ->	Sitios webs orientados a España.
+        - .com.es ->	Dominio de segundo nivel orientado a España.
+        - .cat ->	Sitios webs orientados a Cataluña. Muy usado para sitios webs de gatos.
+        - .la ->	Sitios webs orientados a Laos. Muy usado para domain-hacks.
+        - .me ->	Sitios webs orientados a Montenegro. Muy usado para domain-hacks.
+        - .io ->	Sitios webs orientados al Territorio Británico de Océano Índico. Muy usado como Input/Output.
+        - .dev ->	Sitios webs orientados al mundo del desarrollo o programación (developers).
+        - .blog ->	Nuevos gTLD (dominios genéricos) orientados a categorías. En este caso, a blogs.
+        - .viajes ->	Nuevos gTLD (dominios genéricos) orientados a categorías. En este caso, a webs sobre viajes.
+      
+      -> Para utilizar un dominio para tu página web debes adquirir uno. Su precio depende del tiempo por el que lo compres, el registrador que elijas y el TLD elegido. Existen multitud de registradores para comprar estos dominios. Algunas buenas opciones podrían ser DonDominio o PorkBun.
+
+
+      1.3 - Ruta o path
+        -> Cuando hablamos de la ruta de una URL, podemos estar haciendo referencia a la estructura de carpetas incluyendo o excluyendo el documento final referenciado (si lo existe, algunas URL pueden omitirlo). Aún así, en nuestra explicación vamos a diferenciar bien estas dos partes:
+
+          - Ruta: Es la parte de la URL que es equivalente a las carpetas o directorios donde almacenamos nuestros archivos. Puede tratarse de una sola carpeta o varias de ellas, siempre separadas por el carácter /.
+          - Página o documento: La última parte de la URL suele ser un documento HTML como el del ejemplo: pagina.html. En algunos casos, la extensión .html es abreviada como .htm. Dependiendo del servidor web utilizado, es posible que se utilicen otro tipo de documentos con lenguajes de programación del lado del servidor, como podría ser por ejemplo pagina.php u otros. Si se trata de otro documento, como un archivo PDF o un video, el navegador intentará abrirlo directamente, y si no puede, lo descargará para que el usuario lo abra con alguna aplicación de su sistema.
+
+        ->En el caso que una dirección termine y no indique una página o documento, generalmente, el servidor que aloja la página web dirige al usuario a una página llamada index.html o index.htm por defecto. Esto es configurable en la parte del servidor, y depende de totalmente de la configuración del servidor web utilizado.
+
+
+      1.4 - Parámetros o query strings
+        -> Una parte no mencionada en el esquema anterior son las cadenas de consulta del usuario, más frecuentemente utilizadas en lenguajes como Javascript o lenguajes de programación del servidor (backend). Básicamente, son variables que contienen información y se envían en la URL, como por ejemplo, en la búsqueda de Google:
+
+        https://www.google.com/search?q=gato
+          - q ->	gato =>	Busca "gato"
+
+        https://www.google.es/search?q=gato&tbm=isch
+          - q ->	gato =>	Busca "gato"
+          - tbm ->	isch =>	Busca en Google Imágenes
+
+        -> Como puedes ver, estas query strings se indican al final de la URL, utilizando un ? para comenzar a definir las variables, y utilizando & como separador entre una variable y la siguiente. Cada variable indicará su valor tras su nombre seguido del símbolo =.
+      
+
+      1.5 - Anclas
+        -> Las anclas (anchors) en una URL no son más que un fragmento de texto precedido por el carácter # que indica al navegador que debe buscar una etiqueta HTML con un atributo id con ese texto. Una vez encontrado, posicionará al usuario en esa parte de la página. Se utiliza para acceder directamente a permalinks (enlaces permanentes) o secciones concretas de una página.
+
+
+      1.6 - Fragmentos de texto
+        -> Recientemente también ha aparecido una nueva característica llamada scroll to text fragments. Se basa en escribir el texto #:~:text=<palabrainicial>,<palabrafinal> a continuación de la URL. Con esto, el navegador hace scroll a la parte de la página donde se encuentra el fragmento de texto que comienza por la palabra inicial y termina por la palabra final. También se pueden indicar frases en lugar de palabras.
+
+        -> Habitualmente, el navegador marca y resalta estas palabras, lo que lo hace ideal para usuarios que realizan una búsqueda de algún texto específico y el navegador puede destacarselo para que lo encuentren lo antes posible.
+
+
+      1.7 - Estado de un enlace
+        -> Por defecto, los enlaces pueden tener 3 estados diferentes:
+          - Enlaces sin visitar -> Un enlace que no ha sido visitado aún es representado por los navegadores como un enlace de color azul y subrayado. Se pueden modificar sus estilos mediante la pseudoclase :link de CSS.
+          - Enlaces ya visitados -> Un enlace que ha sido visitado previamente es representado por los navegadores como un enlace de color lila y subrayado. Se pueden modificar sus estilos mediante la pseudoclase :visited de CSS.
+          - Enlaces activos -> Se considera activo un enlace cuando el usuario está pulsando sobre él con el ratón (y no ha dejado de pulsar). Se suele utilizar para destacar el clic visualmente. Aunque no es exclusiva de los enlaces, se pueden modificar sus estilos mediante la pseudoclase :active de CSS.
+
+        -> Un buen consejo es que no realices cambios bruscos en los estilos de los enlaces, ya que los usuarios no lo percibirán como enlaces al no estar acostumbrados. Se recomienda que los enlaces tengan tonalidades de azul y estén subrayados, así como lila los ya visitados.
+
+
+      1.8 - Rutas relativas o absolutas
+        -> Un detalle muy importante que no hay que infravalorar, es cómo indicar las rutas en atributos como href en un enlace, en src de imágenes o videos, etc. Aunque a priori parece muy sencillo, hay que tener muchas cosas en cuenta para realizar enlaces de forma correcta.
+        -> Vamos a analizar las diferentes formas:
+
+          - Sin ruta. Ej:	imagen.jpg ->	El recurso se encuentra en la carpeta actual.
+          - Ruta relativa ascendente. Ej:	img/imagen.jpg ->	El recurso se encuentra en la carpeta img/ de la ruta actual.
+          - Ruta relativa descendente. Ej:	../imagen.jpg ->	El recurso se encuentra en la carpeta anterior a la actual.
+          - Ruta relativa global. Ej:	/img/imagen.jpg ->	El primer / simboliza el principio de la URL (root, raíz).
+          - Ruta absoluta. Ej:	https://dominio.com/img/imagen.jpg ->	Exactamente la URL indicada.
+        
+        -> El usuario puede utilizar la forma de indicar la ruta que prefiera, eso sí, se aconseja ser coherente y utilizar siempre que se pueda un mismo formato de ruta. Particularmente, tiendo a utilizar el tipo de ruta relativa global siempre que pueda, ya que funciona independientemente de donde se encuentre el documento actual. Eso sí, hay que tener bien clara la estructura de la web.
+
+        -> En algunos editores como VSCode, se puede utilizar el formato de ruta que proviene de Linux, donde se prefija la ruta con un ./ que simboliza la carpeta actual. Esto hace que el editor dispare el selector de ficheros y carpetas y sea más fácil para nosotros indicar una ruta.
+ -->
