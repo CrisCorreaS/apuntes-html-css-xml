@@ -40,6 +40,12 @@
 
 - [Página de mdn sobre el atributo "role"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -> Da más información sobre el atributo "role". También indica especificaciones y da consejos de clean code y buen uso de este atributo
 
+#### Dominios
+
+- [dondominio.com](https://www.dondominio.com/es/) -> Es un servicio de registro de dominios, hosting y correo electrónico. Proporciona una variedad de servicios y productos para ayudar a las personas a construir y administrar su presencia en línea.
+
+- [porkbun.com](https://porkbun.com/) -> Es un registrador de nombres de dominio acreditado por ICANN con sede en el Noroeste del Pacífico. Ofrece una variedad de servicios relacionados con los dominios de Internet.
+
 
 #### Librerías interesantes
 - [Prism.js](https://prismjs.com/) -> Es una biblioteca de JavaScript ligera y fácil de usar para resaltar la sintaxis en bloques de código en páginas web. Tiene un tamaño de archivo pequeño, lo que la hace ideal para su uso en sitios web de todos los tamaños.
