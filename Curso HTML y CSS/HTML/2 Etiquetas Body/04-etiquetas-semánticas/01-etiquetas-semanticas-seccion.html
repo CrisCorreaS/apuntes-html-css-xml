@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas semánticas de texto</title>
+  </head>
+  <body>
+    <h2>Tabla de etiquetas de fragmento de texto con significado semántico</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Etiqueta</th>
+          <th>Descripción</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">1 Fragmentos de texto</td>
+        </tr>
+        <tr>
+          <td>&lt;a&gt;</td>
+          <td>Fragmento de texto que enlaza a otra página diferente.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;strong&gt;</td>
+          <td>Fragmento de texto importante o palabras clave.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;em&gt;</td>
+          <td>
+            Fragmento de texto enfatizado respecto a la frase que lo contiene.
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;mark&gt;</td>
+          <td>
+            Fragmento de texto resaltado, como referencia o anotación, debido a
+            su relevancia o importancia en un contexto particular.
+          </td>
+          <td>
+            Buena práctica -> No confundir con la etiqueta &lt;strong&gt;. La
+            etiqueta &lt;mark&gt; se usa para denotar contenido con cierto grado
+            de relevancia, mientras que &lt;strong&gt; se usa para dar
+            importancia a una parte del texto
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;b&gt;</td>
+          <td>
+            Fragmento de texto sin importancia destacable (fines utilitarios).
+          </td>
+          <td>
+            Mala práctica según el W3C y MDN, es lo mismo que poner en CSS:
+            "font-weight: bold;". Solo se puede utilizar cuando no hay un
+            elemento semántico apropiado para sustituir a esta etiqueta.
+            Normalmente se usa &lt;strong&gt; en vez de &lt;b&gt;
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;i&gt;</td>
+          <td>Fragmento de texto con voz o tono alternativo al resto.</td>
+          <td>
+            Mala práctica según el W3C y MDN, es lo mismo que poner en CSS:
+            "font-style: italic;". Solo se puede utilizar cuando no hay un
+            elemento semántico apropiado para sustituir a esta etiqueta.
+            Normalmente se usa &lt;em&gt; en vez de &lt;i&gt;
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;u&gt;</td>
+          <td>
+            Fragmento de texto para nombres propios o escritura incorrecta
+            intencionada.
+          </td>
+          <td>
+            Mala práctica según el W3C y MDN, es lo mismo que poner en CSS:
+            "text-decoration: underline;". Solo se puede utilizar cuando hacemos
+            anotaciones de errores gramaticales o un caso muy específico.
+            Normalmente se usa &lt;em&gt; en vez de &lt;u&gt;
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;s&gt;</td>
+          <td>Fragmento de texto inexacto o que ya no es relevante.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;span&gt;</td>
+          <td>
+            Fragmento de texto genérico sin significado (útil para seleccionar).
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td colspan="3">2 Fragmentos con significado</td>
+        </tr>
+        <tr>
+          <td>&lt;sup&gt;</td>
+          <td>Superíndice</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;sub&gt;</td>
+          <td>Subíndice</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;small&gt;</td>
+          <td>Anotaciones menores</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;cite&gt;</td>
+          <td>
+            Fragmento de texto con el título de un trabajo creativo: obras,
+            libros...
+          </td>
+          <td>
+            Buena práctica -> Está bastante estendido el mal uso de este
+            elemento, mucha gente lo usa para marcar el texto de las citas en
+            vez del autor, para marcar el texto están los elementos q (en línea)
+            y blockquote (en bloque)
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;q&gt;</td>
+          <td>Cita o frase extraída de otro contexto.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;abbr&gt;</td>
+          <td>Abreviatura o acrónimo.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;dfn&gt;</td>
+          <td>Definición: término que posteriormente será definido.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td colspan="3">3 Fragmentos técnicos/informáticos</td>
+        </tr>
+        <tr>
+          <td>&lt;kbd&gt;</td>
+          <td>
+            Entrada de información del usuario (generalmente, combinación de
+            teclado).
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;samp&gt;</td>
+          <td>Salida de información de un programa informático.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;var&gt;</td>
+          <td>Variable (contexto matemático o informático).</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;time&gt;</td>
+          <td>
+            Indica una fecha/hora legible para humanos, con formato para
+            máquinas opcional.
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;data&gt;</td>
+          <td>Información equivalente orientado a máquinas.</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;code&gt;</td>
+          <td>Fragmento de código fuente (en línea).</td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td colspan="3">4 Fragmentos de edición</td>
+        </tr>
+        <tr>
+          <td>&lt;ins&gt;</td>
+          <td>
+            Fragmento de texto o información añadida a posteriori de la
+            publicación inicial.
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+        <tr>
+          <td>&lt;del&gt;</td>
+          <td>
+            Fragmento de texto o información eliminada a posteriori de la
+            publicación inicial.
+          </td>
+          <td>Buena práctica</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Ejemplos -->
+    <!-- <a> -->
+    <p>You can reach Michael at:</p>
+    <ul>
+      <li><a href="https://example.com">Website</a></li>
+      <li><a href="mailto:m.bluth@example.com">Email</a></li>
+      <li><a href="tel:+123456789">Phone</a></li>
+    </ul>
+
+    <!-- <strong> -->
+    <p>Hola, esto es un pequeño <strong>ejemplo</strong>.</p>
+
+    <!-- <em> -->
+    <p>
+      <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
+    </p>
+
+    <!-- <mark> -->
+    <blockquote>
+      It is a period of civil war. Rebel spaceships, striking from a hidden
+      base, have won their first victory against the evil Galactic Empire.
+      During the battle,
+      <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s
+      ultimate weapon, the DEATH STAR, an armored space station with enough
+      power to destroy an entire planet.
+    </blockquote>
+
+    <!-- <b> -->
+    <p>
+      This article describes several
+      <b class="keywords">text-level</b> elements. It explains their usage in an
+      <b class="keywords">HTML</b> document.
+    </p>
+
+    <!-- <i> -->
+    <p>
+      The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in
+      music, art, and literature.
+    </p>
+
+    <!-- <u> -->
+    <p>
+      This paragraph includes a <u class="spelling">wrnogly</u> spelled word.
+    </p>
+
+    <!-- <s> -->
+    <p>
+      <s>There will be a few tickets available at the box office tonight.</s>
+    </p>
+    <p>SOLD OUT!</p>
+
+    <!-- <span> -->
+    <p>Esto es un párrafo, <span>bla, bla, bla.</span></p>
+
+    <div style="border: 1px dotted blue">
+      <h4>Ejemplo de div y span</h4>
+      <p>
+        Esto es un párrafo dentro de un div,
+        <span style="color: red"> y esto un span dentro de un párrafo. </span>
+      </p>
+    </div>
+
+    <!-- <sup> -->
+    <p>Este texto es <sup>superíndice</sup></p>
+
+    <!-- <sub> -->
+    <p>La fórmula química de agua: H<sub>2</sub>O</p>
+
+    <!-- <small> -->
+    <p>
+      <small
+        >The content is licensed under a Creative Commons Attribution-ShareAlike
+        2.5 Generic License.</small
+      >
+    </p>
+
+    <!-- <cite> -->
+    <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+    <figure>
+      <blockquote>
+        <p>
+          It was a bright cold day in April, and the clocks were striking
+          thirteen.
+        </p>
+      </blockquote>
+      <figcaption>
+        First sentence in
+        <cite
+          ><a href="http://www.george-orwell.org/1984/0.html"
+            >Nineteen Eighty-Four</a
+          ></cite
+        >
+        by George Orwell (Part 1, Chapter 1).
+      </figcaption>
+    </figure>
+
+    <!-- <q> -->
+    <p>
+      Conforme al sitio web de Mozilla,
+      <q cite="https://www.mozilla.org/en-US/about/history/details/"
+        >Firefox 1.0 fue lanzado en 2004 y se convirtió en un gran éxito.</q
+      >
+    </p>
+
+    <!-- <abbr> -->
+    <p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
+
+    <!-- <dfn> -->
+    <p>
+      The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is
+      used to indicate the term being defined within the context of a definition
+      phrase or sentence.
+    </p>
+
+    <!-- <kbd> -->
+    <p>Si está conforme escriba <kbd>sí</kbd>. Si no, pulse <kbd>esc</kbd></p>
+
+    <!-- <samp> -->
+    <p>I was trying to boot my computer, but I got this hilarious message:</p>
+    <p>
+      <samp>Keyboard not found <br />Press F1 to continue</samp>
+    </p>
+
+    <!-- <var> -->
+    <p>el bucle no se detendrá hasta que <var>Faltan</var> sea igual a 0.</p>
+
+    <!-- <time> -->
+    <p>
+      El concierto fué el <time datetime="2001-05-15T19:00">15 de Mayo</time>.
+    </p>
+
+    <p>
+      The Cure will be celebrating their 40th anniversary on
+      <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+    </p>
+
+    <p>
+      The concert starts at <time datetime="20:00">20:00</time> and you'll be
+      able to enjoy the band for at least
+      <time datetime="PT2H30M">2h 30m</time>.
+    </p>
+
+    <!-- <data> -->
+    <p>New Products</p>
+    <ul>
+      <li><data value="3967381398">Mini Ketchup</data></li>
+      <li><data value="3967381399">Jumbo Ketchup</data></li>
+      <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
+    </ul>
+
+    <!-- <code> -->
+    <p>
+      The function <code>selectAll()</code> highlights all the text in the input
+      field so the user can, for example, copy or delete the text.
+    </p>
+
+    <!-- <ins> -->
+    <p>“You're late!”</p>
+    <del>
+      <p>“I apologize for the delay.”</p>
+    </del>
+    <ins cite="../howtobeawizard.html" datetime="2018-05">
+      <p>“A wizard is never late …”</p>
+    </ins>
+
+    <!-- <del> -->
+    <p>
+      El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins>
+    </p>
+
+    <blockquote>
+      There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+      <del>thinking</del> <ins>running it</ins> makes it so.
+    </blockquote>
+  </body>
+</html>
+<!-- 
+    -> Hemos hablado que existen múltiples etiquetas HTML dentro del lenguaje HTML5. Y la mayoría pertenecen a dos grupos principales:
+      - Las etiquetas que contienen fragmentos de texto (dan significado o contexto a esos fragmentos)
+      - Las etiquetas que agrupan otras etiquetas (contienen y agrupan información variada)
+    
+    -> En este apartado vamos a hablar del primer grupo, que son las etiquetas que utilizamos para separar fragmentos de textos por motivos semánticos (lo más importante de entender) y/o motivos visuales.
+    -> En el siguiente fragmento de código, tenemos la etiqueta <p>, que pertenece al segundo grupo (agrupación), mientras que la etiqueta <strong> forma parte del primer grupo (semántica de texto):
+
+      <p>Hola, esto es un pequeño <strong>ejemplo</strong>.</p>
+
+    -> Hay que entender que las etiquetas de agrupación, por lo general son etiquetas de bloque. Por otro lado, las etiquetas que permiten dar semántica a los textos son etiquetas en línea. Esto es muy importante entenderlo, ya que nos ayudará a diferenciarlas rápidamente.
+    -> Si no conoces la diferencia entre etiquetas de bloque (block) y en línea (inline), echa un vistazo a la documentación de LenguajeCSS, concretamente a la propiedad display de CSS.
+
+
+    1 Fragmentos de texto
+      -> En primer lugar, existe una serie de etiquetas HTML simples para seleccionar un fragmento de texto y dotarlo de un significado semántico especial. Lo principal es entender que no se hace sólo por mera intención visual, sino porque se le quiere dar un significado semántico, y además, quizás también por una cuestión visual:
+
+        - <a> ->	Fragmento de texto que enlaza a otra página diferente.	
+        - <strong> ->	Fragmento de texto importante o palabras clave.	
+        - <em> ->	Fragmento de texto enfatizado respecto a la frase que lo contiene.	
+        - <mark> ->	Fragmento de texto resaltado, simulando estar marcado con rotulador amarillo.
+        - <b> ->	Fragmento de texto sin importancia destacable (fines utilitarios).	
+        - <i> ->	Fragmento de texto con voz o tono alternativo al resto.	
+        - <u> ->	Fragmento de texto para nombres propios o escritura incorrecta intencionada.
+        - <s> ->	Fragmento de texto inexacto o que ya no es relevante.	
+        - <span> ->	Fragmento de texto genérico sin significado (útil para seleccionar).
+
+      -> Estas son unas de las etiquetas más utilizadas para separar fragmentos de texto en HTML. Sin embargo no son las únicas, hay algunas más que veremos a continuación.
+      -> OJO: Algunas de estas etiquetas, en versiones anteriores de HTML tenían un significado diferente, como por ejemplo las etiquetas <b>, <i> o <u>.
+
+      
+      
+    2 Fragmentos con significado
+      Las siguientes etiquetas HTML también nos permiten modificar el significado semántico de la información que contienen de una forma muy particular. Son menos utilizadas que las anteriores, sin embargo, también forman parte de la lista de etiquetas semánticas de texto:
+
+      - <sup> ->	Superíndice	
+      - <sub> ->	Subíndice	
+      - <small> ->	Anotaciones menores	
+      - <cite> ->	Fragmento de texto con el título de un trabajo creativo: obras, libros...	
+      - <q> ->	Cita o frase extraída de otro contexto.	
+      - <abbr> ->	Abreviatura o acrónimo.	
+      - <dfn> ->	Definición: término que posteriormente será definido.
+
+
+
+    3 Fragmentos técnicos/informáticos
+      -> Existen una serie de etiquetas HTML ligeramente orientadas a aspectos matemáticos o informáticos como combinaciones de teclado del usuario, mensajes de programas o representación de variables matemáticas o informáticas:
+
+        - <kbd> ->	Entrada de información del usuario (generalmente, combinación de teclado).
+        - <samp> ->	Salida de información de un programa informático.	
+        - <var> ->	Variable (contexto matemático o informático).	
+        - <time> ->	Indica una fecha/hora legible para humanos, con formato para máquinas opcional.	
+        - <data> ->	Información equivalente orientado a máquinas.	
+        - <code> ->	Fragmento de código fuente (en línea).
+
+
+
+    4 Fragmentos de edición
+      -> Por último, tenemos unas etiquetas orientadas a la edición posterior a la publicación de un texto o página web. Son útiles para saber rápidamente los cambios o modificaciones que se han realizado:
+
+        - <ins> ->	Fragmento de texto o información añadida a posteriori de la publicación inicial.
+        - <del> ->	Fragmento de texto o información eliminada a posteriori de la publicación inicial.
+ -->
