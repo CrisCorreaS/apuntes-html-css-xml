@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas &lt;kdb&gt; y &lt;samp&gt;</title>
+  </head>
+  <body>
+    <p>
+      Para abrir una nueva pestaña en el navegador, pulsa la combinación de
+      teclas <kbd>CTRL</kbd>+<kbd>T</kbd>.
+    </p>
+
+    <p>
+      Para abrir una nueva pestaña en el navegador, pulsa la combinación de
+      teclas <kbd>CTRL</kbd>+<kbd>T</kbd>.
+    </p>
+
+    <p>
+      <strong>Internet Explorer</strong> mostró un mensaje:
+      <samp>Error: Todo ha ido bien</samp>.
+    </p>
+
+    <!-- <kdb> -->
+    <p>Si está conforme escriba <kbd>sí</kbd>. Si no, pulse <kbd>esc</kbd></p>
+
+    <p>
+      Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to
+      re-render an MDN page.
+    </p>
+
+    <p>
+      Use the command <kbd>help mycommand</kbd> to view documentation for the
+      command "mycommand".
+    </p>
+
+    <!-- <samp> -->
+    <p>I was trying to boot my computer, but I got this hilarious message:</p>
+    <p>
+      <samp>Keyboard not found <br />Press F1 to continue</samp>
+    </p>
+
+    <p>
+      When the process is complete, the utility will output the text
+      <samp>Scan complete. Found <em>N</em> results.</samp> You can then proceed
+      to the next step.
+    </p>
+
+    <pre>
+    <samp><span class="prompt">mike@interwebz:~$</span> <kbd>md5 -s "Hello world"</kbd>
+    MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
+    
+    <span class="prompt">mike@interwebz:~$</span> <span class="cursor">█</span></samp></pre>
+  </body>
+</html>
+<!-- 
+  ->En un documento HTML podríamos querer representar la entrada de datos o información por parte del usuario. Por ejemplo, en un documento debemos representar lo que debe indicar el usuario para realizar una acción.
+  ->Esta entrada de datos, generalmente, se hace por medio de un teclado, aunque también podrían utilizarse otras vías como comandos de voz o similares.
+
+
+  1 La etiqueta <kbd>
+    -> La etiqueta <kbd> se utiliza precisamente para representar la entrada de datos por parte del usuario. El nombre de la etiqueta proviene de keyboard, ya que tradicionalmente siempre se ha utilizado el teclado para proporcionar información por parte del usuario.
+    -> El ejemplo más común y fácil de entender es la entrada de datos mediante combinaciones de teclado para realizar una acción determinada. Ej: Combinaciones de teclas
+    -> Veamos un ejemplo práctico de la etiqueta <kbd>. Necesitamos indicar al lector que al pulsar una cierta combinación de teclas, podrá abrir una nueva pestaña en el navegador.
+    -> Para ello, haremos lo siguiente:
+
+      <p>
+        Para abrir una nueva pestaña en el navegador,
+        pulsa la combinación de teclas <kbd>CTRL</kbd>+<kbd>T</kbd>.
+      </p>
+
+    -> Ahora, podemos aprovechar CSS para dar estilo a estas etiquetas y que simulen ser teclas del teclado:
+
+      <p>
+        Para abrir una nueva pestaña en el navegador,
+        pulsa la combinación de teclas <kbd>CTRL</kbd>+<kbd>T</kbd>.
+      </p>
+
+
+
+  2 La etiqueta <samp>
+    -> La etiqueta <samp> es la opuesta a la etiqueta <kbd>. Si la última representa la entrada de datos por parte del usuario a la máquina, la etiqueta <samp> nos permite representar la salida de la información que proviene de una máquina, hacia el usuario.
+    -> Mediante esta etiqueta podemos mostrar la salida de un programa o sistema a un usuario:
+
+      <p>
+        <strong>Internet Explorer</strong> mostró un mensaje: <samp>Error: Todo ha ido bien</samp>.
+      </p>
+
+    -> De esta forma, podemos indicar tanto entrada como salida de datos desde una máquina.
+ -->
