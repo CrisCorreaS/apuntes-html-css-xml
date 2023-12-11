@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas &lt;abbr&gt; y &lt;dfn&gt;</title>
+  </head>
+  <body>
+    <p>El término <abbr>Km</abbr> es una unidad de longitud.</p>
+
+    <p>
+      El término <abbr title="Kilómetro">Km</abbr> es una unidad de longitud.
+    </p>
+
+    <p>El término <dfn>Kilómetro</dfn> es una unidad de longitud.</p>
+
+    <p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
+    <p>Using <abbr>HTML</abbr> is fun and easy!</p>
+    <p>Using <abbr>CSS</abbr>, you can style your abbreviations!</p>
+
+    <p>
+      You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+      <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+      keep your CSS presentation layer and HTML content layer separate. This is
+      called "separation of concerns."
+    </p>
+
+    <p>El <dfn>HTML</dfn> es un lenguaje de marcado para hipertextos.</p>
+
+    <p>
+      A <dfn id="def-validator">validator</dfn> is a program that checks for
+      syntax errors in code or documents.
+    </p>
+
+    <!-- Lo mejor es hacer -->
+    <p>
+      El término <dfn><abbr title="Kilómetro">Km</abbr></dfn> es una unidad de
+      longitud.
+    </p>
+  </body>
+</html>
+<!-- 
+  Es posible que escribiendo un documento web nos interese definir palabras, conceptos, o abreviar términos. Para ello, tenemos una serie de etiquetas interesantes, vamos a pasar a explicarlas.
+
+    1 La etiqueta <abbr>
+      -> La etiqueta <abbr> nos permite indicar una abreviatura o acrónimo, colocando en el interior el término abreviado, y opcionalmente, en el atributo title el término expandido o completo.
+      -> Veamos un ejemplo para ver como funciona:
+
+        <p>El término <abbr>Km</abbr> es una unidad de longitud.</p>
+
+      -> El término Km es un acrónimo de Kilómetro. Con este ejemplo anterior, podríamos estar utilizando correctamente la etiqueta <abbr>. Sin embargo, es posible indicar en el atributo title el significado expandido del término, dando así más información:
+
+        <p>El término <abbr title="Kilómetro">Km</abbr> es una unidad de longitud.</p>
+
+      -> En resumen, con esta etiqueta podremos definir:
+        - Acrónimos: Bit (BInary digiT), Teleñeco (TELEvisión muÑECO), etc...
+        - Abreviaturas: cm (CentíMetro), hr (HoRas), min (MINutos), etc...
+      
+      ->No todas las abreviaturas requieren el uso de la etiqueta <abbr>. Por ejemplo, si no necesitamos aclarar una abreviatura (está clara en el contexto) o simplemente ya se ha aclarado anteriormente, no es necesario utilizar la etiqueta <abbr>.
+
+
+
+    2 La etiqueta <dfn>
+      -> La etiqueta <dfn> permite establecer el término de una definición, que posteriormente se va a detallar. Por ejemplo, observa el siguiente fragmento de código:
+
+        <p>El término <dfn>Kilómetro</dfn> es una unidad de longitud.</p>
+
+      -> Sin embargo, esto se podría complicar un poco y utilizar simultáneamente una definición y una abreviatura. Veamos como podríamos escribir el marcado HTML de una combinación de ambas:
+
+        <p>
+          El término <dfn><abbr title="Kilómetro">Km</abbr></dfn> es una unidad de longitud.
+        </p>
+
+      -> Recuerda también que puedes hacer uso de elementos como <dl>, <dt> y <dd> para crear una lista de descripciones donde tengas múltiples etiquetas <dfn>. Puedes ver más información en lista de descripciones.
+ -->
