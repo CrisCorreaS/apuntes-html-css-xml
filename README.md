@@ -1,7 +1,7 @@
 # Repositorio de Ejercicios de HTML, CSS y XML
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
 <br/>
-Este repositorio contiene una colección de ejercicios de HTML, CSS y XML que realicé como parte de la asignatura de "Lenguajes de Marcas y Sistemas de Gestión de Información" y en el curso "HTML y CSS a fondo para desarrolladores" de Cluster TIC Galicia y Campus MVP.
+Este repositorio contiene una colección de ejercicios de HTML, CSS y XML que realicé como parte de la asignatura de "Lenguajes de Marcas y Sistemas de Gestión de Información" y un conjunto de cursos de HTML y CSS variados que he hecho y de los que he sacado un montón de apuntes.
 
 ## Contenido
 El repositorio se divide en diferentes secciones:
