@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Tabla de tipos de datos que utilizar en un formulario</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Información a obtener</th>
+          <th>Ejemplos</th>
+          <th>Etiqueta y atributo a utilizar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Información de texto corto</td>
+          <td>Nombres, apellidos, textos cortos...</td>
+          <td>&lt;input&gt;</td>
+        </tr>
+        <tr>
+          <td>Información de texto largo</td>
+          <td>Comentarios, observaciones...</td>
+          <td>&lt;textarea&gt;</td>
+        </tr>
+        <tr>
+          <td>Números o cantidades</td>
+          <td>Edades, precios, cuantías...</td>
+          <td>&lt;input type="number"&gt; o &lt;input type="range"&gt;</td>
+        </tr>
+        <tr>
+          <td>Fechas u horas</td>
+          <td>Fecha de nacimiento, inicio de evento...</td>
+          <td>&lt;input type="date"&gt; o derivados</td>
+        </tr>
+        <tr>
+          <td>Verdadero/falso</td>
+          <td>Si/No, Opción A/B, ON/OFF...</td>
+          <td>&lt;input type="checkbox"&gt;</td>
+        </tr>
+        <tr>
+          <td>Opción única</td>
+          <td>(Elegir una opción de 2 ó más posibles)</td>
+          <td>&lt;input type="radio"&gt; o &lt;select&gt;</td>
+        </tr>
+        <tr>
+          <td>Varias opciones</td>
+          <td>(Elegir varias opciones de 2 ó más posibles)</td>
+          <td>&lt;select multiple&gt; o &lt;input type="checkbox"&gt;</td>
+        </tr>
+        <tr>
+          <td>Opción única abierta</td>
+          <td>(Elegir una opción o indicar una propia)</td>
+          <td>&lt;datalist&gt;</td>
+        </tr>
+        <tr>
+          <td>Selección de color</td>
+          <td>(Escoger un color o tonalidad)</td>
+          <td>&lt;input type="color"&gt;</td>
+        </tr>
+        <tr>
+          <td>Selección de archivo</td>
+          <td>(Escoger un archivo para enviar)</td>
+          <td>&lt;input type="file"&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <!-- Ejemplo básico 1 -->
+    <form name="formulario" method="post" action="/send/"></form>
+
+    <!-- Ejemplo básico 2 -->
+    <form method="get" action="/search/" target="_blank" accept-charset="utf-8"></form>
+
+    <!-- Ejemplo básico 3 -->
+    <form method="post" action="/saveform/" autocomplete="off" novalidate></form>
+
+    <!-- Ejemplo de sintaxis básica -->
+    <form name="userdata" method="post" action="/send/">
+      <input type="text" name="username">
+      <input type="submit">
+    </form>
+
+    <hr />
+
+    <!-- Soy Dalto -->
+    <!-- 
+        En los forms hay tres tipos de formas de separar la información:
+          - inputs: entrada de datos
+          - procesamiento: procesa los datos
+          - outputs: la salida de datos, devuelve los datos procesados o el resultado del procesamiento
+    -->
+    <form method="get">
+      <input type="text" />
+      <input type="password" />
+      <input type="number" />
+      <input type="tel" />
+      <input type="email" />
+      <input type="url" />
+      <input type="color" />
+      <input type="range" min="1" max="5" />
+      <input type="date" />
+      <input type="time" />
+      <input type="datetime-local" />
+      <input type="week" />
+      <input type="month" />
+      <input type="image" />
+      <input type="file" />
+      <input type="search" />
+      <input type="radio" />
+      <input type="hidden" />
+      <input
+        type="button"
+        value="Botón"
+      /><!-- El input de tipo botón siempre tiene que llevar el atributo "value" -->
+      <textarea readonly>Esto es un textarea</textarea>
+      <input type="reset" />
+      <input type="submit" />
+    </form>
+    
+    <hr />
+
+    <form method="post">
+      <label>Nombre: <input type="text" name="nombre" required /></label> <br />
+      <label>Contraseña: <input type="password" name="password" required /></label>
+      <br />
+      <label>Número empleado: <input type="number" name="number" required /></label>
+      <br />
+      <label>Mail: <input type="email" name="email" required /></label> <br />
+
+      <!-- Si ponemos el mismo name en dos inputs diferentes que sean booleanos (type="radio" o está checked o unchecked), si se marca uno, se desmarca el otro -->
+      <label for="acepto">Acepto</label>
+      <input type="radio" name="acepto-deniego" id="acepto" value="acepto" checked /> <!-- con el atributo "checked", se selecciona por defecto esta opción -->
+      <label
+        >Deniego<input type="radio" name="acepto-deniego" id="deniego" value="deniego"
+      /></label>
+      <br />      
+      <br />
+      <input type="submit" value="Enviar Form" />
+    </form>
+
+    <hr />
+
+    <h2>Atributos de la etiqueta form</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>action</td>
+          <td>Dirección URL del backend al cuál se enviará la información obtenida en el formulario.</td>
+        </tr>
+        <tr>
+          <td>method</td>
+          <td>Método HTTP de envío. GET a través de URL, POST para envío extenso de información.</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>Nombre del formulario. Útil para identificar el formulario y procesar posteriormente.</td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td>Nombre del lugar donde se abrirá el formulario. \_blank para nueva pestaña.</td>
+        </tr>
+        <tr>
+          <td>enctype</td>
+          <td>Codificación para el envío del formulario. Importante para envío de archivos.</td>
+        </tr>
+        <tr>
+          <td>accept-charset</td>
+          <td>Fuerza a utilizar una codificación en los parámetros de texto del formulario.</td>
+        </tr>
+        <tr>
+          <td>autocomplete</td>
+          <td>Activa on o desactiva off el autocompletado para todos los campos del formulario.</td>
+        </tr>
+        <tr>
+          <td>novalidate</td>
+          <td>Desactiva la validación HTML5 del formulario. (Es booleano)</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+<!-- 
+  -> HTML proporciona una serie de etiquetas, atributos y conceptos muy útiles para la entrada de información por parte del usuario y enviarla a través de una página. Una de las problemáticas que existen a la hora de que el usuario envíe información es la de eliminar la ambigüedad, o conseguir que la información del usuario cumpla ciertas restricciones y pueda utilizarse o procesarse de la mejor forma posteriormente.
+
+  1 ¿Qué es un formulario?
+    -> Se conoce como formulario a los mecanismos para enviar información por parte del usuario, a través de unos campos visuales de forma sencilla e intuitiva, que determinan la naturaleza del tipo de información que se va a enviar y como hacerla llegar a otro extremo donde se procesará esa información.
+    -> Nuestros objetivos al crear un formulario HTML deben ser los siguientes:
+      - Hacer lo más sencillo posible el proceso de inserción de datos por parte del usuario.
+      - Intentar que la experiencia de usuario sea lo más agradable y cómoda posible.
+      - Intentar que los datos introducidos estén en un formato predecible y esperado.
+      - Reducir los errores al introducir datos en la medida de lo posible.
+      - Comunicar clara y rápidamente si ocurren errores al introducir datos.
+
+
+  2 La etiqueta <form>
+    -> Para comenzar con la creación de un formulario, el primer paso es indicar una etiqueta contenedora <form>, que incluirá toda la información que se quiere recoger en ese formulario: <form></form>
+    -> De esta forma, incluso se pueden crear varias etiquetas <form> por página, pudiendo así crear varios formularios con diferentes objetivos, como por ejemplo, uno para realizar una búsqueda en la página, otro para dejar un comentario y otro para enviar un email al autor, etc.
+
+    -> Es posible crear formularios sin utilizar una etiqueta <form>, sin embargo, tendrían que manejarse desde Javascript y probablemente, tengan peor rendimiento de cara a la accesibilidad.
+
+    -> La etiqueta <form> dispone de varios atributos que se pueden indicar y los podemos ver en la tabla de esta página
+
+
+
+  --- Ejemplo básico 1 ---
+  -> Así pues, vamos a ver un primer formulario base de ejemplo (aún vacío, sin campos de entrada de datos, sólo con la etiqueta contenedora) para ejemplicar su utilización:
+
+    <form name="formulario" method="post" action="/send/"></form>
+
+  -> Nótese que en este primer ejemplo se definen 3 atributos base en <form>:
+    - El atributo name define el nombre del formulario para diferenciarlo de otros.
+    - El atributo method define el método HTTP a utilizar. Usaremos GET cuando nos interese enviar datos a través de la URL. En caso contrario, POST.
+    - El atributo action se usa para indicar la URL a donde se enviarán los datos cuando el usuario pulse el botón de enviar. En caso de omisión, se enviarán a la propia página actual, volviéndola a cargar. En este caso, se estarían enviando a la ruta absoluta https://dominio.com/send/.
+
+
+
+  --- Ejemplo básico 2 ---
+    -> Veamos un nuevo ejemplo utilizando otros campos de formulario:
+
+      <form method="get" action="/search/" target="_blank" accept-charset="utf-8"></form>
+
+    -> En este caso enviamos a través de método GET a la URL https://dominio.com/search/:
+      - Se ha indicado el atributo target con valor _blank, esto significa que se abrirá en una nueva pestaña.
+      - Se ha indicado el atributo accept-charset. Esto forzará a que el texto enviado en el formulario sea interpretado como codificación UTF8. Útil si tienes problemas de carácteres extraños o similar.
+
+
+
+  --- Ejemplo básico 3 ---
+    -> Un último ejemplo con los atributos restantes:
+
+      <form method="post" action="/saveform/" autocomplete="off" novalidate></form>
+
+      - El atributo autocomplete indica el valor off. Por defecto, este atributo está a on. Desactivado, todos los campos del formulario no mostrarán sugerencias anteriores de autocompletado.
+      - El atributo novalidate hará que el usuario pueda saltarse todas las validaciones HTML del mismo. Lo veremos más adelante en la sección de validaciones HTML.
+    
+    -> Sin embargo, aún solo hemos definido la etiqueta contenedora del formulario que determina como se comportará globalmente. Posteriormente, habría que indicar los campos para obtener la información que queremos que el usuario proporcione, de la mejor forma posible.
+
+
+
+
+  3 Información de un formulario
+    -> Para que un usuario pueda introducir información en un formulario, requiere que se le indiquen una serie de campos que le permitan introducir la información de la forma más cómoda y rápida posible. Para ello, debemos saber a priori que tipo de dato le vamos a pedir al usuario (texto, cantidades numéricas, fechas, etc...), y así saber que tipo de campo de entrada de datos es más conveniente utilizar.
+    -> Podemos ver una lista de los tipos de datos que podemos utilizar en la tabla 
+    -> Cada uno de estos campos tiene particularidades específicas, por lo que conviene aprenderlos por separado y entender como funciona cada uno de ellos. En cada uno de esos artículos explicaremos como funcionan.
+
+    -> **En el caso de necesitar algo mucho más específico, tendríamos que crearnos nuestras propias etiquetas personalizadas o utilizar alguna librería que nos proporcione la funcionalidad deseada.
+
+
+
+  4 Sintaxis básica de un formulario
+    -> Como hemos mencionado, la etiqueta <form> es sólo la etiqueta contenedora del formulario. Luego, hay que ir añadiendo campos para crear un formulario extenso y personalizado. Una de las etiquetas que más utilizaremos es la etiqueta <input>.
+    
+    -> Por ejemplo, en el siguiente formulario, establecemos dos etiquetas <input>, una de ellas para obtener información de texto y la otra para incorporar un botón para enviar los datos del formulario:
+
+      <form name="userdata" method="post" action="/send/">
+        <input type="text" name="username">
+        <input type="submit">
+      </form>
+
+    -> En este ejemplo tenemos un pequeño formulario en el cuál:
+      - Se pide al usuario su nombre con la etiqueta <input type="text">
+      - Botón para permitir enviar el formulario con la etiqueta <input type="submit">
+    
+    ->Aunque vemos que se trata de la misma etiqueta <input>, dependiendo del valor indicado en el atributo type realizará una tarea u otra. En los siguientes artículos veremos como crear formularios mucho más personalizados, con más información, semánticos y que sean accesibles.
+
+ -->
+
+<!-- 
+  A la hora de hacer forms, hay que pensar que el servidor va a obtener los datos en forma de pares "clave: valor" en donde:
+  - El atributo "name" es el nombre
+  - El atributo "value" es el valor
+
+  -> El servidor obtiene "name: value"
+  <label>Nombre: <input type="text" name="nombre" required /></label> -> El servidor recibe "nombre: El nombre que introdujéramos"
+  <input type="radio" name="acepto-deniego" id="acepto" value="acepto" checked /> -> El servidor recibe "acepto-deniego: acepto"
+  
+  Es por eso que todos los inputs deben de tener el atributo "name"
+  Y todos los inputs donde haya que hacer click para hacer check o elegir una opción por defecto, hay que darles un "value"
+ -->
