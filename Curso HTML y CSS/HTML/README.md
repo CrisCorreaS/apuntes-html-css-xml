@@ -36,9 +36,14 @@
 
 #### Páginas para las etiquetas de "body"
 
--[Página para ampliar información sobre el atributo "role"](https://w3c.github.io/aria/#introroles) -> Es la página web oficial de W3C donde se tratan temas como la accesibilidad gracias a los WAI-ARIA Roles.
+- [Página para ampliar información sobre el atributo "role"](https://w3c.github.io/aria/#introroles) -> Es la página web oficial de W3C donde se tratan temas como la accesibilidad gracias a los WAI-ARIA Roles.
 
 - [Página de mdn sobre el atributo "role"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -> Da más información sobre el atributo "role". También indica especificaciones y da consejos de clean code y buen uso de este atributo
+
+#### Recursos para crear webs HTML:
+- [Google Fonts](https://fonts.google.com/) -> Es una biblioteca gratuita de fuentes de Google, que permite a los desarrolladores seleccionar, personalizar y usar diferentes fuentes en sus sitios web. Estas fuentes, se pueden incluir en un documento HTML y ofrece una amplia variedad de estilos y familias de fuentes para elegir. Tienes más información sobre cómo utilizar Google Fonts [aquí](https://developers.google.com/fonts/docs/getting_started?hl=es-419)
+
+- [Font Awesome](https://fontawesome.com/) -> Es una biblioteca de iconos que se utiliza ampliamente en el desarrollo web para mejorar la estética y la funcionalidad de las páginas web. Fue diseñada para ser utilizada con elementos en línea y permite cambiar el tamaño, color y otros aspectos visuales de los iconos a través de CSS. Tienes más información sobre cómo usar Font Awesome [aquí](https://fontawesome.com/v4/get-started/)
 
 #### Dominios
 
