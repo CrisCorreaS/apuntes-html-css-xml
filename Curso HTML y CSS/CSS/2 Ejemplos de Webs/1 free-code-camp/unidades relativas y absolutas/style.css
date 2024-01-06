@@ -1,0 +1,65 @@
+body {
+  color: black;
+  padding: 5px;
+  background-color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body>div{
+  background-color: rebeccapurple;
+    margin: 5px 0px 20px;
+}
+
+#contenedor-principal {
+  font-size: 10px;
+}
+
+#contenedor-secundario {
+  font-size: 25px;
+}
+
+.rectangulo {
+  padding: 5px;
+  margin: 5px;
+}
+
+.px {
+  background-color: chartreuse;
+  width: 200px;
+}
+
+.pt {
+  background-color: aqua;
+  width: 200pt;
+}
+
+.vw {
+  background-color: coral;
+  width: 20vw;
+}
+
+.em {
+  background-color: violet;
+  width: 20em;
+  font-size: 1.5em;
+}
+
+.rem {
+  background-color: plum;
+  width: 20rem;
+}
+
+.ex {
+  background-color: orange;
+  width: 20ex;
+}
+
+.vmin {
+  background-color: deepskyblue;
+  width: 20vmin;
+}
+
+.vmax {
+  background-color: springgreen;
+  width: 20vmax;
+}
