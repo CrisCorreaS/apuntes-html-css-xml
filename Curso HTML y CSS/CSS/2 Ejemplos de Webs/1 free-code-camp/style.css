@@ -1,0 +1,170 @@
+/* Según la Guía de Estilos de Google, se debería de dejar una línea en blanco entre cada regla css */
+
+/* Variables: https://caniuse.com/css-variables */
+:root {
+  /* Variables globales */
+  --color-crimson: crimson;
+  --color-amarillo: yellow;
+  --color-blanco: #fff;
+  --color-random: green;
+}
+
+body {
+  background-color: royalblue;
+  /* 
+  Ponemos el color 2 veces porque hay varios navegadores que aún no aceptan las variables de css (https://caniuse.com/css-variables)
+  Así que para prevenir que un navegador no interprete las variables, deberíamos de escribirlas así: */
+  color: white;
+  color: var(--color-blanco, white);
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Ephesis", cursive;
+}
+
+h3 {
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 
+Ponemos el color 2 veces porque hay varios navegadores que aún no aceptan las variables de css (https://caniuse.com/css-variables)
+Así que para prevenir que un navegador no interprete las variables. 
+Podemos quitar el color de respaldo de la variable como vemos en este ejemplo, pero si hay un navegador que interprete variables y no esté bien escrita la variable (haya un error de tipeo), no interpretará bien el código.
+Lo ideal es poner:
+    background-color: crimson;
+    background-color: var(--color-crimson, crimson);
+*/
+#contenedor-foto-gato {
+  background-color: crimson;
+  background-color: var(--color-crimson);
+}
+
+a {
+  font-family: "Gemunu Libre", sans-serif;
+}
+
+img {
+  width: 100px;
+}
+
+#foto-gato {
+  padding: 15px;
+  /* Ponemos como respaldo "yellow" por si hay un error de tipeo al escribir la variable: background-color: var(--color-amarillo, yellow); */
+  background-color: var(--color-amarillo, yellow);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.imagen-de-gatos {
+  width: 200px;
+  border-style: solid dotted dashed double;
+  border-width: 5px;
+  /* Podemos redefinir una variable global y se redefinirá para toda la etiqueta en donde la redefinimos y sus hijas */
+  --color-random: brown;
+  border-color: var(--color-random);
+}
+
+.bordes-redondeados {
+  border-radius: 20px;
+}
+
+.circular {
+  border-radius: 70%;
+}
+
+.contenedor-listas {
+  background-color: silver;
+}
+
+ul,
+ol {
+  font-size: xx-small;
+  color: chocolate;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#lista-gatos-aman {
+  font-size: 15px;
+  color: blueviolet;
+}
+
+#lista-gatos-odian {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#foto-gato-solo {
+  background-color: yellow;
+  border-width: 2px;
+  border-color: black;
+  /* 
+  Es lo mismo poner esto:
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-bottom: 5px; 
+  
+  Que poner esto:  */
+  padding: 20px 15px 5px 10px;
+  /* 
+    Hay que ponerlo en sentido de las agujas del reloj: arriba, derecha, abajo, izquierda
+    Si lo pones con solo dos parámetros -> padding: 20px 5px; significa que arriba y abajo tienen 20px, e izquierda y direcha tienen 5px  
+    Si lo pones con tres parámetros -> padding: 20px 5px 15px; significa que arriba tiene 20px, a la izquierda y derecha 5px y abajo 15px 
+
+    Ej:
+     -> arriba y abajo | izquierda y derecha 
+      padding: 5% 10%;
+    
+     -> arriba | izquierda y derecha | abajo
+      padding: 1em 2em 2em;
+    
+     -> arriba | derecha | abajo | izquierda 
+      padding: 5px 1em 0 2em;
+  */
+}
+
+#foto-gatitos-juntos {
+  background-color: yellow;
+  border-width: 4px;
+  border-color: black;
+  padding: 20px 5px;
+  /* Pasa lo mismo con el padding y sus parámetros, que con el margin y sus parámetros correspondientes */
+  margin: 15px;
+}
+
+/* Para clases */
+.lista-de-gatos {
+  color: burlywood;
+}
+
+/* Para ids */
+#titulo-app-gatos {
+  color: crimson;
+}
+
+/* Selectores de atributo */
+img[src="img/gatos.jpg"] {
+  width: 500px;
+}
+
+input[type="radio"] {
+  margin: 50px;
+}
+
+a[href="#"] {
+  color: fuchsia;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+/* Prioridades: -> <h2 id="titulo-app-gatos" class="pruebaPrioridades" style="color: orchid;">AppDeGatos 3</h2> */
+#titulo-app-gatos {
+  color: yellow;
+}
+
+.pruebaPrioridades {
+  color: purple !important; /* Al final prevalece esta gracias al "!important", si no primero iría ponerle los estilos en línea, luego el estilo del id y por último este */
+}

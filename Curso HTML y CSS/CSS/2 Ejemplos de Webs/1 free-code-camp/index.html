@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprende HTML y CSS - Curso Desde Cero</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Aplicamos CSS con el archivo style.css -> Es la opción recomendada -->
+    <!-- Usamos las tipografías Roboto, Ephesis y Gemunu Libre de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Gemunu+Libre:wght@200&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Aplicamos CSS con el elemento <style> -> No es recomandada */
+      h2 {
+        color: aqua;
+      }
+
+      h3 {
+        color: green;
+      }
+
+      p {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: blue">AppDeGatos</h2>
+    <!-- CSS aplicado como estilo de línea -> No es recomendada -->
+    <h2>AppDeGatos 2</h2>
+    <h2 id="titulo-app-gatos" class="pruebaPrioridades" style="color: orchid;">AppDeGatos 3</h2>
+    <main>
+      <h3>Imágenes de Gatos</h3>
+      <!-- TODO: Añadir enlace a imágenes de gatos -->
+      <p>
+        Haz click aquí para ver más
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          >imágenes de gatos</a
+        >
+      </p>
+      <div id="contenedor-foto-gato">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img
+            class="imagen-de-gatos bordes-redondeados"
+            src="https://bit.ly/fcc-relaxing-cat"
+            alt="Un gatito naranja acostado sobre su espalda"
+            id="foto-gato"
+          />
+        </a>
+      </div>
+      <hr />
+      <h3>Listas de <a href="#">Gatos</a></h3>
+      <div class="contenedor-listas">
+        <p>Cosas que los gatos <em>aman</em>:</p>
+        <ul id="lista-gatos-aman">
+          <li>Menta gatuna</li>
+          <li>Apuntadores Láser</li>
+          <li><s>Lasaña</s></li>
+        </ul>
+        <ul class="lista-de-gatos">
+          <li>Menta gatuna</li>
+          <li>Apuntadores Láser</li>
+          <li><s>Lasaña</s></li>
+        </ul>
+        <img class="circular" src="img/lasagna.jpg" alt="Lañana" />
+        <p>Cosas que los gatos <strong>odian</strong></p>
+        <ol id="lista-gatos-odian">
+          <li>Tratamiento antipulgas</li>
+          <li>Truenos</li>
+          <li>Otros gatos</li>
+        </ol>
+        <img
+          class="imagen-de-gatos"
+          src="img/gatos.jpg"
+          alt="Grupo de gatitos en un prado"
+        />
+        <br />
+        <img
+          src="https://bit.ly/fcc-relaxing-cat"
+          alt="Un gatito naranja acostado sobre su espalda"
+          id="foto-gato-solo"
+          class="imagen-de-gatos"
+        />
+        <br />
+        <img
+          class="imagen-de-gatos"
+          id="foto-gatitos-juntos"
+          src="img/gatos.jpg"
+          alt="Grupo de gatitos en un prado"
+        />
+      </div>
+      <form action="/enviar-respuesta">
+        <label for="interior">
+          <input type="radio" name="interior" id="interior" /> Interior
+        </label>
+        <br />
+        <label for="exterior">
+          <input type="radio" name="exterior" id="exterior" /> Exterior
+        </label>
+        <br />
+        <label for="carinoso">
+          <input type="checkbox" name="carinoso" id="carinoso" /> Cariñoso
+        </label>
+        <br />
+        <label for="perezoso">
+          <input type="checkbox" name="perezoso" id="perezoso" /> Perezoso
+        </label>
+        <br />
+        <label for="energico">
+          <input type="checkbox" name="energico" id="energico" /> Enérgico
+        </label>
+        <br />
+        <input
+          type="text"
+          placeholder="URL de la foto de tu gato"
+          id="foto"
+          name="foto"
+        />
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        <small>Sin Derechos de Autor - </small>
+        <a href="https://www.freecodecamp.org/espanol/">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
