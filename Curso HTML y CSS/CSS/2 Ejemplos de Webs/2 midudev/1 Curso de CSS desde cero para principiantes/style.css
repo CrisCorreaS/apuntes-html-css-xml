@@ -1,0 +1,179 @@
+/*
+COLORES EN CSS:
+Para trabajar con opacidad, está mal usar rgba porque es legacy, ahora lo que se utiliza es el rgb
+  ❌ Antes: rgba(0, 0, 0, 0.5) o rgba(0, 0, 0, 50%)
+  ✅ Ahora: 
+            rgb(0, 0, 0 / 50%) 
+            rgb(0 0 0 / 50%)
+            #11223344 -> HEX usa tres pares de números para su notación normal. Si añadimos un par más, estamos haciendo referencia a la opacidad
+  
+  La forma de rgb es más moderna, es hacia donde va la tendencia y es más cómoda (puede ser usada con o sin comas y puedes quitarle el alpha en cualquier momento)
+
+Hoy en día los colores se usan con valores:
+  - por defecto -> color: blue;
+  - hex -> color: #000000;                       -> Es el más usado
+  - rgb -> color: rgb(0 0 0 / 50%)               -> Es muy fácil de aprender
+  - hsl -> color: hsl(60, 100%, 100%)            -> Es muy fácil de entender
+  - oklch -> color: oklch(348 83% 44% / 50%)     -> Es una buena práctica y muy moderno
+  - transparente -> color: transparent;
+  - currentColor -> border-color: currentColor;  -> Da el valor del color que se utiliza actualmente en el texto del elemento en el que estamos o el elemento padre
+
+También existen los conversores de formatos de color
+*/
+
+/* 
+SELECCIONAR:
+- Siempre que se pueda, a la hora de estilar, hay que intentar evitar los identificadores y las etiquetas.
+- Es buena práctica usar las clases porque así podemos reutilizar nuestro css continuamente (reutilizar el css lo máximo posible es esencial para mejorar el rendimiento)
+- El concepto es: usar muchas clases y pocos identificadores
+
+OPERADORES:
+- Operador "~": 
+  -> Si ponemos p ~ span{} -> estamos estilando todos los <span> que vayan después de un párrafo, pero no dentro de este -> <p>...</p> ... <span>...</span>
+- Operador "+":
+  -> Si ponemos p + span{} -> estamos estilando todos los <span> que vayan estrictamente después de un párrafo, pero no dentro de este -> <p>...</p><span>...</span>
+- Operador ">": 
+  -> Si ponemos p > span{} -> estamos estilando todos los <span> que vayan dentro de un párrafo -> <p>...<span>...</span>...</p>
+
+ESPECIFIDAD:
+- Es más específico el css que hacemos los desarrolladores que el que viene por defecto en el navegador (se puede ver en las herramientas de desarrollador (Elements>Styles); el del navegador es el "user agent") o el que hace por defecto el usuario que interactúa con la página
+- El css en línea es el más específico pero es una mala práctica utilizarlo. En las herramientas de desarrollador del navegador, se puede probar a poner estilos en línea desde el apartado Elements>Style y element.style{}
+- Si ponemos "!important", el estilo que se marque ahí, va a ser el prioritario sobre cualquier otro, da igual la especifidad -> color: purple !important; -> Poner "!important" suele ser un indicador de que el css no está demasiado bien
+
+*/
+
+/* 
+HERENCIA:
+- Hay algunas propiedades como "font-family" que se heredan desde los elementos html
+- Hay otras propiedades como el "border" que no se heredan
+- Las propiedades que no se heredan, podemos hacer que sí que lo hagan con "inherit"
+  
+  Ej:
+    <div class="container">
+      Este es el container:
+      <div class="child">Hola mundo</div>
+    </div>
+
+    Si ponemos: 
+      .container{
+        color: aqua;
+        font-size: 2px;
+        border: 3px solid aqua;
+      }
+
+    Lo que está pasando es que "color" y "font-size" son propiedades que hereda el div "child" del "container"
+    pero el "child" no hereda el border porque no es una propiedad que se herede por defecto (por defecto la propiedad del borden en el div hijo sería -> border: initial;)
+    Para que el "border" también se herede, hay que poner lo siguiente:
+      .child{
+        border: inherit;
+      }
+
+VALORES DE HERENCIA EN CSS:
+- inherit -> Fuerza que las propiedades que no se suelen heredar del padre, se hereden
+- initial -> Establece el valor inicial definido por las especificaciones de CSS (el que viene cuando no hay css -> con la etiqueta <strong>, "font-weight" se pone de tipo "bold" y el "border" está a "none")
+- unset -> Resetea el valor, le quitaría las propiedades heredadas
+- revert -> Revierte el valor de la herencia, salvo que haya un valor por defecto especificado en el navegador
+
+
+REFERENCIAS DE HERENCIA:
+Cualquier propiedad se puede mirar si se hereda o no buscando la propiedad en MDN y luego,
+dentro de la página, yendo al apartado de "Formal Definition" y buscando la sección "inherited"
+*/
+
+/* 
+PSEUDOCLASES:
+Son estados o situaciones especiales en las que un elemento puede estar. No confundir con los pseudoelementos
+- :hover -> Cuando estamos encima de un elemento. Ej: .link:hover{}
+- :active -> Cuando se hace justamente click en un elemento. Ej: .link:active{}
+- :focus -> Cuando un elemento tiene el foco. Ej: input:focus{}
+- :visited -> Cuando hemos visitado ya un enlace. Ej: a:visited{}
+- :first-child -> Cuando solo queremos que el primer hijo tenga las siguientes reglas css. Ej: li:first-child{}
+- :last-child -> Cuando queremos que solo el último hijo tenga las siguientes reglas css. Ej: li:last-child{}
+- 
+*/
+
+/* 
+BORDER VS OUTLINE:
+- Border -> Es el borde del contenido. El borde es algo que afecta al contenido. 
+- Outline -> Es el contorno. Es algo que se está dibujando encima dle contenido.
+
+Si dibujamos un borde, afectamos al ancho del contenido mientras que con el outline no:
+  No es lo mismo poner con el borde:
+      .link:hover{
+        border: 3px solid red;
+      }
+  Que poner con el outline:
+      .link:hover{
+        outline: 3px solid red;
+      }
+*/
+
+/* 
+UNIDADES:
+-> px -> El pixel es una unidad "medio-absoluta" porque antiguamente un pixel de la pantalla era un pixel de css, pero esto ha dejado de ser cierto. No es una unidad absoluta al 100% porque ahora hay un factor relativo que es la densidad de píxeles en la que queremos renderizar el contenido
+-> % -> Los porcentajes son medidas relativas al contenedor padre -> Va del 0 al 100
+-> vh -> El viewport-height es la unidad relativa a la altura del viewport (lo que vemos) -> Va del 0 al 100 -> Hay que tener cuidado con los estilos por defecto del navegador porque si ponemos una altura a un contenedor cualquiera de 100vh, el body en Chrome tiene un margin por defecto en el body de 8px, así que generaría un scroll. Para solucionar esto, tendremos que poner body{margin: 0;} -> Por eso nació CSS Reset (a día de hoy, CSS Reset ya no es tan buena práctica), luego nació el CSS Normalize (que es lo que se suele utilizar)
+-> vw -> El viewport-width es la unidad relativa a la anchura del viewport (lo que vemos) -> Va del 0 al 100
+*/
+
+/* 
+DISPLAY
+Las cajas se pueden dividir en dos categorías: 
+- inline -> En línea es cuando unos elementos se ponen unos al lado de otros, ya que NO hacen un salto de línea. 
+- block -> En bloque es cuando los elementos se ponen unos debajo de otros, ya que hacen un salto de línea.
+*/
+
+/*
+-> Los elementos en línea, tienen un contenido al que se le puede poner estilos para cambiar el color, el fondo...
+   pero no se le puede poner ni altura ni anchura porque se comportan como un texto, aunque sí
+   que le afecta el padding y el margin
+-> Las etiquetas <a>, <span>, <strong>, <em> funcionan en línea
+*/
+
+span {
+  color: mediumvioletred;
+  width: 500px;
+  height: 10px;
+}
+
+/*
+-> Las etiquetas <h1> a <h6>, <div>, <p>, <section> funcionan el bloque 
+
+-> Cuando establecemos un tamaño con width y height x, pensamos que es inamovible,
+   pero lo que pasa es que al poner el padding, el camaño varía, no sigue estático.
+   Esto se debe a que el tamaño del contenido es de la altura x anchura, pero a parte
+   de ese tamaño, también está el tamaño del padding, border y margin
+   
+   -> El tamaño real de los divs dentro de .enBloque es de 140x140px, no de 100x100px.
+      - El contenido es de 100x100
+      - El padding es de 20x20
+      - El borde es de 20x20
+
+-> El margin no afecta al ancho y al alto de nuestra caja, solo a la posición (si está
+   más o menos cerca de x elemento) y la separación.
+*/
+
+.enBloque div {
+  background-color: violet;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid red;
+  margin: 11px;
+}
+
+/* 
+-> Por defecto el "box-sizing" está en "box-sizing: content-box;", por eso al poner el padding y el 
+   border, las proporciones acaban siendo 140x140
+
+-> Si ponemos "box-sizing: border-box;", estamos diciendo que la caja en total sí que tiene
+   que medir 100x100px, por lo que el contenido se adaptará a lo puesto por el border y el padding
+     -> El tamaño real de este div dentro de .enBloque es de 100x100px, no de 140x140px
+      - El contenido ahora es de 60x60
+      - El padding sigue siendo de 20x20
+      - El borde sigue siendo de 20x20
+*/
+
+.enBloque div:first-child {
+  box-sizing: border-box;
+}
