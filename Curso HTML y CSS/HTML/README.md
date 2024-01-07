@@ -1,6 +1,5 @@
 # APUNTES Y CONSEJOS CON HTML
 ## Para buscar referencias de etiquetas
-- [w3schools](https://www.w3schools.com/html/default.asp)
 - Buscar en un navegador: mdn + nombre-etiqueta + html 
 - [Repositorio learning-area de mdn](https://github.com/mdn/learning-area)
 - [Página web oficial del WHATWG](https://html.spec.whatwg.org/multipage/) -> es la página oficial completa del grupo de trabajo de HTML (WHATWG). Es un documento detallado que describe la sintaxis y el comportamiento de HTML. Si al buscar en mdn tienes alguna duda, es bueno tener esta página como referencia ya que aquí todo lo que pongan va a misa y vas a hilar super fino.

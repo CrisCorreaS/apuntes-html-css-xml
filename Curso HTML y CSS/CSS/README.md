@@ -1,6 +1,5 @@
 # APUNTES Y CONSEJOS CON CSS
 ## Para buscar referencias
-- [w3schools](https://www.w3schools.com/css/default.asp)
 - Buscar en un navegador: mdn + nombre-lo-que-busques + css
 - [Repositorio learning-area de mdn](https://github.com/mdn/learning-area)
 
@@ -12,6 +11,7 @@
 
 - [Página de Google Developers para aprender CSS](https://web.dev/learn/css?hl=es) -> Herramienta educativa proporcionada por Google Developers para ayudar a entender y dominar los conceptos fundamentales de CSS. El curso se divide en varios módulos que cubren temas como el modelo de caja, selectores, animaciones... 
 
+- [Lista de vídeos de Youtuve de Midudev](https://www.youtube.com/playlist?list=PLUofhDIg_38q7l8gV4IVCz_pjUeyD99_j) -> Es una lista de 4 vídeos de MiduDev centrados en aprender CSS. En la carpeta de "Ejemplos de Webs" encontrarás apuntes y demás que he tomado al ver los vídeos.
 
 ## Guías para mejorar css
 - [csswizardry guide to css](https://cssguidelin.es/) -> Este documento es una guía de mejores prácticas y recomendaciones para escribir y estructurar CSS de manera eficiente y efectiva
