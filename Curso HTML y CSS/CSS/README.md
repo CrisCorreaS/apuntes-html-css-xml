@@ -20,4 +20,11 @@
 - [csswizardry articles](https://csswizardry.com/page2/#section:articles) -> Artículos de csswizardy donde se tratan temas centrados en css y cómo mejorar el rendimiento de una página web
 
 ## Páginas y herramientas para mejorar
+#### Páginas para CSS en general
 - [Google Fonts](https://fonts.google.com/) ->  Es la biblioteca oficial de Google Fonts. Proporciona un servicio que da acceso a una gran colección de fuentes de texto gratuitas. Estas fuentes se pueden usar en nuestro CSS para aplicarlo a nuestra página web.
+
+#### Herramientas para los colores:
+- [Conversor de colores](https://convertacolor.com/) -> Recurso que al escribir un color en un formato, te da este en diferentes formatos como pueden ser HEX, RGB, HSL o CMYK. No tiene todavía la opción de OKLCH
+
+- [Conversor a oklch](https://oklch.com/) -> Herramienta que convierte cualquier color HEX, RGB o HSL a OKLCH.
+
