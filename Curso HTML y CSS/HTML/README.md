@@ -10,6 +10,8 @@
 
 - [Página de Manz Dev para aprender HTML](https://lenguajehtml.com/) -> Página para aprender HTML, tener una cheat sheet de referencia, vídeos centrados en el tema e información adicional
 
+- [Página de Google Developers para aprender HTML](https://web.dev/learn/html) -> Recurso de aprendizaje en línea proporcionado por el equipo de Chrome y expertos externos para ayudar a aprender HTML. Cada tema tiene un artículo asociado que proporciona información detallada y ejemplos prácticos. Al final de cada sección, hay un resumen y pasos siguientes para continuar aprendiendo.
+
 ## Páginas y herramientas para mejorar
 #### Páginas para HTML en general
 - [Validador HTML W3C](https://validator.w3.org/) -> Es el validador oficial de la W3C que verifica que el código HTML de un sitio web esté bien estructurado y cumpla con los estándares de la W3C
