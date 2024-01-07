@@ -23,6 +23,10 @@
 #### Páginas para CSS en general
 - [Google Fonts](https://fonts.google.com/) ->  Es la biblioteca oficial de Google Fonts. Proporciona un servicio que da acceso a una gran colección de fuentes de texto gratuitas. Estas fuentes se pueden usar en nuestro CSS para aplicarlo a nuestra página web.
 
+- [Calculadora de especifidad de CSS](https://specificity.keegan.st/) -> Proporciona una forma visual para entender la especificidad en CSS.
+
+- [codi.link](https://codi.link/) -> Es una web que permite a los usuarios abrir archivos de código directamente y visualizarlos en tiempo real, por lo que ayuda mucho a practicar CSS desde cualquier dispositivo. Se puede arrastrar y soltar un archivo de código en la ventana del navegador para visualizarlo y editarlo. 
+
 #### Herramientas para los colores:
 - [Conversor de colores](https://convertacolor.com/) -> Recurso que al escribir un color en un formato, te da este en diferentes formatos como pueden ser HEX, RGB, HSL o CMYK. No tiene todavía la opción de OKLCH
 
