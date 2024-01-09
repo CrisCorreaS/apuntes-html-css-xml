@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas &lt;picture&gt; y &lt;source&gt;</title>
+  </head>
+  <body>
+    <h2>Las nuevas etiquetas para representar imágenes son las siguientes:</h2>
+    <table>
+      <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>&lt;picture&gt;</td>
+        <td>&lt;source&gt;</td>
+      </tr>
+      <tr>
+        <td>Agrupa una serie de imágenes. Etiqueta contenedora.</td>
+        <td>Mostrará la imagen que cumpla una serie de criterios opcionales</td>
+      </tr>
+    </table>
+    <hr/>
+    <h2>Atributos de la etiqueta &lt;source&gt;</h2>
+    <table>
+      <tr>
+        <th>Atributo</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td>srcset</td>
+        <td>Serie de imágenes (separadas por coma) que se utilizarán. Atributo obligatorio.</td>
+      </tr>
+      <tr>
+        <td>src</td>
+        <td>Se utiliza cuando se indica audio o video (ver más adelante). En imágenes es ignorado.</td>
+      </tr>
+      <tr>
+        <td>sizes</td>
+        <td>Consulta de medios (media queries) para determinar si la imagen o imágenes se mostrarán.</td>
+      </tr>
+      <tr>
+        <td>media</td>
+        <td>Condición que se debe cumplir para que muestre la imagen.</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>Sugerencia para indicar al navegador el formato que se utiliza. Opcional.</td>
+      </tr>
+      <hr/>
+      <h2>Imágenes responsive</h2>
+      <picture>
+        <source media="(width >= 900px)" srcset="logo-large.png">
+        <source media="(width >= 600px) and (width < 900px)" srcset="logo-medium.png">
+        <source media="(width < 600px)" srcset="logo-small.png">
+        <img src="logo-medium.png" alt="HTML5 logo">
+      </picture>
+      <hr>
+      <h2>Diferentes densidades</h2>
+      <picture>
+        <source media="(width >= 900px)" 
+                srcset="logo-large.png,
+                        logo-large-hd.png 2x,
+                        logo-large-fhd.png 3x">
+        <source media="(width >= 600px) and (width < 900px)" 
+                srcset="logo-medium.png,
+                        logo-medium-hd.png 2x,
+                        logo-medium-fhd.png 3x">
+        <source media="(width < 600px)" 
+                srcset="logo-small.png,
+                        logo-small-hd.png 2x,
+                        logo-small-fhd.png 3x">
+        <img src="logo-medium.png" 
+              srcset="logo-medium.png,
+                     logo-medium-hd.png 2x,
+                     logo-medium-fhd.png 3x" 
+              alt="HTML5 logo">
+      </picture>
+    </table>
+  </body>
+</html>
+<!-- 
+  HTML 5.1 incorpora un nuevo sistema para utilizar imágenes en nuestros documentos HTML de forma mucho más flexible que la etiqueta <img> tradicional. Esta nueva etiqueta nos permitirá mostrar imágenes dependiendo de nuestras necesidades.
+  Las nuevas etiquetas para representar imágenes están en la primera tabla del html
+
+  1 - La etiqueta <picture>
+    Uno de los principales problemas que teníamos al utilizar la etiqueta <img> es que si utilizabamos un formato de
+    imagen moderno, que puede no estar soportado en algunos navegadores, la imagen no se verá en dichos navegadores. Nos
+    falta la posibilidad de establecer alternativas, para que en el caso de estar soportado pueda utilizarla, y en caso
+    contrario utilice un formato alternativo más antiguo, y así poder aprovecharnos de las ventajas de formatos nuevos si
+    hay soporte (menor peso, mayor calidad, etc...).
+  
+    Ej:
+      <picture>
+        Aquí colocaremos posibles imágenes candidatas <source>
+        Aquí colocaremos la imagen <img> a utilizar por defecto
+      </picture>
+  
+    La etiqueta <picture> precisamente se utilizará como un contenedor donde vamos a indicar al
+    navegador que queremos mostrar una imagen. Luego, en su interior, podemos establecer varias etiquetas 
+    <source> donde vamos a proporcionarle posibles opciones, de las cuáles tendrá que decidir cuál utilizar.
+
+  
+
+  2 - La etiqueta <source>
+    Como podemos ver, lo interesante está en el contenido de la etiqueta <picture>. En su interior, vamos a escribir varias
+    etiquetas <source>, que indicarán al navegador que debe intentar leer esa imagen si tiene soporte para su formato:
+  
+    Ej:
+      <picture>
+        <source srcset="image.avif">
+        <source srcset="image.webp">
+        <img src="image.jpg" alt="Descripción breve de la imagen">
+      </picture>
+
+    - Hemos indicado dos etiquetas <source> y una etiqueta <img> dento de <picture>. 
+    - El atributo de las etiquetas <source> es "srcset" y el de <img> es "src". 
+    -> Este comportamiento es similar al de una condición if de programación. El funcionamiento será el siguiente:
+      | - El navegador comprobará la primera etiqueta <source> con una imagen en formato ".avif".
+      |   - Si el navegador la soporta, la insertará en el atributo "src" de la etiqueta <img> y la usará.
+      |   - Si el navegador no la soporta, analizará la siguiente etiqueta <source> con formato ".webp".
+      |     - Si el navegador la soporta, la insertará en el atributo src de la etiqueta <img> y la usará.
+      |     - Si el navegador no la soporta, utilizará la etiqueta <img> indicada al final.
+      |
+      | if(navegador soporta ".avif"){
+      |  Se insertará en el atributo "src" de <img>
+      | } else if(navegador soporta ".webp"){
+      |   Se insertará en el atributo "src" de <img>
+      | } else{
+      |   Se usará el "src" por defecto de <img>
+      | }
+    
+    -> Si un navegador muy antiguo no soporta estas etiquetas modernas, ignorará las etiquetas <picture> y
+      <source> (las tratará como un contenedor <div>) y sólo hará caso a la etiqueta <img>, por lo que seguirá 
+      funcionando, pero la etiqueta <img> debe tener el formato más tradicional.
+  
+    Las etiquetas source pueden tener varios atributos. Podemos a ver para que sirve cada uno en la segunda tabla
+
+  
+  3 - Imágenes responsive
+    Otra ventaja interesante es que con <picture> podemos crear imágenes responsive que cambien dependiendo de
+    características de las media queries (CSS). Por ejemplo, utilicemos min-width (tamaño mínimo de ancho de la pantalla)
+    en el siguiente ejemplo:
+
+      <picture>
+        <source media="(width >= 900px)" srcset="logo-large.png">
+        <source media="(width >= 600px) and (width < 900px)" srcset="logo-medium.png">
+        <source media="(width < 600px)" srcset="logo-small.png">
+        <img src="logo-medium.png" alt="HTML5 logo">
+      </picture>
+
+    De esta forma, estamos indicando que se muestren diferentes imágenes dependiendo de la resolución de pantalla (ancho)
+    del dispositivo:
+      - Dispositivos grandes (igual o más de 900px): Muestra la imagen logo-large.png
+      - Dispositivos grandes (entre 600-899px): Muestra la imagen logo-medium.png
+      - Dispositivos pequeños (menos de 600px): Muestra la imagen logo-small.png
+    
+    Si no cumple las anteriores (o no soporta estas etiquetas): Muestra la imagen logo-medium.png
+    Nótese que esto sólo hará cambio de imagen efectivo justo en los cambios de los rangos indicados (600 y 900). Si se
+    desea que la imagen se adapte proporcionalmente en cada punto, lo mejor es recurrir a tamaños máximos y mínimos con CSS.
+
+  
+  4 - Diferentes densidades
+    Además, este sistema también permite especificar diferentes imágenes dependiendo de la densidad de pantalla del
+    dispositivo (tamaño del píxel en las diferentes pantallas de dispositivos móviles, tablets o monitores). Para ello,
+    tenemos que usar una palabra clave que se forma de un número (multiplicador de densidad) seguido de una x:
+      
+      <picture>
+        <source media="(width >= 900px)"
+                srcset="logo-large.png,
+                        logo-large-hd.png 2x,
+                        logo-large-fhd.png 3x">
+        <source media="(width >= 600px) and (width < 900px)"
+                srcset="logo-medium.png,
+                        logo-medium-hd.png 2x,
+                        logo-medium-fhd.png 3x">
+        <source media="(width < 600px)"
+                srcset="logo-small.png,
+                        logo-small-hd.png 2x,
+                        logo-small-fhd.png 3x">
+        <img src="logo-medium.png"
+            srcset="logo-medium.png,
+                    logo-medium-hd.png 2x,
+                    logo-medium-fhd.png 3x"
+            alt="HTML5 logo">
+      </picture>
+
+    Observa que en cada etiqueta <source> se establece el atributo srcset para indicar una imagen 
+    para una determinada densidad de pantalla (*por ejemplo, 2x o 3x). Si se omite y no se indica 
+    ninguna, es lo mismo que indicar 1x.
+-->
