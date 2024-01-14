@@ -32,3 +32,8 @@
 
 - [Conversor a oklch](https://oklch.com/) -> Herramienta que convierte cualquier color HEX, RGB o HSL a OKLCH.
 
+
+#### Recursos:
+- [scrollbar.app](https://scrollbar.app/) -> Plataforma dedicada a la creación de barras de desplazamiento personalizadas para sitios web.
+
+- [Scrollbar Playground](https://lyqht.github.io/scrollbar-playground/) -> Herramienta para experimentar con diferentes estilos de barras de desplazamiento (scrollbars) sin tener que escribir y probar código cada vez.
