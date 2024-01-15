@@ -5,5 +5,382 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etiqueta &lt;video&gt;</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Atributos etiqueta &lt;video&gt;</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>src</td>
+          <td>
+            Archivo o URL del video a reproducir. Obligatoria si no tiene
+            etiquetas dentro.
+          </td>
+        </tr>
+        <tr>
+          <td>width</td>
+          <td>Indica el tamaño de ancho del video.</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>Indica el tamaño de alto del video.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Atributos de control</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autoplay</td>
+          <td>
+            Comienza a reproducir el video automáticamente. OJO, está sujeto a
+            normas del navegador.
+          </td>
+        </tr>
+        <tr>
+          <td>loop</td>
+          <td>
+            Vuelve a iniciar el video cuando finaliza su reproducción (en
+            bucle).
+          </td>
+        </tr>
+        <tr>
+          <td>muted</td>
+          <td>
+            Establece que el video se reproduzca con sonido muteado
+            (silenciado).
+          </td>
+        </tr>
+        <tr>
+          <td>controls</td>
+          <td>
+            Muestra los controles de reproducción (por defecto no se muestran).
+          </td>
+        </tr>
+        <tr>
+          <td>playsinline</td>
+          <td>
+            Reproduce el video en línea, es decir, en su área de reproducción.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Atributos de precarga</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Atributo</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>poster</td>
+          <td>Muestra una imagen a modo de presentación.</td>
+        </tr>
+        <tr>
+          <td>preload</td>
+          <td>Indica como realizar la precarga del video.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>El atributo preload</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Valor</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>auto</td>
+          <td>
+            Valor por defecto. El navegador decide si debe descargar el video de
+            forma anticipada o no.
+          </td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>
+            Se le indica al navegador que no descargue el video hasta que se
+            pulse el botón de play.
+          </td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            Se le indica al navegador que descargue los metadatos del video,
+            pero no el video en sí.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Formatos de vídeo</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="4">Formatos de video</th>
+        </tr>
+        <tr>
+          <th>Formato</th>
+          <th>Códecs utilizado</th>
+          <th>Características</th>
+          <th>¿Recomendado?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4"><strong>Formatos modernos</strong></td>
+        </tr>
+        <tr>
+          <td>MP4</td>
+          <td>x264, DivX H264</td>
+          <td>Alta calidad. El códec x264 es libre.</td>
+          <td>✅ Buen soporte</td>
+        </tr>
+        <tr>
+          <td>WebM</td>
+          <td>VP8, VP9</td>
+          <td>Alternativa libre a MP4 de Google.</td>
+          <td>✅ Buen soporte</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Formatos de nueva generación</strong></td>
+        </tr>
+        <tr>
+          <td>AV1</td>
+          <td>Basado en VP10, Daala y Thor</td>
+          <td>Compite con HEVC/H.265</td>
+          <td>❌ Soporte irregular</td>
+        </tr>
+        <tr>
+          <td>HEVC</td>
+          <td>x265, DivX HEVC</td>
+          <td>Futura evolución de MP4.</td>
+          <td>❌ Soporte irregular</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>Formatos más antiguos o no orientados a web</strong></td>
+        </tr>
+        <tr>
+          <td>OGV</td>
+          <td>Theora</td>
+          <td>Alternativa libre a MP4.</td>
+          <td>⚠️ Sin soporte en Safari</td>
+        </tr>
+        <tr>
+          <td>MKV</td>
+          <td>Matroska</td>
+          <td>Buena compresión. Potente.</td>
+          <td>❌ Alto consumo CPU</td>
+        </tr>
+        <tr>
+          <td>AVI</td>
+          <td>XviD, DivX 3/5</td>
+          <td>Menor compresión que MP4.</td>
+          <td>❌ Anticuado</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table>
+    <h2>Videos con fallbacks o extras (etiquetas que pueden estar dentro de la etiqueta &lt;video&gt;)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Etiqueta</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;source&gt;</td>
+          <td>Establece un archivo de video principal o alternativo.</td>
+        </tr>
+        <tr>
+          <td>&lt;track&gt;</td>
+          <td>Establece un archivo de subtítulos principal o alternativo.</td>
+        </tr>
+        <tr>
+          <td>&lt;img&gt;</td>
+          <td>Establece una imagen como fallback, para navegadores que no soporten video.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
+<!-- 
+  En HTML5 se introduce la interesante posibilidad de mostrar videos directamente desde nuestro navegador. De hecho, si arrastramos un 
+  video a la ventana del navegador, comprobaremos que comienza a reproducirse en él. Esto ocurre porque los navegadores son capaces de 
+  mostrar imágenes, reproducir video y audio.
+  Para mostrarlos en nuestras páginas, usaremos la etiqueta HTML <video>, la cuál tiene varios atributos que podemos ver en la tabla 1
+  
+  Un primer ejemplo muy básico para colocar un video en nuestra página web podría ser el siguiente:
+    <video src="video.mp4" width="360" height="640"></video>
+  
+  Al igual que vimos en el apartado de etiqueta <img>, tenemos a nuestra disposición el atributo "src" para indicar la ruta
+  o archivo de video, el atributo "width" para indicarle un tamaño de ancho y el atributo "height" para indicar un tamaño de
+  alto.
+  
+  Indicar los valores de ancho y alto en el HTML es una buena práctica, porque reservamos el tamaño inicialmente aunque el
+  video no se haya descargado, y así evitamos posibles saltos o cambios de tamaño que desembocan en comportamientos
+  molestos e inesperados al cargar una web.
+  
+  Ojo: Si lo que quieres es insertar videos desde Youtube, Vimeo u otro servicio alternativo, debes utilizar la etiqueta
+  HTML iframe en lugar de la etiqueta <video>. Esta última sólo sirve para archivos en formato de video directamente.
+
+  
+-> 1 Atributos de control
+    Las etiquetas <video>, al igual que las etiquetas <audio> que veremos más adelante, tienen una serie de atributos boolean,
+    es decir, atributos de verdadero o falso, para activar o desactivar características. Para activarlas, simplemente
+    tenemos que indicar el atributo en la etiqueta, para desactivarlas, simplemente lo omitimos.
+
+    Estas características son las que se ven en la segunda tabla.
+
+    Una aclaración sobre el atributo "playsinline": En algunos dispositivos móviles, al reproducir el video, este se muestra
+    en pantalla completa, dejando la web en un segundo plano. Si establecemos el atributo playsinline, obligaremos a que el
+    video se reproduzca en el lugar donde se encuentra.
+    
+    Veamos un sencillo ejemplo aplicado:
+
+      <video src="video.mp4" autoplay muted loop></video>
+    
+    Este video se reproducirá automáticamente, silenciado y en modo bucle, es decir, cuando llegue al final, comenzará a
+    reproducirse de nuevo. Ten en cuenta que un video .mp4 que no tenga el atributo controls, por norma general, el usuario
+    lo interpretará como si fuera una imagen o .gif animado. Si no ve claramente que hay una barra de controles, no caerá en
+    que se trata de un video.
+
+    * Desde 2017, Chrome, Firefox y otros navegadores establecieron un cambio de políticas con el atributo de reproducción
+      automática "autoplay", por lo que lo más probable es que la autoreproducción no funcione salvo que el usuario haya
+      interactuado antes en la página (click, scroll, etc...).
+
+    * En algunos casos, especialmente en dispositivos móviles, puede que los videos no se reproduzcan automáticamente si
+      tienen un canal de audio (incluso aunque se use el atributo muted). Si quieres establecer un video de fondo para el
+      diseño de una web, es aconsejable retirar el canal de audio del video. Esto hará que el video ocupe menos y no de este
+      tipo de problemas en móviles.
+
+
+
+-> 2 Atributos de precarga
+    Existen algunos atributos más para utilizar en la etiqueta <video>, que resultan muy interesantes ya que están
+    relacionados con la precarga del video. Los podemos encontrar en la tercera tabla.
+
+    2.1 - El atributo poster
+      Por defecto, las etiquetas <video> muestran el fotograma inicial del video enlazado, ya sea un fotograma del mismo o una
+      pantalla negra inicial. Sin embargo, podemos mostrar una imagen personalizada a modo de «carátula» como lo hace, por
+      ejemplo Youtube, de modo que el video no se llega a mostrar hasta que el usuario pulsa en el botón de play.
+    
+      Para ello, utilizaremos el atributo poster, que funciona de forma similar al atributo src de una imagen <img>. En ella
+      podremos indicar la dirección de la imagen que queremos utilizar como carátula.
+
+        <video controls poster="/images/w3html5.gif">
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+
+      
+    2.2 - El atributo preload
+      Mediante el atributo "preload" podemos indicar al navegador como queremos que se comporte respecto a los elementos de
+      video. Por defecto, el navegador tiene el valor "auto" en este atributo, por lo que decidirá si es necesario descargarlo o
+      no, pero podemos utilizar los valores "none" o "metadata" para cambiar este comportamiento como vemos en la cuarta tabla.
+
+      Veamos otro ejemplo con lo que hemos aprendido:
+        
+        <video src="video.mp4" poster="poster.png" preload="metadata" controls></video>
+        
+      En este caso indicamos que el navegador debe mostrar un video, pero en lugar de mostrar el primer fotograma del mismo,
+      utilizará una imagen de presentación mediante el atributo poster. El archivo de video no se descargará de forma
+      anticipada inicialmente, puesto que se ha indicado que sólo se descarguen sus metadatos (título, duración, etc...).
+      Además, se ha establecido que muestre los controles por defecto.
+
+
+    2.3 - Formatos de video
+      Antes de continuar, debemos conocer una serie de conceptos básicos y los diferentes formatos de video que existen
+      actualmente. En primer lugar, debemos saber que un archivo de video se compone de dos partes principales:
+        - El formato contenedor, que es el formato del video en sí.
+        - Canales internos (canal de audio, canal de video, etc...), codificados con diferentes codecs.
+
+      Un video simple, suele tener como mínimo, un canal de video y otro de audio, sin embargo puede tener muchos más
+      (subtítulos, imágenes, canales de audio alternativos, etc...). Esto es un detalle muy importante, ya que dependiendo del
+      formato y/o codec, puede que sea factible utilizarlo para web o no.
+
+      * Codec codifica y comprime los datos de un archivo, vídeo o audio para agilizar su transferencia o para que ocupe
+      menos espacio.
+      
+      A continuación tenemos un listado de los formatos/codecs más conocidos y utilizados para web en la taba 5.
+
+      * Otros formatos como MOV, FLV, 3GP, MPG, RMVB o ASF/WMV no se recomiendan para su utilización en web ya que son
+        anticuados, propietarios o poco eficientes.
+
+    
+    2.4 - Videos con fallbacks o extras
+      La etiqueta <video> también puede actuar como etiqueta contenedora e incluir varias etiquetas HTML para dotar de
+      mayor compatibilidad, o capacidades adicionales, de forma muy similar a como lo hace la etiqueta <picture> de
+      imágenes.
+    
+      Las etiquetas que podemos incluir dentro de una etiqueta <video> son las que aparecen en la sexta tabla
+
+      
+      
+      2.4.1 - La etiqueta<source>
+        Si utilizamos la etiqueta <video> como etiqueta contenedora, podemos incluir etiquetas
+        <source> en su interior para proporcionar videos con formatos alternativos y tener mayor compatibilidad con
+        navegadores antiguos. De esta forma, navegadores que soporten nuevos formatos, aprovecharán estos recursos, y los que
+        no, utilizarán los antiguos o las etiquetas de fallback.
+      
+        Veamos una posible implementación de la etiqueta <video> como etiqueta contenedores con múltiples alternativas:
+          
+          <video width="640" height="480">
+            <source src="video.mp4" type="video/mp4" />
+            <source src="video.webm" type="video/webm" />
+            <source src="video.ogv" type="video/ogg" />
+            <img src="imagen.png" alt="Video no soportado" />
+            Su navegador no soporta contenido multimedia.
+          </video>
+        
+        En este ejemplo, los navegadores no mostrarán todos los contenidos a la vez, sino que seguirán los siguientes pasos:
+          - Intenta mostrar el primer formato: MP4. Si el navegador no lo soporta, salta al siguiente.
+          - Intenta mostrar el segundo formato: WEBM. Si el navegador no lo soporta, salta al siguiente.
+          - Intenta mostrar el tercer formato: OGV. Si el navegador no lo soporta, salta al siguiente.
+          - Si se trata de un navegador que no soporta HTML5 ni sus etiquetas de video, intentará mostrar la imagen.
+          - Si se trata de un navegador de terminal de texto (o sin capacidades gráficas), mostrará el texto del final.
+
+        De esta forma tenemos soporte completo para todo tipo de dispositivos.
+
+      
+    2.5 - Acceso a segundos específicos
+      Utilizando los fragmentos multimedia se pueden conseguir algunas acciones interesantes, como por ejemplo especificar el
+      momento concreto del video (o audio) en el que se quiere empezar a reproducir o terminar de reproducir.
+      
+      Veamos algunos ejemplos:
+
+        <video controls src="video.mp4#t=15"></video>
+
+          -> En este primer caso, reproducimos el video video.mp4 a partir del segundo 15 del mismo. Aparecerán los controles puesto
+            que hemos definido el atributo controls.
+
+
+        <video autoplay src="video.mp4#t=10,20"></video>
+
+          -> En este segundo caso, reproducimos el video video.mp4 a partir del segundo 10, hasta llegar al segundo 20. No aparecerán
+            los controles puesto que hemos omitido el atributo controls, pero como hemos definido el atributo autoplay, si el clip
+            de video no tiene canal de audio, el video se reproducirá automáticamente aunque el usuario no haya interactuado
+            previamente en la página, como generalmente se requiere.
+ -->
