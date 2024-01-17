@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía de CSS Flexbox para aprender de forma sencilla - midudev</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container desbordam1">CSS IS AWESOME</section>
+    <section class="container desbordam2">CSS IS AWESOME</section>
+    <section class="container desbordam3">CSS SOMETIMES IS AWESOME</section>
+    <section class="container desbordam4">CSS IS AWESOME</section>
+    <section class="container desbordam5">CSS IS AWESOME</section>
+    <hr />
+    <section class="parent1">
+      <div class="containers cont1">
+        parent container no relative -> absolute top 0, right 0
+      </div>
+      <div class="containers cont2">
+        parent container no relative -> absolute top 0, right 50%
+      </div>
+      <div class="containers cont3 v1">
+        parent container no relative -> absolute centrado
+      </div>
+      <div class="containers cont4 ver1">
+        parent container no relative -> fixed bottom 0, right 0
+      </div>
+    </section>
+    <hr />
+    <section class="parent2">
+      <div class="containers cont1">
+        parent container relative -> absolute top 0, right 0
+      </div>
+      <div class="containers cont2">
+        parent container relative -> absolute top 0, right 50%
+      </div>
+      <div class="containers cont3 v2">
+        parent container relative -> absolute centrado
+      </div>
+      <div class="containers cont4 ver2">
+        parent container relative -> fixed bottom 0, right 150px
+      </div>
+    </section>
+    <hr />
+    <h2>Pruebas de z-index</h2>
+    <h3>Sin z-index (en orden del html)</h3>
+    <div class="container-box">
+      <div class="black-box">Black box</div>
+      <div class="gray-box">Gray box</div>
+      <div class="green-box">Green box</div>
+    </div>
+    <h3>Con z-index haciendo que la negra esté por encima, luego la gris y por último la verde</h3>
+    <div class="container-box">
+      <div class="black-box primera">Black box</div>
+      <div class="gray-box segunda">Gray box</div>
+      <div class="green-box tercera">Green box</div>
+    </div>
+  </body>
+</html>

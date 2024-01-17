@@ -1,0 +1,277 @@
+/* 
+-> Cuando establecemos un tamaño con width y height x, pensamos que es inamovible,
+   pero lo que pasa es que al poner el padding, el camaño varía, no sigue estático.
+   Esto se debe a que el tamaño del contenido es de la altura x anchura, pero a parte
+   de ese tamaño, también está el tamaño del padding, border y margin
+   
+   -> El tamaño real de los divs dentro de .enBloque es de 140x140px, no de 100x100px.
+      - El contenido es de 100x100
+      - El padding es de 20x20
+      - El borde es de 20x20
+
+-> El margin no afecta al ancho y al alto de nuestra caja, solo a la posición (si está
+   más o menos cerca de x elemento) y la separación.
+
+-> Por defecto el "box-sizing" está en "box-sizing: content-box;", por eso al poner el padding y el 
+   border, las proporciones acaban siendo 140x140
+
+-> Si ponemos "box-sizing: border-box;", estamos diciendo que la caja en total sí que tiene
+   que medir 100x100px, por lo que el contenido se adaptará a lo puesto por el border y el padding
+     -> El tamaño real de este div dentro de .enBloque es de 100x100px, no de 140x140px
+      - El contenido ahora es de 60x60
+      - El padding sigue siendo de 20x20
+      - El borde sigue siendo de 20x20
+*/
+
+body {
+  background: #09f;
+  margin: 0; /* Ponemos esto para que por defecto no haya un margin de 8px */
+}
+
+.container {
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 48px;
+  margin: 10px;
+}
+
+/* 
+DESBORDAMIENTO
+-> Con la letra tan grande, el texto de la se está desbordando (efecto de desbordamiento) y por 
+   lo tanto, se sale por fuera de la caja. 
+   
+-> Esto ocurre cuando tenemos un tamaño fijo de una caja (width: 150px; height: 150px;) y el contenido
+   de esta, no cabe dentro de la propia caja y se va para fuera de la caja (se sale y se desborda).
+   Por defecto, cuando un desbordamiento ocurre, tenemos "overflow: visible" -> lo que desborda
+   se hace visible, por lo que, el contenido no es recortado y se dibuja fuera de la caja contenedora.
+
+-> Hay diferentes formas de solucionarlo: 
+    - Poniendo "overflow: hidden;" el contenido que desborda desaparece y no hay forma de acceder a él
+          .container {
+            overflow: hidden;
+          }
+      
+      * También se puede poner cómo queremos que desaparezca el texto con "text-overflow", que tiene por
+         defecto el valor "text-overflow: clip;", pero también se puede poner "ellipsis"
+          .container {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+      * Si ponemos "text-overflow: ellipsis;", el contenido de la caja, si es texto, que se 
+        desborde, se pondría con puntos suspensivos (CSS IS AWE...). En un furuto, a "text-overflow"
+        en vez de poder ponerle los valores "clip" o "ellipsis", se le van a poder pasar cadenas de texto
+        como "text-overflow: 'leer más...';"
+
+
+    - Poniendo "overflow: scroll;" el contenido que desborda desaparece pero aparecen unas barritas
+        horizontales y verticales de desplazamiento para poder acceder a este, moviéndonos con las barritas
+          .container {
+            overflow: scroll;
+          }
+
+
+    - Poniendo "overflow: auto;" es lo más recomendado y básicamente, dependiendo del navegador,
+        pondrá las barras de navegación o no. Si pones "scroll" fuerzas a que salgan las barras,
+        mientras que con "auto" lo que haces es que el propio navegador elija cómo mostrar ese contenido
+          .container {
+            overflow: auto;
+          }
+*/
+.desbordam1 {
+  overflow: visible; /* Es su valor por defecto, no es necesario ponerlo */
+}
+
+.desbordam2 {
+  overflow: hidden;
+}
+
+.desbordam3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.desbordam4 {
+  overflow: scroll;
+}
+
+.desbordam5 {
+  overflow: auto;
+}
+
+/*
+LAS POSICIONES EN CSS:
+
+-> Los elementos por defecto en CSS se posicionan por defecto de forma estática, es decir, se quedan
+   donde están definidos en HTML y se van apliando. Por eso, tenemos por defecto "position: static"
+
+-> A parte de "position: static" tenemos diferentes tipos de posicionamiento, como por ejemplo: 
+    - "position: absolute" -> Se parece mucho a "static", pero si ponemos "absolute", vamos a poder
+        determinar las coordenadas del elemento en el documento. Si sabemos las coordenadas, podemos
+        poner: "top: 0; left: 0;" ...
+        * Esto hace que, de forma absoluta, saltándose totalmente cualquier control que tuviésemos de cómo
+          eran los elementos html que estuvieran conteniendo el elemento en cuestión, se los salta y posiciona
+          el elemento respecto a todo el documento(left, right, top...) 
+*/
+
+section {
+  border: 5px solid #000;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+}
+
+.containers {
+  width: 100px;
+  height: 100px;
+}
+
+.cont1 {
+  position: absolute;
+  background: rgb(244, 128, 255);
+  top: 0;
+  right: 0;
+}
+
+.cont2 {
+  position: absolute;
+  background: rgb(163, 248, 34);
+  top: 0;
+  right: 50%;
+  border-right: 1px red solid;
+}
+/* 
+-> Si ponemos "position: absolute; top: 0; right: 0;" en el "section" lo único que pasa es que toda
+    la caja se pone en la esquina superior derecha sin ningún espacio.
+
+-> Si ponemos "position: absolute; top: 0; right: 0;" en el ".container2", aunque ".container2" esté
+    dentro de "section", sale fuera del "section" y se pone en la esquina superior derecha, dando
+    igual en qué sitio del html estuviera (en este caso, se pone a la misma altra que la del primer 
+    ejemplo (arriba de todo))
+
+-> top: 0 -> Va hacia arriba de todo, dejando 0 píxeles. Si ponemos "top: 10px" dejaría un espacio de 
+    10px. Esto también sucede con "left", "right" y "bottom". 
+    - Podemos leer "right: 50px" como 50 píxeles de diferencia respecto a la posición más hacia la derecha. 
+    - Si usamos porcentajes ej: "right: 50%", significa que se pondrá en el medio de la página sin 
+        contar con el ancho de la caja, por lo que el lado derecho del cuadrado estará en el punto
+        a partir del medio de la caja. (He puesto un borde rojo de 1px en ese cuadrado para marcar la
+        línea que marca más o menos la mitad de la caja), a partir de esta mitad es donde se situa el
+        resto de la caja.
+*/
+
+/* 
+-> Cuando queremos mover un elemento, pero no respecto a todo el documento, sino respecto a su elemento
+   padre, tenemos que poner "position: relative" en el contenedor padre. Lo que hacemos es: crear un punto
+   relativo, para que cualquiera de nuestros hijos, pueda tomarlo como referencia.
+   
+-> Cuando tenemos un "position: absolute", va a estar buscando en todos los padres y abuelos (o en el propio
+   documento, si ningún padre tiene un "position: relative"), un punto relativo. Si encuentra un punto relativo,
+   se guiarán por ese punto, y si no, se guiarán por el propio documento como referencia.
+*/
+
+.parent2 {
+  position: relative;
+}
+
+/* 
+--> Para centrar un div, se puede usar:
+      .container2{
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto; -> Es importante poner el "margin: auto" o si no, no funciona ya que el margen entonces no es igual en todos los sitios
+      }
+
+  -> Pero no es la forma más aconsejable de centrar un elemento en css. También, en vez de poner
+      "right: 0; left: 0; top: 0; bottom: 0;", se puede poner "inset: 0;" 
+*/
+
+.cont3 {
+  position: absolute;
+  margin: auto;
+  background: rgba(109 56 255 / 80%);
+}
+
+.v1 {
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.v2 {
+  inset: 0;
+}
+
+/* 
+-> A parte de "position: absolute;" o "position: relative", también existe "position: fixed" que
+   es bastante parecido a "position: absolute", pero no se mueve al hacer scroll a diferencia del
+   "absolute" porque se queda fijo en pantalla. Las coordenadas que le vamos a pasar al "fixed",
+   van a ser relativas no al padre que tenga "position: relative", ni al documento, sino a la 
+   pantalla. Se va a quedar fija en el viewport, porque es el "hijo" del viewport.
+*/
+
+.cont4 {
+  position: fixed;
+}
+
+.ver1 {
+  background-color: rgb(252, 235, 138);
+  bottom: 0;
+  right: 0;
+}
+
+.ver2 {
+  background-color: rgb(247, 219, 65);
+  bottom: 0;
+  right: 150px;
+}
+
+/* 
+APILAMIENTO (stacking context)
+Es el concepto de que los elementos html que tenemos son dibujados en 3D, por lo tanto hay un 
+eje z imaginario de profundidad. Para ver esto, en Edge podemos ir a "Dev Tools>Vista 3D" o en 
+Chrome yendo a "Dev Tools > Overflow Menu / 3 dots (hidden by default) > 'More Tools'>'Layers'"
+
+
+*/
+.container-box {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+
+.primera{
+  z-index: 3;
+}
+
+.segunda{
+  z-index: 2;
+}
