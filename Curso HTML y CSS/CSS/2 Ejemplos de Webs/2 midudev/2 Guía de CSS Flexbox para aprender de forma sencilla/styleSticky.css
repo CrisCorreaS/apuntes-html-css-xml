@@ -1,0 +1,43 @@
+/* 
+A parte de posiciones "relative", "absolute" y "fixed", también hay una "position: sticky" la cual es
+muy confundida con "fixed".
+
+Por una parte, el "fixed" se queda fijo en pantalla y no le afecta el "relative"; pero "sticky"
+no se queda fijo en pantalla como "fixed", se queda pegado al contenedor en el que está, por lo 
+que sí que le afecta si el contenedor es "relative" o no. "sticky" siempre mantiene su posición
+dentro del contenedor "relative" que lo contenga. Pero no se queda en la misma posición como el
+"absolute", el "sticky" también depende del viewport, por lo que si el sticky está en el top 0;
+right 0; siempre estará en la esquina superior derecha desde nuestra perspectiva, de hecho, al
+hacer scroll, mientras aún esté dentro del contenedor, se moverá hacia abajo al hacer scroll hacia
+abajo, porque el "sticky" depende del viewport y del contenedor, por lo que irá hacia abajo para
+parecer que siempre está en la esquina superior derecha hasta que se acabe el contenedor.
+
+"sticky" deja su posición en el contenedor siempre que pueda, pero al hacer scroll, se ve empujado
+hacia abajo (o hacia arriba) hasta donde puede en el contenedor en el que se encuentra. Este sí
+que tiene que ver con el contenedor en el que se encuentra
+
+Ejemplos en indexSticky.html
+*/
+body{
+  background-color: seashell;
+}
+
+.stickyParent {
+  border: 5px solid #000;
+  height: 500px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.stickyParent:nth-child(3){
+  height: 1000px;
+}
+
+.sticky1 {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  background-color: rgb(252, 138, 237);
+  top: 0;
+  right: 0;
+}
