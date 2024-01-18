@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <link rel="stylesheet" href="styleFlex.css" />
+  </head>
+  <body>
+    <h2>Displays que vimos en el anterior vídeo</h2>
+    <h3>display: block;</h3>
+    <section class="parent1">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </section>
+    <h3>display: inline;</h3>
+    <section class="parent2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </section>
+    <hr>
+    <h2>Displays flex con diferente flex-direction</h2>
+    <h3>display: flex; flex-direction: row;</h3>
+    <section class="parent3">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: column;</h3>
+    <section class="parent4">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: row-reverse;</h3>
+    <section class="parent5">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: column-reverse;</h3>
+    <section class="parent6">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <hr>
+    <h2>Pruebas de diferentes "direction" y "flex-direction"</h2>
+    <h3>display: flex; flex-direction: flex; direction: ltr;</h3>
+    <section class="parent8">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: flex; direction: rtl;</h3>
+    <section class="parent7">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: row-reverse; direction: ltr;</h3>
+    <section class="parent10">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: row-reverse; direction: rtl;</h3>
+    <section class="parent9">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <hr />
+    <h2>Pruebas de diferentes "writting-mode" y "flex-direction"</h2>
+    <h3>display: flex; flex-direction: flex; writing-mode: vertical-lr;</h3>
+    <section class="parent11">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: flex; writing-mode: vertical-rl;</h3>
+    <section class="parent12">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: column-reverse; writing-mode: vertical-lr;</h3>
+    <section class="parent13">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>display: flex; flex-direction: column-reverse; writing-mode: vertical-rl;</h3>
+    <section class="parent14">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <hr>
+    <h2>Pruebas con flex-wrap y flex-flow</h2>
+    <h3>flex-direction: row; flex-wrap: nowrap;</h3>
+    <section class="nowrap flex-wrap">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>flex-direction: row; flex-wrap: wrap;</h3>
+    <section class="wrap flex-wrap">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>flex-flow: row wrap;</h3>
+    <section class="flex-flow1">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <h3>flex-direction: row nowrap;</h3>
+    <section class="flex-flow2">
+      <div class="itemFlex">1</div>
+      <div class="itemFlex">2</div>
+      <div class="itemFlex">3</div>
+    </section>
+    <hr>
+    <h2>Posicionamiento con nowrap</h2>
+    <h3>Ejemplo por defecto</h3>
+    <section class="nowrapEjemplo">
+      <div class="itemNoWrap1 itemNoWrap">1</div>
+      <div class="itemNoWrap1 itemNoWrap">2</div>
+      <div class="itemNoWrap1 itemNoWrap">3</div>
+    </section>
+    <h3>Ejemplo resuelto con flex-grow: 1;</h3>
+    <section class="nowrapEjemplo">
+      <div class="itemNoWrap2 itemNoWrap">1</div>
+      <div class="itemNoWrap2 itemNoWrap">2</div>
+      <div class="itemNoWrap2 itemNoWrap">3</div>
+    </section>
+    <h3>Ejemplo resuelto con flex-basis: 200px;</h3>
+    <section class="nowrapEjemplo">
+      <div class="itemNoWrap3 itemNoWrap">1</div>
+      <div class="itemNoWrap3 itemNoWrap">2</div>
+      <div class="itemNoWrap3 itemNoWrap">3</div>
+    </section>
+  </body>
+</html>

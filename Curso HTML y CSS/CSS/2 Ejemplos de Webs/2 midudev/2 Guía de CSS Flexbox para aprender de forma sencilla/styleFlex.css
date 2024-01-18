@@ -1,0 +1,310 @@
+/* 
+-> display: block;
+    Muestra el contenido como si fuera una caja, y en lugar de hacer que el contenido se lea en línea,
+    lo ponemos en bloque y el siguiente elemento aparece después del salto de línea.
+    Si ponemos "display: block;" tanto en el .parent como en el .item, o se lo quitamos, no pasaría nada
+    porque los divs por defecto ya tienen el "display: block;" (se pone un div debajo de otro, de arriba a abajo)
+
+    Al "display: block;" si que le afecta el ancho y alto puestos en css (width: 100px y un height: 100px)
+*/
+.parent1 {
+  display: block;
+}
+
+.item {
+  border: 1px solid;
+  opacity: 0.9;
+  width: 100px;
+  height: 100px;
+  background: #09f;
+}
+
+.item:first-child {
+  background: yellow;
+}
+
+.item:last-child {
+  background: red;
+}
+
+/* 
+-> display: inline;
+    Muestra el contenido en la misma línea ya que se muestra exactamente igual que como si fuese un texto
+    (va uno en línea con el otro, en dirección a cómo vemos el texto de izquierda a derecha)
+    Si ponemos "display: inline;" en el .parent no le afectaría porque solo afecta al section, pero si
+    lo ponemos en el .item, todos los divs se pondrían unos al lado de los otros en vez de debajo
+
+    *El problema del "display: inline;" es que el alto y el ancho no les afectan (el css marca un 
+    width: 100px y un height: 100px, pero se puede ver a simple vista que no lo está cumpliendo), al igual que le
+    pasa al texto. Lo que hace es mirar únicamente el contenido del div y asignarle por defecto lo que sea el 
+    contenido.
+*/
+
+.parent2 .item {
+  display: inline;
+}
+
+/* 
+-> display: flex;
+Es una propiedad de css que establece cómo tiene que funcionar realmente el contenedor respecto a sus hijos. 
+El flex no lo tenemos que utilizar directamente en el hijo, sino que deberíamos de utilizarlo 
+en el contenedor.
+
+Esto, directamente hace que tengamos un contenedor que es flexible y que va a permitir a los hijos
+ser alineados de una forma mucho más eficiente tanto horizontal como verticalmente, incluso cuando
+tenemos tamaños desconocidos o dinámicos.
+
+Con display flex: a los hijos les afecta el ancho y el alto como a "position: absolute" y a diferencia
+de "position: inline", pero los alinea horizontalmetne como si estuvieran en "position: inline",
+esto se debe a que ha detectado que tiene espacio suficiente para poner los hijos a los lados 
+(horizontalmente) y los ha puesto a los lados. Esto se debe a que ha determinado que tiene una 
+dirección en la que puede este contenido estar y por defecto la dirección en la que nosotros 
+estamos trabajando es como filas.
+
+Así que como una fila, ha dicho: la dirección del contenido, de este contenido flexible, va a ser
+una fila y por lo tanto voy a poner el contenido en fila.
+
+Hay que tener en cuenta que flex es unidireccional, por lo que SIEMPRE vamos a estar trabajando
+en un solo eje (vertical u horizontal). Por otro lado grid es una cuadrícula, por lo que no 
+tiene esa limitación y sí que se puede trabajar bidimensionalmente (en plano).
+
+-> "flex-direction" por defecto es "flex-direction: row;"
+*/
+.parent3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemFlex {
+  border: 1px solid;
+  opacity: 0.9;
+  width: 100px;
+  height: 100px;
+  background: #09f;
+}
+
+.itemFlex:first-child {
+  background: yellow;
+}
+
+.itemFlex:last-child {
+  background: red;
+}
+
+/* 
+También podemos indicarle que el "flex-direction" en vez de ir por filas va por columnas con 
+"flex-direction: column;", por lo que apila sus hijos como si fuese una columna (de arriba a abajo)
+*/
+
+.parent4 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+También podemos indicarle que el "flex-direction" en vez de ir por filas de izquierda a derecha, 
+con "flex-direction: row-reverse;", vaya en filas de derecha a izquierda (inversa)
+*/
+
+.parent5 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* 
+También podemos indicarle que el "flex-direction" en vez de ir por columnas de arriba a abajo, 
+con "flex-direction: column-reverse;", vaya en columnas de abajo a arriba (inversa)
+*/
+
+.parent6 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* 
+Si ponemos "flex-direction: flex;" estamos haciendo referencia a la dirección por defecto que es
+"flex-direction: row;".
+
+También podemos poner el atributo "direction", "direction" es la dirección de escritura, que 
+significa cómo vamos a leer el texto: si de derecha a izquierda (rtl) o de izquierda a derecha 
+(ltr). 
+
+*/
+.parent7 {
+  display: flex;
+  flex-direction: flex;
+  direction: rtl;
+}
+
+.parent8 {
+  display: flex;
+  flex-direction: row;
+  direction: ltr;
+}
+
+.parent9 {
+  display: flex;
+  flex-direction: row-reverse;
+  direction: rtl;
+}
+
+.parent10 {
+  display: flex;
+  flex-direction: row-reverse;
+  direction: ltr;
+}
+
+/* 
+El atributo "direction" también se parece mucho al atributo "writting-mode" que también mira
+de qué forma escribimos
+*/
+.parent11 {
+  display: flex;
+  flex-direction: row;
+  writing-mode: vertical-lr;
+}
+
+.parent12 {
+  display: flex;
+  flex-direction: row;
+  writing-mode: vertical-rl;
+}
+
+.parent13 {
+  display: flex;
+  flex-direction: column-reverse;
+  writing-mode: vertical-lr;
+}
+
+.parent14 {
+  display: flex;
+  flex-direction: column-reverse;
+  writing-mode: vertical-rl;
+}
+
+/* 
+También tenemos "flex-wrap" que por defecto es "flex-wrap: nowrap;".
+
+Si no hay suficiente espacio en el contenedor (los elementos ahora son de 100x100) los elementos
+se van a desbordar.
+
+Nosotros vamos a poner que el contenedor sea de (200x200) en teoría los elementos al ser tres de
+100x100, se desbordarán; pero el "flex-wrap: nowrap;" ajusta el tamaño de los elementos para que
+quepan dentro del padre, lo cual hace que ahora cada elemento se dimensione con un ancho más pequeño
+(que ponemos ver en las dev tools) de 64,672x100.
+
+El "flex-wrap: nowrap;" si no hay suficiente espacio en el contenedor, lo que va a hacer es modificar
+de alguna manera los elementos para que quepan en el contenedor sí o sí. No va a hacer un salto de
+línea para que los elementos quepan en el contenedor ni modificar el contenedor.
+*/
+
+.flex-wrap {
+  display: flex;
+  border: 4px solid #000;
+  width: 200px;
+}
+
+.nowrap {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* 
+"flex-wrap: wrap;" hace que si el contenedor es demasiado pequeño para los elementos, que se hagan
+saltos de línea. Por lo que con el "flex-wrap: nowrap;" el contenedor va a ser horizontal de 
+200x100 y los elementos se modificarán para ser de 64,672x100, mientras que con el
+"flex-wrap: wrap;" el contenedor va a ser vertical de 200x300 (la altura se ha multiplicado por 
+tres) mientras que los elementos seguirán siendo de 100x100
+*/
+
+.wrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* 
+"flex-flow" es una forma abreviada de usar "flex-wrap: wrap;" o "flex-wrap: nowrap;" y "flex-direction: row;",
+es decir, que con "flex-flow" estás estableciendo "flex-direction" y "flex-wrap"
+
+A "flex-flow" hay que pasarle la dirección y qué queremos que haga: "wrap" o "nowrap"
+*/
+.flex-flow1 {
+  display: flex;
+  flex-flow: row wrap;
+  border: 4px solid #000;
+  width: 200px;
+}
+
+.flex-flow2 {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 4px solid #000;
+  width: 200px;
+}
+
+/* 
+Cuando estamos en filas y tenemos un contenedor con un ancho muy grande y unos elementos que son
+muy pequeños. Ej: contenedor de 300x300px y elementos de 50x50px.
+
+Si nosotros queremos que los elementos tomen todo el tamaño del contenedor ya que por ahora están
+ordenados y alineados a la izquierda pero sobra bastante espacio.
+
+Primero tenemos que saber lo siguiente:
+  - Hay varias propiedades que tienen establecidos valores por defecto en los elementos:
+    -> flex-grow: 0; -> eso significa que los elementos NO crecen
+    -> flex-shrink: 1; -> los elementos pueden reducir su tamaño a uno más pequeño que su flex-basis
+    -> flex-basis: auto; -> los elementos tienen un tamaño base en auto -> si está en auto, solo
+                            tiene en cuenta al width del propio elemento que es 50px
+
+  - Estas tres propiedades es a lo que se le conoce como "flex: initial;" lo cual es la forma
+    inicial de tratar al flex
+*/
+.nowrapEjemplo {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 4px solid #000;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.itemNoWrap {
+  border: 1px solid;
+  box-sizing: border-box;
+  opacity: 0.9;
+  width: 50px;
+  height: 100px;
+  background: #09f;
+}
+
+.itemNoWrap:first-child {
+  background: yellow;
+}
+
+.itemNoWrap:last-child {
+  background: red;
+}
+
+.itemNoWrap1 {
+  flex-grow: 0;/* los elementos NO crecen */
+  flex-shrink: 1;/* los elementos pueden reducir su tamaño a uno más pequeño que su flex-basis */
+  flex-basis: auto;/* los elementos tienen un tamaño base en auto */
+}
+
+/*
+Podemos hacer que tome un tamaño mayor estableciendo un valor por defecto en el "flex-basis" o 
+haciendo que los elementos crezcan poneiendo un 1 como valor del "flex-grow".
+
+Solo poniendo el "flex-grow: 1;" ya arreglamos el ejercicio porque va a ocupar el espacio (es la
+mejor solución)
+*/
+.itemNoWrap2{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.itemNoWrap3{
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 200px;
+}
