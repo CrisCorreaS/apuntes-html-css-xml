@@ -47,7 +47,7 @@
 - [Font Awesome](https://fontawesome.com/) -> Es una biblioteca de iconos que se utiliza ampliamente en el desarrollo web para mejorar la estética y la funcionalidad de las páginas web. Fue diseñada para ser utilizada con elementos en línea y permite cambiar el tamaño, color y otros aspectos visuales de los iconos a través de CSS. Tienes más información sobre cómo usar Font Awesome [aquí](https://fontawesome.com/v4/get-started/)
 
 #### Temas Interesantes
-- [MDN - Tutorial para Usar SVG](https://developer.mozilla.org/es/docs/Web/SVG)
+- [MDN - Tutorial para Usar SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 - [Guía para Cómo Usar Imágenes SVG](https://www.freecodecamp.org/espanol/news/como-utilizar-imagenes-svg-en-css-y-html-un-tutorial-para-principiantes/)
 
