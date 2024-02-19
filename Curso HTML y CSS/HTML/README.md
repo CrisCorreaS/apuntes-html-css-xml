@@ -15,7 +15,9 @@
 #### Páginas para HTML en general
 - [Validador HTML W3C](https://validator.w3.org/) -> Es el validador oficial de la W3C que verifica que el código HTML de un sitio web esté bien estructurado y cumpla con los estándares de la W3C
 
-- [Validador Links W3C](https://validator.w3.org/checklink) -> Se utiliza para verificar problemas en los enlaces, anclajes y objetos referenciados en una página web, una hoja de estilo CSS o de manera recursiva en un sitio web completo 
+- [Validador Links W3C](https://validator.w3.org/checklink) -> Se utiliza para verificar problemas en los enlaces, anclajes y objetos referenciados en una página web, una hoja de estilo CSS o de manera recursiva en un sitio web completo
+  
+- [HTMHell](https://www.htmhell.dev/) -> Recurso educativo para mostrar ejemplos de lo que no se debe hacer en el desarrollo web con HTML y proporcionar detalles y consejos sobre cómo corregir estos errores.
 
 - [caninclude.glitch.me](https://caninclude.glitch.me/) -> Nos ayuda a comprobar si una etiqueta HTML puede incluirse dentro de otra. Para ello, debemos introducir la etiqueta padre y la etiqueta hijo y la web mostrará un mensaje indicando si la inclusión es válida o no
 
