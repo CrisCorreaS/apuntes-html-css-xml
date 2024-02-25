@@ -3,6 +3,9 @@
 - Buscar en un navegador: mdn + nombre-lo-que-busques + css
 - [Repositorio learning-area de mdn](https://github.com/mdn/learning-area)
 
+## Guías de Estilos de Referencia
+- [Trello CSS Guide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80) → guía de estilo para el CSS utilizado en Trello, una plataforma de gestión de proyectos.
+
 ## Apuntes o cursos gratis
 
 - [Página de MDN para aprender CSS](https://developer.mozilla.org/es/docs/Learn/CSS) → Recurso educativo que proporciona información sobre CSS, desde los fundamentos hasta cosiñas más avanzadas como la aplicación de estilos a texto y cajas, y el diseño responsive (RWD). El contenido de la página está dividido en varios módulos que siguen un orden recomendado de aprendizaje.
@@ -13,14 +16,17 @@
 
 - [Lista de vídeos de Youtuve de Midudev](https://www.youtube.com/playlist?list=PLUofhDIg_38q7l8gV4IVCz_pjUeyD99_j) → Lista de 4 vídeos de MiduDev centrados en aprender CSS. En la carpeta de "Ejemplos de Webs" encontrarás apuntes y demás que he tomado al ver los vídeos.
 
-- [Curso Buenas Prácticas con Selectores - Codely](https://pro.codely.com/library/buenas-practicas-con-css-selectores/path/) → Curso de Buenas Prácticas con Selectores de CSS
-
 - [Cursos de Stephanie Eckles](https://egghead.io/q/resources-by-stephanie-eckles) → Cursos de Stephanie Eckles para aprender desarrollo web con HTML y CSS
 
 - [Learn How To Make a Website with Steph](https://learnfromsteph.dev/) → Serie de videos educativos creada por Stephanie Eckles, diseñado para personas sin experiencia previa en desarrollo web, ofreciendo una forma accesible y práctica de aprender los fundamentos del desarrollo front-end.
 
+- [Curso Buenas Prácticas con Selectores - Codely](https://pro.codely.com/library/buenas-practicas-con-css-selectores/path/) → Curso de Buenas Prácticas con Selectores de CSS
+
 ## Guías para mejorar css
 - [csswizardry guide to css](https://cssguidelin.es/) → Este documento es una guía de mejores prácticas y recomendaciones para escribir y estructurar CSS de manera eficiente y efectiva
+
+## Metodologías
+- [CSS with BEM](https://en.bem.info/methodology/css/) → En el contexto de CSS, BEM (Block, Element, Modifier) proporciona una estructura clara para nombrar y organizar las clases CSS, facilitando la comprensión y el mantenimiento del código
 
 ## Juegos para mejorar
 ### General 
